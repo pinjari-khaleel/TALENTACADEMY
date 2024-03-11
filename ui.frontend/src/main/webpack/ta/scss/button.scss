@@ -1,0 +1,436 @@
+.button {
+	font-family: $brown;
+	font-weight:400;
+	text-transform: uppercase;
+	border-radius: 1.875rem;
+	cursor: pointer;
+	display: inline-block;
+	line-height: normal;
+	font-size: 0.75rem;
+	position: relative;
+	text-transform: uppercase;
+
+	a,
+	button {
+		margin: 1rem 2.5rem;
+	}
+
+	.cmp-button {
+		display: inline-flex;
+	}
+
+	span {
+		line-height: normal;
+	}
+}
+
+.button--primary_darkgold {
+	color: map-get($colors, "white");
+	background-color: map-get($colors, "darkGold");
+	border: 1px solid rgba(0, 0, 0, 0.1);
+
+	&:hover,
+	&:focus {
+		background-color: map-get($colors, "gold");
+	}
+
+	&:disabled,
+	&[disabled="true"] {
+		background-color: map-get($colors, "disabledGold");
+	}
+
+	.cmp-button {
+		display: flex;
+		align-items: center;
+		line-height: normal;
+		height: 19px;
+
+		svg {
+			margin-left: 0.625rem;
+			height: 1.125rem;
+		}
+	}
+
+	&.has-no-arrow {
+
+		.cmp-button,
+		.cta-link__text {
+			&::after {
+				display: none;
+			}
+		}
+	}
+}
+
+.button--primary_black {
+	color: map-get($colors, "white");
+	background-color: map-get($colors, "black");
+	border: 0;
+
+	&:hover,
+	&:focus {
+		background-color: map-get($colors, "black50");
+	}
+
+	&:disabled,
+	&[disabled="true"] {
+		background-color: map-get($colors, "black20");
+	}
+}
+
+.button--primary_cream {
+	color: map-get($colors, "darkGold");
+	background-color: map-get($colors, "cream50");
+	border: 1px solid #f3eddf;
+
+	svg path {
+		stroke: map-get($colors, "darkGold");
+		fill: map-get($colors, "darkGold");
+	}
+
+	&:hover,
+	&:focus {
+		border: 1px solid map-get($colors, "darkGold");
+	}
+
+	&:disabled,
+	&[disabled="true"] {
+		color: #d8c693;
+	}
+}
+
+.button--secondary {
+	color: map-get($colors, "black");
+	background-color: map-get($colors, "white");
+	border: 1px solid map-get($colors, "black20");
+
+	a,
+	button {
+		display: inline-block;
+	}
+
+	svg path {
+		stroke: #000;
+		fill: #000;
+	}
+
+	&:hover {
+		border: 1px solid map-get($colors, "darkGold");
+	}
+
+	&:disabled,
+	&[disabled="true"] {
+		border: 1px solid #a9a8a8;
+		background-color: #fefdfc;
+		color: map-get($colors, "black20");
+	}
+}
+
+.button--secondary_invert {
+	color: map-get($colors, "white");
+	background-color: transparent;
+	border: 1px solid #414345;
+
+	&:hover {
+		border: 1px solid map-get($colors, "white");
+	}
+
+	&:disabled,
+	&[disabled="true"] {
+		border: 1px solid #333538;
+		color: #8e8f91;
+	}
+}
+
+.button--small {
+	font-size: 0.625rem;
+
+	a,
+	button {
+		margin: 0.75rem 1.875rem;
+	}
+}
+
+.tertiary {
+	font-family: $brown;
+	font-weight: 300;
+	font-style: normal;
+	text-transform: uppercase;
+	color: map-get($colors, "deepBlack");
+	font-size: 0.75rem;
+	display: flex;
+
+	svg {
+		margin-left: 0.625rem;
+	}
+
+	svg path {
+		stroke: #000;
+		fill: #000;
+	}
+
+	&:hover {
+		color: map-get($colors, "gold");
+
+		svg path {
+			stroke: map-get($colors, "gold");
+			fill: map-get($colors, "gold");
+		}
+	}
+}
+
+.tertiary--over {
+	color: map-get($colors, "white");
+	letter-spacing: 0.0625rem;
+}
+
+.tertiary--small {
+	font-size: 0.625rem;
+}
+
+@include md {
+	.button .cmp-button svg {
+		margin-left: 1rem;
+	}
+
+	.button {
+		font-size: 1rem;
+
+		a,
+		button {
+			margin: 1.25rem 2.5rem;
+		}
+	}
+
+	.button--small {
+		font-size: 0.75rem;
+
+		a,
+		button {
+			margin: 1rem 1.875rem;
+		}
+	}
+
+	.tertiary {
+		font-size: 1rem;
+	}
+
+	.tertiary--small {
+		font-size: 0.75rem;
+	}
+
+	.header--button {
+		display: block;
+		width: 192px;
+		border-radius: 50px;
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 30px;
+		letter-spacing: 0.78px;
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: center;
+	}
+}
+
+.has-no-arrow {
+
+	.cmp-button,
+	.cta-link__text {
+		&::after {
+			display: none;
+		}
+	}
+}
+
+.has-arrow {
+
+	.cmp-button,
+	.cta-link__text {
+		display: flex;
+		align-items: center;
+		line-height: normal;
+
+		&::after {
+			content: "";
+			position: relative;
+			width: 24px;
+			height: 24px;
+			margin-left: 0.625rem;
+			background: url("../resources/images/arrow-right.svg") no-repeat center center;
+			background-size: contain;
+		}
+	}
+
+	.cmp-button {
+		height: 19px;
+	}
+}
+
+.cta-arrow {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	background-color: map-get($colors, "darkGold");
+	width: 60px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	cursor: pointer;
+
+	transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+	position: relative;
+
+	&::before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		background-image: url("../resources/images/arrow-right.svg");
+		background-repeat: no-repeat;
+		background-position: center center;
+		border-radius: 50%;
+	}
+
+	&:hover,
+	&:focus {
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		background-color: map-get($colors, "gold");
+		box-shadow: none;
+
+		svg {
+			&>* {
+				stroke: map-get($colors, "white");
+				fill: map-get($colors, "white");
+			}
+		}
+	}
+
+	&:disabled,
+	&[disabled="true"] {
+		opacity: 0.5;
+		pointer-events: none;
+		cursor: not-allowed;
+	}
+
+	&.cta-arrow-left {
+		&::before {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.cta-arrow-transparent {
+	border: 1px solid rgba(210, 210, 211, 0.2);
+	background: transparent;
+	transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+	&:hover,
+	&:focus {
+		border: 1px solid map-get($colors, "white");
+		background: transparent;
+	}
+}
+
+.cta-arrow-white {
+	background-color: map-get($colors, "white");
+	box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+
+	&::before {
+		background-image: url("../resources/images/arrow-dark.svg");
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	&:hover,
+	&:focus {
+		&::before {
+			background-image: url("../resources/images/arrow-right.svg");
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+	}
+
+	&:disabled,
+	&[disabled="true"] {
+		opacity: 0.5;
+		border: 1px solid var(--primary-black-50, #8e8f90);
+		box-shadow: none;
+		background-color: transparent;
+
+		&::before {
+			background-image: url("../resources/images/arrow-grey.svg");
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+	}
+}
+
+.cta-link {
+	padding: 1.125rem 2.5rem 1.0625rem 2.5rem;
+	text-align: center;
+
+	&.button--small {
+		padding: 1.0625rem 1.875rem;
+	}
+
+	&.has-arrow,
+	&.has-back-arrow {
+		display: inline-flex;
+		align-items: center;
+		line-height: normal;
+		gap: 15px;
+
+	}
+
+	&.has-arrow {
+		&::after {
+			content: "";
+			position: relative;
+			width: 24px;
+			height: 24px;
+			background: url("../resources/images/arrow-right.svg") no-repeat center center;
+			background-size: contain;
+		}
+
+		&.button--secondary {
+			&::after {
+				background: url("../resources/images/arrow-dark.svg") no-repeat center center;
+			}
+		}
+
+	}
+
+	&.has-back-arrow {
+
+		&::before {
+			content: "";
+			position: relative;
+			width: 24px;
+			height: 24px;
+			background: url("../resources/images/arrow-right.svg") no-repeat center center;
+			background-size: contain;
+			transform: rotate(180deg);
+		}
+
+		&.button--secondary {
+			&::before {
+				background: url("../resources/images/arrow-dark.svg") no-repeat center center;
+			}
+		}
+
+	}
+}
+
+.button>a::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}

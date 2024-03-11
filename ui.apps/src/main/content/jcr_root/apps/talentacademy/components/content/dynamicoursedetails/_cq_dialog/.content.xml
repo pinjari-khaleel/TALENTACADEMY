@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Course Details"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="talentacademy.author">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <coursedetails
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Course Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <courseid
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter the Course/Learning Program ID"
+                                        fieldLabel="Course ID/Learning program ID"
+                                        name="./courseId"/>
+                                    <skillslabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter the skills label"
+                                        fieldLabel="Skills Label"
+                                        name="./skillsLabel"/>
+                                    <badgeslabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter the label for badges"
+                                        fieldLabel="Badges label"
+                                        name="./badgesLabel"/>
+                                    <formatlabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter the format label"
+                                        fieldLabel="Format label"
+                                        name="./formatLabel"/>
+                                    <header
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter the header for the section."
+                                        fieldLabel="Curriculum Header"
+                                        name="./header"/>
+                                    <accheader
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter the header for the section."
+                                        fieldLabel="Accreditations Header"
+                                        name="./accHeader"/>
+                                    <infoctalabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Register Interest"
+                                        fieldLabel="Register Interest Label"
+                                        name="./infoctaLabel"/>
+                                    <infoctaurl
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldDescription="Select Register Interest URL"
+                                        fieldLabel="Register Interest URL"
+                                        name="./infoctaURL"
+                                        rootPath="/content/talentacademy"/>
+                                    <target
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldDescription="Select the checkbox to open link on new tab"
+                                        name="./infotarget"
+                                        text="Open in New Tab"
+                                        uncheckedValue="_self"
+                                        value="_blank"/>
+                                </items>
+                            </column>
+                        </items>
+                    </coursedetails>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

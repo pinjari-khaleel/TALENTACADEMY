@@ -1,0 +1,252 @@
+/*******************************
+             Headers
+*******************************/
+
+.title1, .title2, .title3, .title4, .title5, .title6 {
+  font-family: $brown;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.title1 {
+  font-size: 3.4375rem;
+  line-height: 119%;
+  letter-spacing: 0.4125rem;
+}
+
+.title2 {
+  font-size: 3.125rem;
+  line-height: 120%;
+  letter-spacing: 0.375rem;
+}
+
+.title3 {
+  font-size: 2.3125rem;
+  line-height: 108%;
+  letter-spacing: 0.2775rem;
+}
+
+.title4 {
+  font-size: 1.75rem;
+  line-height: 140%;
+  letter-spacing: 0.21rem;
+}
+
+.title5 {
+  font-size: 1.5rem;
+  line-height: 120%;
+  letter-spacing: 0.18rem;
+}
+.title6 {
+  font-size: 1.25rem;
+  line-height: 143%;
+  letter-spacing: 0.15rem;
+}
+
+
+@include md {
+  .title1 {
+    font-size: 7.4375rem;
+    line-height: 134%;
+    letter-spacing: 0.8925rem;
+  }
+
+  .title2 {
+    font-size: 5.5625rem;
+    line-height: 112%;
+    letter-spacing: 0.6675rem;
+  }
+
+  .title3 {
+    font-size: 4.1875rem;
+    line-height: 119%;
+    letter-spacing: 0.5025rem;
+  }
+
+  .title4 {
+    font-size: 3.125rem;
+    line-height: 120%;
+    letter-spacing: 0.375rem;
+  }
+
+  .title5 {
+    font-size: 2.3125rem;
+    line-height: 140%;
+    letter-spacing: 0.2775rem;
+  }
+  .title6 {
+    font-size: 1.75rem;
+    line-height: 143%;
+    letter-spacing: 0.21rem;
+  }
+}
+
+/*******************************
+             Text
+*******************************/
+
+.body1,
+.body2,
+.body3,
+.body4,
+.body5,
+.body6 {
+  font-family: $brown;
+  font-weight: 300;
+}
+
+.body1 {
+  font-size: 1.75rem;
+  line-height: 143%;
+}
+
+.body2 {
+  font-size: 1.3125rem;
+  line-height: 148%;
+}
+
+.body3 {
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+.body4 {
+  font-size: 0.875rem;
+  line-height: 150%;
+}
+
+.body5 {
+  font-size: 0.75rem;
+  line-height: 150%;
+}
+.body6 {
+  font-size: 0.625rem;
+  line-height: 140%;
+}
+
+@include md {
+  .body1 {
+    font-size: 3.125rem;
+    line-height: 132%;
+  }
+
+  .body2 {
+    font-size: 2.3125rem;
+    line-height: 135%;
+  }
+
+  .body3 {
+    font-size: 1.75rem;
+    line-height: 143%;
+  }
+
+  .body4 {
+    font-size: 1.3125rem;
+    line-height: 148%;
+  }
+
+  .body5 {
+    font-size: 1rem;
+    line-height: 150%;
+  }
+  .body6 {
+    font-size: 0.875rem;
+    line-height: 150%;
+  }
+}
+
+p {
+  font-family: $brown;
+  font-weight: 300;
+  margin: 0 0 1rem;
+  line-height: 143%;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/*-------------------
+      Caption
+--------------------*/
+.captionL {
+  font-family: $brown;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 143%;
+  letter-spacing: 0.135rem;
+  text-transform: uppercase;
+  @include md {
+    font-size: 1.3125rem;
+    line-height: 120%;
+    letter-spacing: 0.1575rem;
+  }
+}
+.captionM {
+  font-family: $brown;
+  font-weight: 400;
+  font-size: .875rem;
+  line-height: 140%;
+  letter-spacing: 0.105rem;
+  text-transform: uppercase;
+  @include md {
+    font-size: 1rem;
+    line-height: 140%;
+    letter-spacing: 0.12rem;
+  }
+}
+.captionS {
+  font-family: $brown;
+  font-weight: 400;
+  font-size: 0.625rem;
+  line-height: 120%;
+  letter-spacing: 0.075rem;
+  text-transform: uppercase;
+  @include md {
+    font-size: .75rem;
+    line-height: 120%;
+    letter-spacing: 0.09rem;
+  }
+}
+
+
+/*-------------------
+        Links
+--------------------*/
+
+a {
+  font-family: $brown;
+  font-weight : 400;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.rtl,
+[dir="rtl"],[lang="ar"] {
+  .title1,
+  .title2,
+  .title3,
+  .title4,
+  .title5,
+  .title6 {
+    font-family: $bukra;
+    letter-spacing: normal !important;
+  }
+  .body1,
+  .body2,
+  .body3,
+  .body4,
+  .body5,
+  .body6,p {
+    font-family: $zarid;
+    font-weight: normal;
+    letter-spacing: normal !important;
+  }
+  .captionS, .captionM, .captionL {
+    letter-spacing: normal !important;
+  }
+}

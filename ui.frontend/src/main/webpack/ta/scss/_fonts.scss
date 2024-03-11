@@ -1,0 +1,43 @@
+$brown: Brown, sans-serif;
+$bukra: Bukra, sans-serif;
+$zarid: Zarid, sans-serif;
+ 
+@font-face {
+  font-family: "Brown";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../resources/fonts/Brown-Light.woff2") format("woff2"),
+    url("../resources/fonts/Brown-Light.woff") format("woff");
+}
+ 
+@font-face {
+  font-family: "Brown";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../resources/fonts/Brown-Regular.woff2") format("woff2"),
+    url("../resources/fonts/Brown-Regular.woff") format("woff");
+}
+ 
+@font-face {
+  font-family: "Brown";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../resources/fonts/Brown-Bold.woff2") format("woff2"),
+    url("../resources/fonts/Brown-Bold.woff") format("woff");
+}
+ 
+@font-face {
+  font-family: "Bukra";
+  font-weight: bold;
+  font-style: normal;
+  src: local("Bukra-Regular"),
+    url("../resources/fonts/bukra-regular.woff2") format("woff2");
+}
+ 
+@font-face {
+  font-family: "Zarid";
+  font-weight: bold;
+  font-style: normal;
+  src: local("Zarid-Regular"),
+    url("../resources/fonts/zarid-regular.woff2") format("woff2");
+}

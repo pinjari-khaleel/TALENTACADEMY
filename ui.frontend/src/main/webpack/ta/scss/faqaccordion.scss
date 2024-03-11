@@ -1,0 +1,102 @@
+.ta-faq {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 1.25rem;
+  gap: 1.875rem;
+  @include md() {
+    gap: 3.5rem;
+    padding: 6rem 4.375rem;
+    max-width: 1640px;
+    margin: auto;
+  }
+  .title4 {
+    max-width: 40.1875rem;
+  }
+  .faq-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 1.25rem;
+    @include md() {
+      grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
+    }
+    .accordion-open-border {
+      border: 1px solid map-get($colors, "black");
+    }
+    .ta-accordion {      
+      height: fit-content;      
+      padding: 0 1.875rem;
+      @include md() {
+        padding: 0 3.875rem 0 3.125rem;
+      }
+      .accordion-item {
+        padding: 1.875rem 0;
+        @include md() {
+          padding: 2.8rem 0;
+        }
+      }
+      .accordion-item-content {
+        p {
+          color: map-get($colors, "black75");
+          font-size: 1rem;
+        }
+      }
+      .accordion-item-header {        
+        &::after {
+          top: 2px;
+        }
+        .rounded-numbers {
+          display: none;
+        }
+        @include md() {
+          min-height: 2.75rem;
+          align-items: center;
+          &::after {
+            top: 0.5rem;
+          }
+        }
+        h5 {
+          margin: 0;
+          margin-right: 1rem;
+          font-size: 0.875rem;
+          letter-spacing: 0.105rem;
+          @include md() {
+            margin-right: 1.5rem;
+            font-size: 1rem;
+            letter-spacing: 0.12rem;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+      .accordion-item-header[aria-expanded="true"] {
+        &::after {
+          transform: rotate(0deg);
+          top: 6px;
+          @include md() {          
+            top: 1.25rem;
+          }
+        }        
+      }
+    }
+  }
+  .load-more-button {
+    width: fit-content;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+[dir="rtl"] {
+  .ta-faq .accordion-item-header {    
+    h5 {
+      text-align: right;
+      margin-left: 1.5rem;
+      margin-right: 0;
+    }
+    &::after {
+      right: 100%;      
+    }
+  } 
+}

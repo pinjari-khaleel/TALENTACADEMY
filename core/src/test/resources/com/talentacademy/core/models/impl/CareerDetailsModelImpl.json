@@ -1,0 +1,43 @@
+{
+    "careerdetails": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "talentacademy/components/content/careerdetails",
+        "jobTitle": "Travel Advisor",
+        "recruitmentStatus": "Actively Recruiting",
+        "demandGrowthLabel": "Demand Growth Label",
+        "demandGrowthValue": "Demand Growth Value",
+        "salaryRangeLabel": "Salary Range Label",
+        "salaryRangeValue": "Salary Range Value",
+        "potentialEmployersLabel": "Potential Employers Label",
+        "registerInterestCtaLabel": "Register Interest",
+        "registerInterestCtaLink": "externallink",
+        "openInNewTab": "true",
+        "filterTags": "[talent-academy:career-listing/recruitment-status/actively-recruitment,talent-academy:career-listing/sector/tourism,talent-academy:career-listing/experience-level/2-3-years-experience]",
+        "roleDetails": {
+            "item0": {
+                "jcr:primaryType": "nt:unstructured",
+                "label": "Role",
+                "description": "Job Description"
+            },
+            "jcr:primaryType": "nt:unstructured"
+        },
+        "employerIcons": {
+            "item0": {
+                "jcr:primaryType": "nt:unstructured",
+                "employers": "/content/dam/talentacademy/icons/lg-logo.svg"
+            },
+            "jcr:primaryType": "nt:unstructured"
+        },
+        "badgeList": {
+            "jcr:primaryType": "nt:unstructured",
+            "item0": {
+                "jcr:primaryType": "nt:unstructured",
+                "badge": "/content/dam/talentacademy/badges/badge-1.svg"
+            },
+            "item1": {
+                "jcr:primaryType": "nt:unstructured",
+                "badge": "/content/dam/talentacademy/badges/badge-2.svg"
+            }
+        }
+    }
+}

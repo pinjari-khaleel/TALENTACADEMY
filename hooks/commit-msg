@@ -1,0 +1,25 @@
+#!/bin/sh
+# Get the first line of the commit message file
+MESSAGE_FIRST_LINE=$(head -n 1 "$1")
+MESSAGE_SECOND_LINE=$(tail -n 1 "$1")
+SIZE=$(echo -n "$MESSAGE_SECOND_LINE" | wc -c)
+#echo "$SIZE"
+MAX_SIZE=72
+# Check if the message is empty
+if [ -z "$MESSAGE_FIRST_LINE" ]; then
+  echo "Error: Commit message cannot be empty."
+  exit 1
+fi
+if [[ "$SIZE" -gt "$MAX_SIZE" ]];then
+  echo "Description size exceeds, should be less than 72 characters"
+  exit 1
+fi
+# Check if the message matches the regex
+regex="[A-Za-z]+[[:space:]][A-Za-z]+-[0-9]+:[[:space:]][A-Za-z]+"
+if [[ ! "$MESSAGE_FIRST_LINE" =~ $regex ]]; then
+  echo "$MESSAGE_FIRST_LINE"
+  echo "ERROR: Commit message should in form of <type> <Ticket number>: <Subject> "
+  exit 1
+fi
+# Message is valid, allow commit
+exit 0

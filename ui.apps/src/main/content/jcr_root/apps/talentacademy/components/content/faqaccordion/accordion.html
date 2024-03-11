@@ -1,0 +1,14 @@
+<template data-sly-template.include="${@ accordionObj}">
+    <div class="ta-accordion">
+        <div class="accordion-item" role="presentation">
+            <button class="accordion-item-header" aria-expanded="false">
+                <h5 class="captionM">
+                    ${accordionObj.question}
+                </h5>
+            </button>
+            <div class="accordion-item-content" role="region" aria-labelledby="section1-header">
+                <p>${accordionObj.answer}</p>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,31 @@
+<template data-sly-template.include="${@ curriculumObj, details, type}">
+  <h4 class="title6" data-sly-test="${curriculumObj.header}">${curriculumObj.header}</h4>
+ 	<sly data-sly-list.curriculums="${details.moduleList}">
+	<sly data-sly-test="${type == 'static' || curriculumObj.currentPageLocale == curriculums.locale}">
+  <div class="ta-accordion">
+    <div class="accordion-item" role="presentation">
+      <button class="accordion-item-header" aria-expanded="false">
+        <p class="rounded-numbers">${curriculumsList.count}</p>
+        <h5 class="captionM">${curriculums.title}
+			<sly data-sly-test="${type == 'static'}">
+			  <span>${curriculums.subtitle}</span>
+			</sly>
+			<sly data-sly-test="${type == 'dynamic'}">
+			  <sly data-sly-set.durHours="${curriculums.durationHours}"></sly>
+			  <sly data-sly-set.durMins="${curriculums.durationMinutes}"></sly>
+			  <sly data-sly-test="${durHours || durMins}">
+			    <sly data-sly-test="${durHours}" data-sly-set.hours="${durHours} ${'hours' @i18n}"></sly>
+			    <sly data-sly-test="${durMins}" data-sly-set.mins="${durMins} ${'minutes' @i18n}"></sly>
+			  </sly>
+			  <span>${hours || mins} . ${curriculums.format @i18n}</span>
+			</sly>
+        </h5>
+      </button>
+      <div class="accordion-item-content" role="region" aria-labelledby="section1-header">
+        <p data-sly-test="${curriculums.description}">${curriculums.description}</p>
+      </div>
+    </div>
+  </div>
+  </sly>
+ 	</sly>
+</template>

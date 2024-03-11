@@ -1,0 +1,22 @@
+<!-- Google Tag Manager (noscript) -->
+<sly data-sly-use.model="com.talentacademy.core.models.DataLayerModel"/>
+<sly data-sly-test="${model.gtmId}">
+<noscript>
+    <iframe
+        src="https://www.googletagmanager.com/ns.html?id=${model.gtmId @ context='text'}"
+        height="0" width="0"
+        style="display:none;visibility:hidden">
+    </iframe>
+</noscript>
+</sly>
+<!-- End Google Tag Manager (noscript) -->
+<div class="app" id="app">
+    <sly data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page"
+    data-sly-use.ta="com.talentacademy.core.models.PageConfigModel"></sly>
+    <sly data-sly-test.languageDirection="${ta.languageDirection ?  ta.languageDirection : 'ltr'}"></sly>
+    <div data-component="app-root" data-theme="neom" lang="${page.language}" dir="${languageDirection}" class="app__root -isReady ${languageDirection}">
+        <sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"
+     data-sly-repeat.child="${templatedContainer.structureResources}"
+     data-sly-resource="${child.path @ resourceType=child.resourceType, decorationTagName='div'}"></sly>
+    </div>
+</div>

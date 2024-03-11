@@ -1,0 +1,181 @@
+.grid-listing-container {
+	display: flex;
+	flex-direction: column;
+	background: map-get($colors, "cream25");
+	padding-bottom: 5rem;
+	.ta-pill, .ta-cancel-button {
+		font-family: $brown;       
+	}
+	
+	.grid-listing-header {
+		padding-bottom: 2.5rem;
+		display: inline-flex;
+		justify-content: space-between;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+
+		.title5 {
+			letter-spacing: 0.2775rem;
+			text-transform: uppercase;
+			padding: 1.88rem 1.25rem;
+			width: 100%;
+
+			@include md() {
+				max-width: 53.5rem;
+				padding: 0;
+			}
+		}
+
+		@include md() {
+			.body4 {
+				margin-top: 1.25rem;
+			}
+
+			flex-direction: row;
+			padding: 0rem 4.17rem;
+		}
+	}
+
+	.grid-applied-filters {
+		display: flex;
+		align-items: center;
+		padding: 0 1.25rem;
+		gap: 0.625rem;
+		overflow-x: auto;
+
+		@include md {
+			padding: 0rem 4.17rem;
+		}
+
+		.ta-pill {
+			margin-bottom: 2.75rem;
+		}
+
+		.ta-pill-selected {
+			background-color: map-get($colors, "cream25");
+			border: 1px solid map-get($colors, "black20");
+			position: relative;
+			width: max-content;
+			padding-right: 2.625rem;
+
+			&::after {
+				background: url("../resources/images/closeicon.svg") no-repeat;
+				position: absolute;
+				content: "";
+				width: 0.75rem;
+				height: 0.75rem;
+				display: inline-block;
+				top: 16px;
+				right: 1.25rem;
+				background-size: contain;
+			}
+		}
+	}
+
+	.ta-pill {
+		border-radius: 30px;
+		padding: 0.75rem 1.25rem;
+		background: map-get($colors, "white");
+		cursor: pointer;
+		border: 1px solid map-get($colors, "black20");
+		color: map-get($colors, "black75");
+		font-size: .625rem;
+		@include md {
+		  font-size: .75rem;
+		}
+	}
+
+	.ta-pill-selected {
+		border: 1px solid map-get($colors, "gold");
+	}
+
+	.grid-listing {
+		padding-inline: 1.25rem;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+		gap: 1.25rem;
+
+		@include md() {
+			padding: 0 4.17rem;
+		}
+
+		.ta-career-cardlisting {
+			.ta-tag {
+				border: 1px solid;
+			}
+
+			.career-card-content {
+				.captionL {
+					font-size: 1rem;
+				}
+
+				.captionS {
+					font-size: 0.75rem;
+				}
+			}
+		}
+	}
+
+	.load-more-button {
+		display: flex;
+		justify-self: center;
+		align-self: center;
+		margin-top: 1.88rem;
+
+		@include md() {
+			width: fit-content;
+			margin-top: 3.75rem;
+		}
+	}
+}
+
+.course-listing-container {
+	background-color: map-get($colors, "cream50");
+	padding-inline: 1.25rem;
+
+	@include md {
+		padding-inline: 4.17rem;
+	}
+
+	.grid-listing-header {
+		flex-direction: column;
+		align-items: start;
+		max-width: 53.5rem;
+
+		@include md {
+			padding-top: 6.25rem;
+			margin-bottom: 3.75rem;
+			padding-inline: 0;
+			flex-direction: column;
+		}
+
+		.title5 {
+			padding-inline: 0;
+		}
+	}
+
+	.grid-listing {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+		padding: 0;
+
+		@include md() {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+
+		gap: 1.25rem;
+	}
+
+	.course-card {
+		width: 100%;
+
+		.course-card__image img {
+			width: 100%;
+		}
+
+		@include md() {
+			max-width: none;
+		}
+	}
+}

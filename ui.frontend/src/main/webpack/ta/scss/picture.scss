@@ -1,0 +1,45 @@
+.image {
+    width: 100%;
+    position: relative;
+    max-height: 385px;
+    overflow: hidden;
+    @include md {
+        max-height: 900px;
+    }
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+    &::before{
+        content: "";
+        width: 100%;
+        height: 360px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;  
+        @include md {
+            height: 380px;
+        }  
+    }
+    & > figure {
+        text-align: center;
+        .cmp-image__title {
+            position: absolute;
+            top: 38px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 0 31px;
+            word-wrap: break-word;
+            @extend .title4;
+            color:  map-get($colors, "white");
+            @include md {
+                top: 82px;
+                padding: 0;
+            }
+        }
+    }
+}

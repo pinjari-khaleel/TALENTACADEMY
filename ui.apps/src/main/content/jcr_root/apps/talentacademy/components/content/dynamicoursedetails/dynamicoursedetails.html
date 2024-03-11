@@ -1,0 +1,32 @@
+<sly data-sly-use.model="${'com.talentacademy.core.models.CourseDetailsModel' @ type='dynamic'}">
+<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+  <sly data-sly-list.coursedetails="${model.courseDetails}">
+    <div class="bg-cream25 ta-career-details" data-component="${analyticsModel.title}">
+      <section class="main">
+        <sly data-sly-use.infocard="${'/apps/talentacademy/components/content/coursedetails/infocard.html'}"
+          data-sly-call="${infocard.include @  infocardObj=model, details=coursedetails, type='dynamic'}" />
+        <div class="info-list">
+          <div>
+            <div class="ta-rich-text-content-wrapper">
+              <sly>
+                <div class="info-item">
+                  <sly data-sly-list.localizedData="${coursedetails.courseLocalizedDataList}">
+                    <sly
+                      data-sly-test="${localizedData.richTextOverview && localizedData.locale == model.currentPageLocale}">
+                      ${localizedData.richTextOverview @context='html'}
+                    </sly>
+                  </sly>
+                </div>
+              </sly>
+            </div>
+            <div>
+              <sly data-sly-test="${coursedetails.moduleList}" 
+              	data-sly-use.curriculum="${'/apps/talentacademy/components/content/coursedetails/curriculum.html'}"
+                data-sly-call="${curriculum.include @  curriculumObj=model, details=coursedetails, type='dynamic'}" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </sly>
+</sly>

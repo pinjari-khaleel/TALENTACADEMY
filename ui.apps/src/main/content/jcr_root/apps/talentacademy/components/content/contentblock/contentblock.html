@@ -1,0 +1,42 @@
+<sly data-sly-use.model="com.talentacademy.core.models.ContentBlockModel">
+	<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+	<sly data-sly-test="${properties.contentBlockVariation == 'withImage'}">
+	    <section class="ta-content-block" data-component="${analyticsModel.title}">
+	        <div class="ta-cb-content-section">
+	            <h4 class="title4">${model.header}</h4>
+	            <p class="ta-cb-description">
+	                ${model.description}
+	            </p>
+	            <div class="ta-cb-stat-section" data-sly-test="${model.contentDetails}">
+	                <sly data-sly-list.details="${model.contentDetails}">
+	                    <dl class="ta-cb-stat-column">
+	                        <dt class="ta-cb-stat-header">${details.label}</dt>
+	                        <dd class="ta-cb-stat-subheader" data-sly-test="${detailsList.first}">${details.value}</dd>
+	                        <dd class="ta-cb-stat-numbers" data-sly-test="${!detailsList.first}">${details.value}</dd>
+	                    </dl>
+	                </sly>
+	            </div>
+	            <div class="banner__buttons" data-sly-test="${properties.enableCta == 'true'}">
+	                <sly
+	                    data-sly-resource="${ @ path='ctabutton', resourceType='talentacademy/components/button', decorationTagName='div'}">
+	                </sly>
+	            </div>
+	        </div>
+	        <img class="ta-cb-image ta-cb-section" src="${model.fileReference}" alt="${model.altText}" />
+	    </section>
+	</sly>
+    <sly data-sly-test="${properties.contentBlockVariation == 'withoutImage'}">
+		<section class="ta-contentblock" data-component="${analyticsModel.title}">
+			<div class="ta-contentblock__container">
+				<h4 data-sly-test="${model.pretitle}" class="captionM">${model.pretitle}</h4>
+				<h5 data-sly-test="${model.title}" class="title4">${model.title}</h5>	
+				<div>${model.descriptionText @context='html'}</div>			
+				<div class="banner__buttons" data-sly-test="${properties.enableButton == 'true'}">
+					<sly
+						data-sly-resource="${ @ path='ctabutton', resourceType='talentacademy/components/button', decorationTagName='div'}">
+					</sly>
+				</div>
+			</div>
+		</section>
+	</sly>
+</sly>

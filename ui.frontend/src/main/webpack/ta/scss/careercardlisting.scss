@@ -1,0 +1,64 @@
+.ta-career-cardlisting {
+  background: map-get($colors, "white");
+  border: 1px solid map-get($colors, "black20");
+  width: 100%;
+  padding: 2.5rem 1.875rem;
+  display: flex;
+  flex-direction: column;
+  .ta-tag {
+    width: fit-content;
+    margin-bottom: 1.25rem;
+  }
+
+  .career-card-content {
+    display: flex;
+    flex-direction: column;
+
+    .title6 {
+      text-overflow: ellipsis;
+      line-height: 143%;
+      height: 4.8125rem;
+
+      @include md() {
+        font-size: 1.5rem;
+        line-height: 130%;
+        margin-bottom: 1.25rem;
+      }
+    }
+
+    .captionS {
+      font-weight: 400;
+      letter-spacing: 0.09rem;
+      text-transform: uppercase;
+      font-family: $brown;
+    }
+    .captionL {
+      font-weight: 400;
+      letter-spacing: 0.09rem;
+      text-transform: uppercase;
+      font-family: $brown;
+      margin-bottom: 1.25rem;
+      font-size: 0.75rem;
+      @include md() {
+		 font-size: 1rem;
+	  }
+    }
+    .badges-section {      
+      .captionS {
+        margin-bottom: 0.625rem;
+      }
+      .course-images-wrapper {
+        display: flex;
+        img {
+          margin-right: -4%;
+          margin-bottom: 1.875rem;
+        }
+      }
+    }
+  }
+
+  .button {
+    width:fit-content;
+  }
+
+}

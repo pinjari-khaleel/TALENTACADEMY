@@ -1,0 +1,22 @@
+<template data-sly-template.group="${@ navigationItems='The navigation items for the current level'}">
+
+    <!-- Mobile navigation -->
+    <nav class="ta-main-nav">
+        <sly data-sly-use.mobileTemplate="mobile.html"
+            data-sly-call="${mobileTemplate.mobilenav @ mobileitems=navigationItems}"></sly>
+            
+        <ul class="ta-header-links" data-sly-list="${navigationItems}">
+            <sly data-sly-test.activeCheckNav="${item.path in currentPage.path}"></sly>
+            <li class="ta-header-link ${activeCheckNav == true ? 'ta-header-active' : '' }"><a href="${item.URL}">${item.title}</a></li>
+            <sly data-sly-test="${itemList.last}">
+                <li class="ta-header-link"
+                    data-sly-resource="${'lang-nav-desktop' @resourceType='/apps/talentacademy/components/structure/languagenavigation'}">
+                </li>
+            </sly>
+        </ul>
+        <!-- Desktop dynamic Level 1 navigation -->
+    </nav>
+    </div>
+    <sly data-sly-use.desktopTemplate="desktop.html"
+        data-sly-call="${desktopTemplate.desktopNavItem @ desktopNavItems=navigationItems}"></sly>
+</template>

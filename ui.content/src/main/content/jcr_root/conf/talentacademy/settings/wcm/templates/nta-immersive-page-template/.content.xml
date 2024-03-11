@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        cq:templateType="/conf/talentacademy/settings/wcm/template-types/page-template-type"
+        jcr:description="NTA Immersive template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="NTA Immersive page template"
+        status="enabled"/>
+</jcr:root>

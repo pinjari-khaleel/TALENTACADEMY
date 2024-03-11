@@ -1,0 +1,16 @@
+{
+	"jcr:primaryType": "nt:unstructured",
+	"gridType": "grid",
+	"caption": "Caption",
+	"iconGridTitle": "Icon Grigd Title",
+	"iconGridDescription": "Icon Grigd Desceiption",
+	"gridIconsList": {
+		"jcr:primaryType": "nt:unstructured",
+		"item0": {
+			"jcr:primaryType": "nt:unstructured",
+			"icon": "/content/dam/dummyicon.png",
+			"iconText": "Icon Label",
+			"altText": "Alt Text"
+		}
+	}
+}

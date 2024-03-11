@@ -1,0 +1,62 @@
+.ta-sitemap {
+  padding: 60px 0;
+  @include md {
+    padding: 100px 0;
+  }
+
+  &__heading {
+    padding: 10px 20px 0 20px;
+    @include md {
+      padding: 0 70px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__section {
+    padding: 40px 20px;
+    border-bottom: 1px solid map-get($colors, "black10");
+    @include md {
+      padding: 50px 70px;
+    }
+
+    .captionL {
+      color: map-get($colors, "darkGold");
+      margin-bottom: 30px;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__links {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    @include md {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 83px;
+    }
+    a {
+      letter-spacing: 0.96px;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+      color: map-get($colors, "black75");
+      line-height: 200%;
+      &:hover {
+        color: map-get($colors, "darkGold");
+      }
+    }
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  &__block &__subtext {
+    font-weight: 300;
+    text-transform: none;
+    line-height: 120%;
+  }
+}
+

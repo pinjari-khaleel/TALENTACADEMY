@@ -1,0 +1,21 @@
+{
+  "google-recaptcha": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Thu Dec 22 2022 16:26:01 GMT+0530",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:createdBy": "admin",
+      "jcr:title": "Neom Recaptcha",
+      "reCaptchaSecretKey": "6LeEwEopAAAAAAGeBTHfxKfvlyDRBoR7MjW3hr7L",
+      "cq:template": "/apps/neom/components/cloudservices/google-recaptcha/template",
+      "jcr:lastModifiedBy": "admin",
+      "jcr:created": "Thu Dec 22 2022 16:26:01 GMT+0530",
+      "cq:lastModified": "Thu Dec 22 2022 16:26:34 GMT+0530",
+      "reCaptchaSiteKey": "6LeEwEopAAAAAMgt4jJOVEifgA1sh1xL3spqnx-K",
+      "jcr:lastModified": "Thu Dec 22 2022 16:26:34 GMT+0530",
+      "sling:resourceType": "neom/components/cloudservices/google-recaptcha/component",
+      "cq:lastModifiedBy": "admin"
+    }
+  }
+  }

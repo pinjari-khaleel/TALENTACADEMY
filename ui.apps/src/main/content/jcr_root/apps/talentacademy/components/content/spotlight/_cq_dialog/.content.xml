@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Spotlight"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <caption
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation//form/textfield"
+                        fieldDescription="Please enter the caption"
+                        fieldLabel="Caption"
+                        name="./caption"/>
+                    <learningPathway
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation//form/textfield"
+                        fieldDescription="Please enter the tag label."
+                        fieldLabel="Enter the tag label"
+                        name="./learningPathway"/>
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Please enter the title"
+                        fieldLabel="Title"
+                        name="./title"/>
+                    <description
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                        fieldDescription="Please enter the description"
+                        fieldLabel="Description"
+                        name="./description"/>
+                    <desktopBackgroundImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        fieldLabel="Desktop Background Image"
+                        fileReferenceParameter="./desktopBackgroundImage"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        name="./file"
+                        rootPath="/content/dam/talentacademy"/>
+                    <mobileBackgroundImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        fieldLabel="Mobile Background Image"
+                        fileReferenceParameter="./mobileBackgroundImage"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        name="./file"
+                        rootPath="/content/dam/talentacademy"/>
+                    <imageAltText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Background Image Alt Text"
+                        name="./imageAltText"/>
+                    <backgroundVideo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        fieldDescription="This background video will override the background image"
+                        fieldLabel="Background Video"
+                        fileReferenceParameter="./backgroundVideo"
+                        mimeTypes="[video/mp4,video/mpeg,video/mpg]"
+                        name="./file"
+                        rootPath="/content/dam/talentacademy"/>
+                    <backgroundVideoPoster
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        fieldDescription="This poster will show when background video takes time to load"
+                        fieldLabel="Background Video Poster"
+                        fileReferenceParameter="./backgroundVideoPoster"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        name="./file"
+                        rootPath="/content/dam/talentacademy"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

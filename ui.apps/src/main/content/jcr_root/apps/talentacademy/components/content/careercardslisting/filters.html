@@ -1,0 +1,33 @@
+<!-- Filters Statrs -->
+<template data-sly-template.include="${@ model}">
+    <div class="grid-filters" data-sly-test="${model.getIdTagData}">
+        <button class="grid-filter-header button">
+            <span class="body5">${model.filtersLabel}</span>
+        </button>
+
+        <div class="grid-filter-modal">
+            <sly data-sly-list.productTagName="${model.getIdTagData}">
+                <div class="ta-accordion">
+                    <div class="accordion-item" role="presentation">
+                        <button class="accordion-item-header" aria-expanded="false" aria-labelledby="summary">
+                            <p data-sly-test="${productTagName[0]}">${productTagName[0]}</p>
+                        </button>
+
+                        <div class="accordion-item-content" role="region" aria-labelledby="description" data-sly-list.tagName="${model.getIdTagData[productTagName]}">
+                            <sly data-sly-list.childFilter="${model.getIdTagData[productTagName][tagName]}">
+                                <div class="ta-pill" data-filterTag="${childFilter}">${tagName}</div>
+                            </sly>
+                        </div>
+                    </div>
+                </div>
+            </sly>
+            <div class="grid-filter-buttons">
+                <button class="ta-cancel-button button--secondary" id="cancelFilter">${model.clearFilterLabel}</button>
+                <button class="button button--primary_black cta-link" id="applyFilter" data-sly-test="${model.applyFilterLabel}">
+                    <span class="cta-link__text">${model.applyFilterLabel}</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</template>
+<!-- Filters end -->

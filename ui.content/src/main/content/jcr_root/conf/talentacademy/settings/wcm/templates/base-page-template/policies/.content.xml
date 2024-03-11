@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:policy="talentacademy/components/page/policy"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="wcm/core/components/policies/mappings">
+        <root
+            cq:policy="talentacademy/components/container/policy_1574694950110"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/core/components/policies/mapping">
+            <experiencefragment-header
+                cq:policy="talentacademy/components/experiencefragment/policy_header"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping"/>
+            <experiencefragment-footer
+                cq:policy="talentacademy/components/experiencefragment/policy_footer"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping"/>
+            <container
+                cq:policy="talentacademy/components/container/policy_all_components"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping">
+                <talentacademy jcr:primaryType="nt:unstructured">
+                    <components jcr:primaryType="nt:unstructured">
+                        <button
+                            cq:policy="talentacademy/components/button/policy_1698914359307"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                        <content jcr:primaryType="nt:unstructured">
+                            <carouselcontainer
+                                cq:policy="talentacademy/components/content/carouselcontainer/policy_1701761462509"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <contentblock
+                                cq:policy="talentacademy/components/content/contentblock/policy_1701172395697"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <columncontrol
+                                cq:policy="talentacademy/components/content/columncontrol/policy_1701672297591"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                        </content>
+                        <teaser
+                            cq:policy="talentacademy/components/teaser/policy_1308332899181300"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                        <text
+                            cq:policy="talentacademy/components/text/policy_98790830545500"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                        <form jcr:primaryType="nt:unstructured">
+                            <ntaformcontainer cq:policy="talentacademy/components/form/ntaformcontainer/policy_14830315172861"
+                                       jcr:primaryType="nt:unstructured"
+                                       sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <radiobuttoncontainer cq:policy="talentacademy/components/form/radiobuttoncontainer/container"
+                                 jcr:primaryType="nt:unstructured"
+                                 sling:resourceType="wcm/core/components/policies/mapping"/>
+                        </form>
+                    </components>
+                </talentacademy>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

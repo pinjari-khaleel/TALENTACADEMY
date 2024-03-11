@@ -1,0 +1,105 @@
+<template data-sly-template.include="${@ type, courseImage, altTextForImage, carouselImageLabelText, title, coursesCount, durationHours, durationMinutes, badgesTitle, badgesList, contentTypeID, pagePath, courseModel}">
+<sly data-sly-use.imageTemplate="/apps/talentacademy/components/content/atoms/dmediaimage.html"></sly>
+<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+  <div class="course-card" data-component="${analyticsModel.title}">
+    <sly data-sly-set.courseID="${'course' in contentTypeID ? contentTypeID : ''}" />
+    <sly data-sly-set.learningPathwayID="${'learningProgram' in contentTypeID ? contentTypeID : ''}" />
+    <sly data-sly-test="${courseImage}">
+      <div class="course-card__image">
+		  <sly data-sly-call="${imageTemplate.image @ 
+              imagePath=courseImage, alt=altTextForImage, mobileImgWidth='280', desktopImgWidth='420'}"></sly>
+        <sly data-sly-test="${carouselImageLabelText}">
+          <div class="ta-tag ta-tag_black ta-tag_size-2 bg-white">
+            ${carouselImageLabelText @i18n}
+          </div>
+        </sly>
+      </div>
+    </sly>
+    <div class="course-card__description bg-cream ${courseImage ? '' : 'course-card__description--left'}">
+      <sly data-sly-test="${carouselImageLabelText}">
+        <div class="ta-tag ta-tag_black ta-tag_size-2 bg-white">
+          ${carouselImageLabelText @i18n}
+        </div>
+      </sly>
+      <div class="course-card__title">
+        <sly data-sly-test="${title}">
+          <h3 class="captionL">
+            ${title}
+          </h3>
+        </sly>
+      </div>
+      <div class="course-card__titles">
+        <sly data-sly-test="${type == 'static'}">
+            <sly data-sly-test="${coursesCount}">
+                <h4 class="captionM">${coursesCount}</h4>
+            </sly>
+            <sly data-sly-test="${!coursesCount}">
+                <h4 class="captionM">--</h4>
+            </sly>
+            <sly data-sly-test="${badgesTitle}">
+                <h5 class="captionS">${badgesTitle}</h5>
+            </sly>
+            <sly data-sly-test="${badgesList}">
+                <ul class="course-badges" data-sly-list.badges="${badgesList}">
+                  <li>
+                    <sly data-sly-set.altText="badge-${badgesList.count}" />
+                    <img src="${badges.icon ? badges.icon : badges}" alt="${badges.altText ? badges.altText : altText}">
+                  </li>
+                </ul>
+            </sly>
+        </sly>
+        <sly data-sly-test="${type == 'dynamic'}">
+            <sly data-sly-test="${coursesCount}">
+              <h4 class="captionM">${coursesCount} ${'courses' @i18n}</h4>
+            </sly>
+            <sly data-sly-test="${(!coursesCount) && (durationHours || durationMinutes)}">
+              <sly data-sly-set.hours="${durationHours} ${'hours' @i18n}"></sly>
+              <sly data-sly-set.mins="${durationMinutes} ${'minutes' @i18n}"></sly>
+              <sly data-sly-test="${(durationHours) && (durationMinutes)}">
+                <h4 class="captionM">${hours} ${mins}</h4>
+              </sly>
+              <sly data-sly-test="${(durationHours) && (!durationMinutes)}">
+                <h4 class="captionM">${hours}</h4>
+              </sly>
+              <sly data-sly-test="${(!durationHours) && (durationMinutes)}">
+                <h4 class="captionM">${mins}</h4>
+              </sly>
+            </sly>
+            <sly data-sly-test="${(!coursesCount) && (!durationHours) && (!durationMinutes)}">
+                <h4 class="captionM">--</h4>
+            </sly>
+            <sly data-sly-test="${badgesList}">
+                <h5 class="captionS">${'Earn These Badges:' @i18n}</h5>
+                <ul class="course-badges" data-sly-list.badges="${badgesList}">
+                    <sly data-sly-test="${badgesList.count <= 3}">
+                        <li>
+                            <img src="${badges.badgeImage}" alt="badge-${badgesList.count}">
+                        </li>
+                    </sly>
+                </ul>
+            </sly>
+        </sly>
+      </div>
+      <sly data-sly-test="${courseModel.primaryButtonLabel || courseModel.secondaryButtonLabel}">
+        <div class="course-card__buttons">
+          <sly data-sly-test="${courseModel.primaryButtonLabel}">
+            <a class="button button--primary_darkgold has-no-arrow button--small cta-link"
+              href="${courseModel.primaryButtonLink}" target="${courseModel.primaryButtonTarget}"
+              data-learningPathwayID="${learningPathwayID}" data-courseID="${courseID}">
+              <span class="cta-link__text">${courseModel.primaryButtonLabel}</span>
+            </a>
+          </sly>
+          <sly data-sly-test="${courseModel.secondaryButtonLabel}">
+			  <sly data-sly-test="${courseModel.secondaryButtonLink && contentTypeID}" data-sly-set.uri="${courseModel.secondaryButtonLink}?loid=${contentTypeID}"></sly>
+			  <sly data-sly-test="${courseModel.secondaryButtonLink && !contentTypeID}" data-sly-set.uri="${courseModel.secondaryButtonLink}"></sly>
+			
+            <a class="button button--secondary has-no-arrow button--small cta-link"
+              href="${pagePath || uri}" target="${courseModel.secondaryButtonTarget}">
+              <span class="cta-link__text">${courseModel.secondaryButtonLabel}</span>
+            </a>
+          </sly>
+        </div>
+      </sly>
+    </div>
+  </div>
+</template>

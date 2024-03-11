@@ -1,0 +1,35 @@
+<sly data-sly-use.model="com.talentacademy.core.models.BlinderModel"></sly>
+<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+<section class="blinder" data-component="${analyticsModel.title}">
+	<h2>${model.header}</h2>
+	<ul class="blinder__items">
+		<sly data-sly-list.blinderDetails="${model.blinderDetails}">
+			<li class="blinder__item">
+				<div class="blinder__title">
+					<h3>${blinderDetails.header}</h3>
+				</div>
+				<div class="blinder__description">
+					<div class="blinder__content">
+						<p>${blinderDetails.description}</p>
+						<ul class="blinder__description-items">
+							<sly data-sly-list="${blinderDetails.contentDetails}">
+								<li>
+									<h4>${item.label}
+										<span>${item.value}</span>
+									</h4>
+								</li>
+							</sly>
+						</ul>
+						<sly data-sly-use.button="${'button.html'}"
+							data-sly-call="${button.include @  blinderDetailsObj=blinderDetails}" />
+					</div>
+				</div>
+				<sly data-sly-use.image="${'image.html'}"
+					data-sly-call="${image.include @  blinderDetailsObj=blinderDetails}" />
+			</li>
+		</sly>
+	</ul>
+</section>
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}" class="panel-title">
+	${'Blinder' @i18n}
+</h3>

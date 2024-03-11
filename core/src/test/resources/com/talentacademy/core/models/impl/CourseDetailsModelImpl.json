@@ -1,0 +1,114 @@
+{
+	"coursedetails": {
+		"jcr:primaryType": "nt:unstructured",
+		"sling:resourceType": "talentacademy/components/content/contentblock",
+		"ctaLabel": "discover more",
+		"ctaURL": "/content/ta/dummy",
+		"target": "_blank",
+		"skillsLabel": "skills",
+		"badgesLabel": "badges",
+		"formatLabel": "format",
+		"durationLabel": "duration",
+		"duration": "15 MINS",
+		"infoctaLabel": "enroll now",
+		"infoctaURL": "dummy url",
+		"infotarget": "_blank",
+		"accHeader": "dummy accheader",
+		"aboutHeader": "dummy about header",
+		"aboutDescription": "dummy about description",
+		"header": "curriculum",
+		"learningPathwayID": "learningPathwayID:123",
+		"overviewRichText": "dummy overview text",
+		"skills": {
+			"item0": {
+				"jcr:primaryType": "nt:unstructured",
+				"skill": "Destination knowledge"
+			},
+			"jcr:primaryType": "nt:unstructured"
+		},
+		"badges": {
+			"item0": {
+				"jcr:primaryType": "nt:unstructured",
+				"badge": "/content/dam/dummybadge.png"
+			},
+			"item1": {
+				"jcr:primaryType": "nt:unstructured",
+				"badge": null
+			},
+			"jcr:primaryType": "nt:unstructured"
+		},
+		"formats": {
+			"item0": {
+				"jcr:primaryType": "nt:unstructured",
+				"format": "Instructor-led"
+			},
+			"item1": {
+				"jcr:primaryType": "nt:unstructured",
+				"format": null
+			},
+			"jcr:primaryType": "nt:unstructured"
+		},
+		"curriculum": {
+			"item0": {
+				"jcr:primaryType": "nt:unstructured",
+				"title": "Travel Planning",
+				"subtitle": "Travel Planning subtitle",
+				"description": "dummy curriculum description"
+			},
+			"item1": {
+				"jcr:primaryType": "nt:unstructured",
+				"title": null,
+				"subtitle": null,
+				"description": null
+			},
+			"jcr:primaryType": "nt:unstructured"
+		},
+		"accreditations": {
+			"item0": {
+				"jcr:primaryType": "nt:unstructured",
+				"title": "project management institute",
+				"description": "dummy accreditation description"
+			},
+			"jcr:primaryType": "nt:unstructured"
+		}
+	},
+	"coursedetailsdynamic": {
+		"jcr:primaryType": "cq:Page",
+		"sling:resourceType": "talentacademy/components/coursedetailsdynamic",
+		"title": "Test Title",
+		"ctaLabel": "discover more",
+		"ctaURL": "/content/ta/dummy",
+		"target": "_blank",
+		"skillsLabel": "skills",
+		"badgesLabel": "badges",
+		"formatLabel": "format",
+		"durationLabel": "duration",
+		"duration": "15 MINS",
+		"infoctaLabel": "enroll now",
+		"infoctaURL": "dummy url",
+		"infotarget": "_blank",
+		"accHeader": "dummy accheader",
+		"aboutHeader": "dummy about header",
+		"aboutDescription": "dummy about description",
+		"header": "curriculum",
+		"learningPathwayID": "learningPathwayID:123",
+		"overviewRichText": "dummy overview text",
+		"jcr:content": {
+			"jcr:primaryType": "cq:PageContent",
+			"jcr:createdBy": "admin",
+			"sling:resourceType": "neomtalentacademy/components/page",
+			"root": {
+				"jcr:primaryType": "nt:unstructured",
+				"sling:resourceType": "talentacademy/components/container",
+				"container": {
+					"jcr:primaryType": "nt:unstructured",
+					"sling:resourceType": "talentacademy/components/content/container",
+					"coursedetailsdynamic": {
+						"jcr:primaryType": "nt:unstructured",
+						"sling:resourceType": "talentacademy/components/content/coursedetailsdynamic"
+					}
+				}
+			}
+		}
+	}
+}

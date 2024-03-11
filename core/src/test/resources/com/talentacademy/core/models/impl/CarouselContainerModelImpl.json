@@ -1,0 +1,13 @@
+{
+    "careercarousel": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "talentacademy/components/content/careercarousel",
+        "caption": "Caption",
+        "carouselTitle": "In-demand careers in 2025",
+        "carouselDescription": "With thousands of job roles to explore in NEOM",
+        "buttonLabel": "Explore careers in NEOM",
+        "buttonLink" : "/content/talentacademy/sa/en/page",
+        "carouselType": "carousel",
+        "openInNewTab": "true"
+    }
+}

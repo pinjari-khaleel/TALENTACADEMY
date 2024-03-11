@@ -1,0 +1,20 @@
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}" class="panel-title">${'promotionalbanner' @i18n}</h3>
+<sly data-sly-use.model="com.talentacademy.core.models.PromotionalBannerModel">
+	<sly data-sly-use.imageTemplate="/apps/talentacademy/components/content/atoms/dmediaimage.html"></sly>
+  <sly data-sly-set.bgImage="${model.fileReference}" />
+  <sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+  <section data-component="${analyticsModel.title}" class="ta-banner ${bgImage ? 'ta-banner__image ' : ''}content-center" data-sly-test="${bgImage || model.sectionTitle || model.sectionDescription}">
+    <div class="ta-banner__image-container" data-sly-test="${bgImage}">
+      <sly data-sly-call="${imageTemplate.image @ 
+              imagePath=bgImage, alt=model.altTextForImage, mobileImgWidth='360', desktopImgWidth='1440'}" />
+    </div>
+    <div class="ta-banner__content">
+      <h2 data-sly-test="${model.sectionTitle}" class="captionL text-darkGold">${model.sectionTitle}</h2>
+      <p data-sly-test="${model.sectionDescription}" class="ta-banner__description${bgImage ? '-image title4 text-white' : '-color title6 text-deepBlack'}">${model.sectionDescription}</p>
+      <div class="ta-banner__buttons">
+        <sly data-sly-resource="${ @ path='button1', resourceType='talentacademy/components/button', decorationTagName='div'}"></sly>
+        <sly data-sly-resource="${ @ path='button2', resourceType='talentacademy/components/button', decorationTagName='div'}"></sly>
+      </div>
+    </div>
+  </section>
+</sly>

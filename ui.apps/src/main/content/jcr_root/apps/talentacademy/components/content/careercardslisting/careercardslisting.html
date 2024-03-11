@@ -1,0 +1,61 @@
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}" class="panel-title">
+	${'careercardslisting' @i18n}</h3>
+<sly data-sly-use.model="com.talentacademy.core.models.CareerCardsListingModel">
+	<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+	<section class="grid-listing-container career-listing-container" data-component="${analyticsModel.title}">
+
+		<sly data-sly-set.activelyrecruiting="${'activelyrecruiting' @i18n}" />
+		<sly data-sly-set.futureposition="${'futureposition' @i18n}" />
+
+		<input type="hidden" class="joblistingdetails" data-rootDetailsPath="${model.rootDetailsPath}"
+			data-badgesEarned="${model.badgesEarned}" data-knowMoreCtaLabel="${model.knowMoreCtaLabel}"
+			data-loadMoreLimit="${model.loadMoreLimit}" data-loadMoreCtaLabel="${model.loadMoreCtaLabel}"
+			data-activelyrecruiting="${'activelyrecruiting' @i18n}" data-futureposition="${'futureposition' @i18n}" 
+			data-rolescount="${'rolescount' @ i18n}">
+
+		<div class="grid-listing-header" data-sly-test="${model.getCareerDetailsdata.size}">
+			<h4 class="title5">${model.getCareerDetailsdata.size} ${'rolescount' @ i18n}</h4>
+			<sly data-sly-use.temp="${'filters.html'}" data-sly-call="${temp.include @ model = model}" />
+		</div>
+		
+		<ul class="grid-applied-filters"></ul>
+		
+		<ul class="grid-listing" data-sly-list.cardDetail="${model.getCareerDetailsdata}"
+			data-sly-test="${model.getCareerDetailsdata.size}">
+			<li data-sly-test="${model.loadMoreLimit > cardDetailList.index}">
+				<div class="ta-career-cardlisting">
+
+					<sly data-sly-test="${cardDetail.recruitmentStatus}">
+						<div class="ta-tag ta-tag_small ta-tag_with-border ${cardDetail.recruitmentStatus == 'activelyrecruiting' ? 'ta-tag_orange' : 'ta-tag_blue'}">
+							${cardDetail.recruitmentStatus == 'activelyrecruiting' ? activelyrecruiting : futureposition}
+						</div>
+					</sly>
+
+					<div class="career-card-content">
+						<h4 class="title6">${cardDetail.jobTitle}</h4>
+						<p class="captionS">${cardDetail.sector}</p>
+						<p class="captionL">${cardDetail.experienceLevel}</p>
+						<div class="badges-section">
+							<p class="captionS">${model.badgesEarned}</p>
+							<div class="course-images-wrapper" data-sly-list.badgeItem="${cardDetail.badges}">
+								<img src="${badgeItem}" alt="badge-${badgeItemList.count}" />
+							</div>
+						</div>
+					</div>
+
+					<a class="button button--primary_darkgold has-no-arrow button--small cta-link"
+						data-sly-test="${model.knowMoreCtaLabel && cardDetail.pagePath}" href="${cardDetail.pagePath}">
+						<span class="cta-link__text">${model.knowMoreCtaLabel}</span>
+					</a>
+				</div>
+			</li>
+		</ul>
+
+		<button class="button button--secondary load-button load-more-button cta-link" data-offset="1"
+			data-sly-test="${model.getCareerDetailsdata.size > model.loadMoreLimit && model.loadMoreCtaLabel}">
+			<span class="cta-link__text">${model.loadMoreCtaLabel}</span>
+		</button>
+
+	</section>
+
+</sly>

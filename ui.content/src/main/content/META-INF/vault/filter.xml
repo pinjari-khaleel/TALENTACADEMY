@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/talentacademy/site-config" mode="merge"/>
+    <filter root="/conf/talentacademy" mode="merge">
+        <exclude pattern="/conf/talentacademy/site-config(/.*)"/>
+    </filter>
+    <filter root="/content/talentacademy" mode="merge"/>
+    <filter root="/content/dam/talentacademy/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/talentacademy" mode="merge"/>
+</workspaceFilter>

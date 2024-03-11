@@ -1,0 +1,319 @@
+{
+  "links": {
+    "self": "https://learningmanagereu.adobe.com/primeapi/v2/learningObjects?page[limit]=6&include=skills.skillLevel.badge,instances.badge&filter.loTypes=course,learningProgram&sort=name&filter.ignoreEnhancedLP=true",
+    "next": "https://learningmanagereu.adobe.com/primeapi/v2/learningObjects?page[limit]=6&include=skills.skillLevel.badge,instances.badge&filter.loTypes=course,learningProgram&sort=name&filter.ignoreEnhancedLP=true&page[cursor]=eyJjb3Vyc2UiOjYsImxlYXJuaW5nUHJvZ3JhbSI6MH0="
+  },
+  "data": {
+    "id": "course:1757233",
+    "type": "learningObject",
+    "attributes": {
+      "authorNames": [
+        "Blinkist"
+      ],
+      "catalogLabels": [
+        {
+          "name": "arabic-course-formats",
+          "values": [
+            "Class Room",
+            "E Learning"
+          ]
+        },
+        {
+          "name": "arabic-skills",
+          "values": [
+            "Test Skill 1",
+            "Test Skill 2"
+          ]
+        }
+      ],
+      "dateCreated": "2023-06-08T02:16:11.000Z",
+      "datePublished": "2023-06-08T02:16:11.000Z",
+      "dateUpdated": "2023-06-08T02:16:11.000Z",
+      "duration": 900,
+      "effectiveModifiedDate": "2023-06-08T02:29:03.000Z",
+      "effectivenessIndex": 0,
+      "enrollmentType": "Self Enroll",
+      "hasOptionalLoResources": false,
+      "hasPreview": false,
+      "imageUrl": "https://media.go1static.com/image/upload/w_800/v1614064785/xryqn3um5funqa4y2qow.jpg?cp_oauth_jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwIjoidXJsIiwicmFuZCI6IjI4MWNlOTZjOGNhZTU4Mjk5MzM0MDFiOGJjYjllNzQ5IiwidiI6IjEiLCJvcmlnaW5hbFVybEhhc2giOiI0ZjkxZGNjN2ZhMjU3OGVhN2FhMWJiZTIyMmNkMWY3MGRkYTczYzkyIiwiZXhwIjoxNzA1NTc4MjEwLCJyaWQiOiI3NTE4MjIyIiwiaWF0IjoxNzA0OTczNDEwLCJjaWQiOiIxIn0.fTvGRGpl2HD4X5_LlQi3nmgfw4rFHHw5rndBswIxZxQ",
+      "isExternal": false,
+      "isMqaEnabled": false,
+      "isPrerequisiteEnforced": false,
+      "isSubLoOrderEnforced": true,
+      "loFormat": "Self Paced",
+      "loType": "course",
+      "moduleResetEnabled": false,
+      "state": "Published",
+      "unenrollmentAllowed": false,
+      "localizedMetadata": [
+        {
+          "locale": "en-US",
+          "name": "30 Ways to Reboot Your Body",
+          "overview": "30 Ways to Reboot Your Body (2015) gives you the keys to repairing and regenerating your body so you can take your health and fitness goals to the next level. These blinks explain the importance of digestive health, light exercise and solid routines. Get ready to have your ideas about diet and exercise challenged.",
+          "richTextOverview": "<p><em>30 Ways to Reboot Your Body</em> (2015) gives you the keys to repairing and regenerating your body so you can take your health and fitness goals to the next level. These blinks explain the importance of digestive health, light exercise and solid routines. Get ready to have your ideas about diet and exercise challenged.</p>"
+        }
+      ],
+      "rating": {
+        "averageRating": 0,
+        "ratingsCount": 0
+      }
+    },
+    "relationships": {
+      "instances": {
+        "data": [
+          {
+            "id": "course:1757233_1823429",
+            "type": "learningObjectInstance"
+          }
+        ]
+      },
+      "skills": {
+        "data": [
+          {
+            "id": "course:1757233_64781",
+            "type": "learningObjectSkill"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "course:1757233_1823429",
+      "type": "learningObjectInstance",
+      "attributes": {
+        "dateCreated": "2023-06-08T02:16:11.000Z",
+        "isDefault": true,
+        "isFlexible": false,
+        "state": "Active",
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "Default instance"
+          }
+        ]
+      },
+      "relationships": {
+        "learningObject": {
+          "data": {
+            "id": "course:1757233",
+            "type": "learningObject"
+          }
+        },
+        "loResources": {
+          "data": [
+            {
+              "id": "course:1757233_1823429_2094507_1",
+              "type": "learningObjectResource"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:1757233_64781",
+      "type": "learningObjectSkill",
+      "attributes": {
+        "credits": 1,
+        "learningObjectId": "course:1757233"
+      },
+      "relationships": {
+        "skillLevel": {
+          "data": {
+            "id": "64781_1",
+            "type": "skillLevel"
+          }
+        }
+      }
+    },
+    {
+      "id": "64781_1",
+      "type": "skillLevel",
+      "attributes": {
+        "level": "1",
+        "maxCredits": 1,
+        "name": ""
+      },
+      "relationships": {
+        "skill": {
+          "data": {
+            "id": "64781",
+            "type": "skill"
+          }
+        }
+      }
+    },
+    {
+      "id": "113166",
+      "type": "badge",
+      "attributes": {
+        "imageUrl": "https://cpcontents.adobe.com/eu/public/account/9668/accountassets/9668/badges/badge_blackbelt.png",
+        "name": "BLACK BELT",
+        "state": "Retired"
+      }
+    },
+    {
+      "id": "1611272_1_en-US",
+      "type": "resource",
+      "attributes": {
+        "authorDesiredDuration": 360,
+        "avatarUrls": [],
+        "contentType": "VIDEO",
+        "dateCreated": "2023-06-08T01:59:22.000Z",
+        "desiredDuration": 316,
+        "hasQuiz": false,
+        "hasToc": false,
+        "internalResourceId": 2033566,
+        "isDefault": false,
+        "locale": "en-US",
+        "location": "6212420831001",
+        "name": "Using Movement to Convey a Feeling",
+        "onlyQuiz": false,
+        "reportingType": "CAPI"
+      }
+    },
+    {
+      "id": "73238",
+      "type": "skill",
+      "attributes": {
+        "name": "Communication skills",
+        "state": "Active"
+      },
+      "relationships": {
+        "levels": {
+          "data": [
+            {
+              "id": "73238_1",
+              "type": "skillLevel"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:2042880_2122155_2447933_0",
+      "type": "learningObjectResource",
+      "attributes": {
+        "externalReporting": false,
+        "loResourceType": "Content",
+        "multipleAttemptEnabled": false,
+        "previewEnabled": false,
+        "resourceType": "Elearning",
+        "submissionEnabled": false,
+        "version": 1,
+        "localizedMetadata": [
+          {
+            "description": "Using Movement to Convey a Feeling description ",
+            "locale": "en-US",
+            "name": "Using Movement to Convey a Feeling"
+          }
+        ]
+      },
+      "relationships": {
+        "learningObject": {
+          "data": {
+            "id": "course:2042880",
+            "type": "learningObject"
+          }
+        },
+        "loInstance": {
+          "data": {
+            "id": "course:2042880_2122155",
+            "type": "learningObjectInstance"
+          }
+        },
+        "resources": {
+          "data": [
+            {
+              "id": "1611272_1_en-US",
+              "type": "resource"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:2042880_2122155_2447933_0",
+      "type": "learningObjectResource",
+      "attributes": {
+        "externalReporting": false,
+        "loResourceType": "Content",
+        "multipleAttemptEnabled": false,
+        "previewEnabled": false,
+        "resourceType": "Elearning",
+        "submissionEnabled": false,
+        "version": 1,
+        "localizedMetadata": [
+          {
+            "description": "Using Movement to Convey a Feeling description ",
+            "locale": "en-US",
+            "name": "Using Movement to Convey a Feeling"
+          }
+        ]
+      },
+      "relationships": {
+        "learningObject": {
+          "data": {
+            "id": "course:2042880",
+            "type": "learningObject"
+          }
+        },
+        "loInstance": {
+          "data": {
+            "id": "course:2042880_2122155",
+            "type": "learningObjectInstance"
+          }
+        },
+        "resources": {
+          "data": [
+            {
+              "id": "1611272_1_en-US",
+              "type": "resource"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:2042880_2122155_2447936_0",
+      "type": "learningObjectResource",
+      "attributes": {
+        "externalReporting": false,
+        "loResourceType": "Content",
+        "multipleAttemptEnabled": false,
+        "previewEnabled": false,
+        "resourceType": "Elearning",
+        "submissionEnabled": false,
+        "version": 1,
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "Introduction-Vector Illustration Drawing with the Pen Tool"
+          }
+        ]
+      },
+      "relationships": {
+        "learningObject": {
+          "data": {
+            "id": "course:2042880",
+            "type": "learningObject"
+          }
+        },
+        "loInstance": {
+          "data": {
+            "id": "course:2042880_2122155",
+            "type": "learningObjectInstance"
+          }
+        },
+        "resources": {
+          "data": [
+            {
+              "id": "1611269_1_en-US",
+              "type": "resource"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

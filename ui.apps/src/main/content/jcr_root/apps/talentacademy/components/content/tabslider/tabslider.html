@@ -1,0 +1,36 @@
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}" class="panel-title">${'Tab Slider' @i18n}</h3>
+<sly data-sly-use.model="com.talentacademy.core.models.TabSliderModel"></sly>
+<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+<sly data-sly-use.imageTemplate="/apps/talentacademy/components/content/atoms/dmediaimage.html" />
+<div class="ta-tab-slider bg-cream50" data-component="${analyticsModel.title}">
+    <div class="ta-tab-slider__container">
+        <h2 class="title5">${model.header}</h2>
+        <ul class="ta-tab-slider__pagination">
+            <sly data-sly-list.details="${model.tabSliderDetails}">
+                <li>${details.tabName}</li>
+            </sly>
+        </ul>
+        <div class="ta-tab-slider__content">
+            <div class="swiper-wrapper" data-sly-test="${model.tabSliderDetails}">
+                <sly data-sly-list.details="${model.tabSliderDetails}">
+                <div class="swiper-slide ta-tab-slider-item">
+                    <div class="ta-tab-slider-item__description">
+                        <h3 class="title6 pagination-text">${details.title}</h3>
+                        <p class="body5">
+                            ${details.description}
+                        </p>
+                    </div>
+                    <div class="ta-tab-slider-item__image">
+                        <sly data-sly-call="${imageTemplate.image @ 
+                            imagePath=details.image, alt=details.imageAltText, mobileImgWidth='320', desktopImgWidth='750', className='ta-tab-slider-item__image'}">
+                        </sly>
+                    </div>
+                </div>
+                </sly>
+            </div>
+        </div>
+    </div>
+</div>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.all @ categories='talentacademy.swiper'}" />
+</sly>

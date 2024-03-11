@@ -1,0 +1,28 @@
+<sly data-sly-use.model="com.talentacademy.core.models.CourseDetailsModel">
+<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+<sly data-sly-list.coursedetails="${model.courseDetails}">
+  <div class="bg-cream25 ta-career-details">
+    <section class="main" data-component="${analyticsModel.title}">
+      <sly data-sly-use.infocard="${'infocard.html'}" 
+      	data-sly-call="${infocard.include @  infocardObj=model, details=coursedetails, type='static'}" />
+      <div class="info-list">
+        <div>
+          <div class="ta-rich-text-content-wrapper">
+	          <div class="info-item">
+				${model.overviewRichText @context='html'}
+	          </div>
+          </div>
+          <div>
+            <sly data-sly-test="${model.accreditations.hasChildren}"
+              data-sly-use.accreditations="${'accreditations.html'}"
+              data-sly-call="${accreditations.include @  accreditationsObj=model}" />
+
+            <sly data-sly-test="${coursedetails.moduleList}" data-sly-use.curriculum="${'curriculum.html'}"
+              data-sly-call="${curriculum.include @  curriculumObj=model, details=coursedetails, type='static'}" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</sly>
+</sly>

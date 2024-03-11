@@ -1,0 +1,277 @@
+{
+	"asset1": {
+		"jcr:content": {
+			"metadata": {
+				"dam:Fileformat": "JPEG",
+				"dam:MIMEtype": "image/jpeg",
+				"dam:scene7APIServer": "https://s7sps3apissl.scene7.com",
+				"dam:scene7CloudConfigPath": "/conf/global/settings/cloudconfigs/dmscene7",
+				"dam:scene7Domain": "https://example.scene7.com/",
+				"dam:scene7File": "example/007_GT_BROWN_157-11",
+				"dam:scene7FileStatus": "PublishComplete",
+				"dam:scene7Folder": "example/us/international/model-page/grecale/lifestyle/vertical/",
+				"dam:scene7ID": "a|743648474",
+				"dam:scene7LastModified": "{Long}1659096110755",
+				"dam:scene7Name": "007_GT_BROWN_157-11",
+				"dam:scene7PublishedBy": "",
+				"dam:scene7Type": "Image",
+				"dam:sha1": "bcdac0149fe91f0a2efba8f5a9dde1355c273d7f",
+				"dc:format": "image/jpeg",
+				"jcr:primaryType": "nt:unstructured",
+				"tiff:ImageLength": "1440",
+				"tiff:ImageWidth": "810"
+			},
+			"related": {
+				"jcr:primaryType": "nt:unstructured"
+			},
+			"dam:assetState": "processed",
+			"dam:s7damType": "Image",
+			"jcr:primaryType": "dam:AssetContent",
+			"status": "Finished",
+			"prefix": "jcr"
+		},
+		"jcr:primaryType": "dam:Asset",
+		"jcr:uuid": "343425cf-9b43-4aa3-a416-c1569d905d45",
+		"prefix": "jcr"
+	},
+	"asset2": {
+		"jcr:content": {
+			"metadata": {
+				"dam:Fileformat": "JPEG",
+				"dam:MIMEtype": "image/jpeg",
+				"dam:scene7APIServer": "https://s7sps3apissl.scene7.com",
+				"dam:scene7CloudConfigPath": "/conf/global/settings/cloudconfigs/dmscene7",
+				"dam:scene7Domain": "https://example.scene7.com/",
+				"dam:scene7File": "example/007_GT_BROWN_157-11",
+				"dam:scene7FileStatus": "PublishComplete",
+				"dam:scene7Folder": "example/us/international/model-page/grecale/lifestyle/vertical/",
+				"dam:scene7ID": "a|743648474",
+				"dam:scene7LastModified": "{Long}1659096110755",
+				"dam:scene7Name": "007_GT_BROWN_157-11",
+				"dam:scene7PublishedBy": "",
+				"dam:scene7Type": "Image",
+				"dam:sha1": "bcdac0149fe91f0a2efba8f5a9dde1355c273d7f",
+				"dc:format": "image/jpeg",
+				"jcr:primaryType": "nt:unstructured",
+				"tiff:ImageLength": "2440",
+				"tiff:ImageWidth": "2010"
+			},
+			"related": {
+				"jcr:primaryType": "nt:unstructured"
+			},
+			"dam:assetState": "processed",
+			"dam:s7damType": "Image",
+			"jcr:primaryType": "dam:AssetContent",
+			"status": "Finished",
+			"prefix": "jcr"
+		},
+		"jcr:primaryType": "dam:Asset",
+		"jcr:uuid": "343425cf-9b43-4aa3-a416-c1569d905d45",
+		"prefix": "jcr"
+	},
+	"asset3": {
+		"jcr:primaryType": "nt:unstructured",
+		"jcr:uuid": "343425cf-9b43-4aa3-a416-c1569d905d45",
+		"prefix": "jcr"
+	},
+	"asset4": {
+		"jcr:content": {
+			"metadata": {
+				"dam:Fileformat": "JPEG",
+				"dam:MIMEtype": "image/jpeg",
+				"dam:scene7APIServer": "https://s7sps3apissl.scene7.com",
+				"dam:scene7CloudConfigPath": "/conf/global/settings/cloudconfigs/dmscene7",
+				"dam:scene7Domain": "https://example.scene7.com/",
+				"dam:scene7File": "example/007_GT_BROWN_157-11",
+				"dam:scene7FileStatus": "processed",
+				"dam:scene7Folder": "example/us/international/model-page/grecale/lifestyle/vertical/",
+				"dam:scene7ID": "a|743648474",
+				"dam:scene7LastModified": "{Long}1659096110755",
+				"dam:scene7Name": "007_GT_BROWN_157-11",
+				"dam:scene7PublishedBy": "",
+				"dam:scene7Type": "Image",
+				"dam:sha1": "bcdac0149fe91f0a2efba8f5a9dde1355c273d7f",
+				"dc:format": "image/jpeg",
+				"jcr:primaryType": "nt:unstructured",
+				"tiff:ImageLength": "2440",
+				"tiff:ImageWidth": "2010"
+			},
+			"related": {
+				"jcr:primaryType": "nt:unstructured"
+			},
+			"dam:assetState": "processed",
+			"dam:s7damType": "Image",
+			"jcr:primaryType": "dam:AssetContent",
+			"status": "Finished",
+			"prefix": "jcr"
+		},
+		"jcr:primaryType": "dam:Asset",
+		"jcr:uuid": "343425cf-9b43-4aa3-a416-c1569d905d45",
+		"prefix": "jcr"
+	},
+	"asset5": {
+		"jcr:content": {
+			"metadata": {
+				"dam:Fileformat": "JPEG",
+				"dam:MIMEtype": "image/jpeg",
+				"dam:scene7APIServer": "https://s7sps3apissl.scene7.com",
+				"dam:scene7CloudConfigPath": "/conf/global/settings/cloudconfigs/dmscene7",
+				"dam:scene7Domain": "https://example.scene7.com/",
+				"dam:scene7File": "example/007_GT_BROWN_157-11",
+				"dam:scene7FileStatus": "PublishComplete",
+				"dam:scene7Folder": "example/us/international/model-page/grecale/lifestyle/vertical/",
+				"dam:scene7ID": "a|743648474",
+				"dam:scene7LastModified": "{Long}1659096110755",
+				"dam:scene7Name": "007_GT_BROWN_157-11",
+				"dam:scene7PublishedBy": "",
+				"dam:scene7Type": "Image",
+				"dam:sha1": "bcdac0149fe91f0a2efba8f5a9dde1355c273d7f",
+				"dc:format": "image/jpeg",
+				"jcr:primaryType": "nt:unstructured",
+				"tiff:ImageLength": "2440",
+				"tiff:ImageWidth": "2010"
+			},
+			"related": {
+				"jcr:primaryType": "nt:unstructured"
+			},
+			"dam:assetState": "processed",
+			"dam:s7damType": "Image",
+			"jcr:primaryType": "dam:AssetContent",
+			"status": "Finished",
+			"prefix": "jcr"
+		},
+		"jcr:primaryType": "dam:Asset",
+		"jcr:uuid": "343425cf-9b43-4aa3-a416-c1569d905d45",
+		"prefix": "jcr"
+	},
+	"asset6": {
+		"jcr:content": {
+			"metadata": {
+				"dam:Fileformat": "JPEG",
+				"dam:scene7APIServer": "https://s7sps3apissl.scene7.com",
+				"dam:scene7CloudConfigPath": "/conf/global/settings/cloudconfigs/dmscene7",
+				"dam:scene7Domain": "https://example.scene7.com/",
+				"dam:scene7File": "example/007_GT_BROWN_157-11",
+				"dam:scene7FileStatus": "PublishComplete",
+				"dam:scene7Folder": "example/us/international/model-page/grecale/lifestyle/vertical/",
+				"dam:scene7ID": "a|743648474",
+				"dam:scene7LastModified": "{Long}1659096110755",
+				"dam:scene7Name": "007_GT_BROWN_157-11",
+				"dam:scene7PublishedBy": "",
+				"dam:scene7Type": "Image",
+				"dam:sha1": "bcdac0149fe91f0a2efba8f5a9dde1355c273d7f",
+				"dc:format": "image/svg+xml",
+				"jcr:primaryType": "nt:unstructured"			
+			},
+			"related": {
+				"jcr:primaryType": "nt:unstructured"
+			},
+			"dam:assetState": "processed",
+			"dam:s7damType": "Image",
+			"jcr:primaryType": "dam:AssetContent",
+			"status": "Finished",
+			"prefix": "jcr"
+		},
+		"jcr:primaryType": "dam:Asset",
+		"jcr:uuid": "343425cf-9b43-4aa3-a416-c1569d905d45",
+		"prefix": "jcr"
+	},
+	"asset7": {
+		"jcr:content": {
+			"metadata": {
+				"dam:Fileformat": "JPEG",
+				"dam:MIMEtype": "image/jpeg",
+				"dam:scene7APIServer": "https://s7sps3apissl.scene7.com",
+				"dam:scene7CloudConfigPath": "/conf/global/settings/cloudconfigs/dmscene7",
+				"dam:scene7FileStatus": "PublishComplete",
+				"dam:scene7Folder": "example/us/international/model-page/grecale/lifestyle/vertical/",
+				"dam:scene7ID": "a|743648474",
+				"dam:scene7LastModified": "{Long}1659096110755",
+				"dam:scene7Name": "007_GT_BROWN_157-11",
+				"dam:scene7PublishedBy": "",
+				"dam:scene7Type": "Image",
+				"dam:sha1": "bcdac0149fe91f0a2efba8f5a9dde1355c273d7f",
+				"dc:format": "image/jpeg",
+				"jcr:primaryType": "nt:unstructured",
+				"tiff:ImageWidth": "810"
+			},
+			"related": {
+				"jcr:primaryType": "nt:unstructured"
+			},
+			"dam:assetState": "processed",
+			"dam:s7damType": "Image",
+			"jcr:primaryType": "dam:AssetContent",
+			"status": "Finished",
+			"prefix": "jcr"
+		},
+		"jcr:primaryType": "dam:Asset",
+		"jcr:uuid": "343425cf-9b43-4aa3-a416-c1569d905d45",
+		"prefix": "jcr"
+	},
+	"asset8": {
+		"jcr:content": {
+			"metadata": {
+				"dam:Fileformat": "JPEG",
+				"dam:MIMEtype": "image/jpeg",
+				"dam:scene7APIServer": "https://s7sps3apissl.scene7.com",
+				"dam:scene7CloudConfigPath": "/conf/global/settings/cloudconfigs/dmscene7",
+				"dam:scene7Domain": "https://example.scene7.com/",
+				"dam:scene7File": "example/007_GT_BROWN_157-11",
+				"dam:scene7FileStatus": "PublishComplete",
+				"dam:scene7Folder": "example/us/international/model-page/grecale/lifestyle/vertical/",
+				"dam:scene7ID": "a|743648474",
+				"dam:scene7LastModified": "{Long}1659096110755",
+				"dam:scene7Name": "007_GT_BROWN_157-11",
+				"dam:scene7PublishedBy": "",
+				"dam:scene7Type": "Image",
+				"dam:sha1": "bcdac0149fe91f0a2efba8f5a9dde1355c273d7f",
+				"dc:format": "image/jpeg",
+				"jcr:primaryType": "nt:unstructured",
+				"tiff:ImageWidth": "810"
+			},
+			"related": {
+				"jcr:primaryType": "nt:unstructured"
+			},
+			"dam:assetState": "processed",
+			"dam:s7damType": "Image",
+			"jcr:primaryType": "dam:AssetContent",
+			"status": "Finished",
+			"prefix": "jcr"
+		},
+		"jcr:primaryType": "dam:Asset",
+		"jcr:uuid": "343425cf-9b43-4aa3-a416-c1569d905d45",
+		"prefix": "jcr"
+	},
+	"asset9": {
+		"jcr:content": {
+			"metadata": {
+				"dam:Fileformat": "JPEG",
+				"dam:MIMEtype": "image/jpeg",
+				"dam:scene7APIServer": "https://s7sps3apissl.scene7.com",
+				"dam:scene7CloudConfigPath": "/conf/global/settings/cloudconfigs/dmscene7",
+				"dam:scene7Domain": "https://example.scene7.com/",
+				"dam:scene7File": "example/007_GT_BROWN_157-11",
+				"dam:scene7FileStatus": "PublishComplete",
+				"dam:scene7Folder": "example/us/international/model-page/grecale/lifestyle/vertical/",
+				"dam:scene7ID": "a|743648474",
+				"dam:scene7LastModified": "{Long}1659096110755",
+				"dam:scene7Name": "007_GT_BROWN_157-11",
+				"dam:scene7PublishedBy": "",
+				"dam:sha1": "bcdac0149fe91f0a2efba8f5a9dde1355c273d7f",
+				"dc:format": "image/jpeg",
+				"jcr:primaryType": "nt:unstructured",
+				"tiff:ImageWidth": "810"
+			},
+			"related": {
+				"jcr:primaryType": "nt:unstructured"
+			},
+			"dam:s7damType": "Image",
+			"jcr:primaryType": "dam:AssetContent",
+			"status": "Finished",
+			"prefix": "jcr"
+		},
+		"jcr:primaryType": "dam:Asset",
+		"jcr:uuid": "343425cf-9b43-4aa3-a416-c1569d905d45",
+		"prefix": "jcr"
+	}
+}

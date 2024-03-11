@@ -1,0 +1,9 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "sling:resourceType": "talentacademy/components/structure/header",
+  "lobbyLabel": "Lobby Label",
+  "lobbyUrl": "Lobby Url",
+  "logoLink": "Logo Link",
+  "logoUrl": "Logo Url",
+  "logoAltText": "Alt text"
+}

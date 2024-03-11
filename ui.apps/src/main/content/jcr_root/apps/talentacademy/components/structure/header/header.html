@@ -1,0 +1,33 @@
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}" class="panel-title">
+    ${'header' @i18n}
+</h3>
+
+<sly data-sly-use.HeaderConfig="com.talentacademy.core.models.HeaderModel">
+	<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+    <header class="ta-header" data-component="${analyticsModel.title}">
+        <div class="ta-header-wrapper">
+            <div class="ta-branding">
+                <a href="${HeaderConfig.logoLink}" class="logo-link">
+                    <img src="${HeaderConfig.logoUrl}" alt="${HeaderConfig.logoAltText}" class="logo-image"
+                        data-dev-todo="use-svg-instead" />
+                </a>
+            </div>
+            <div class="ta-header-right">
+                <div class="ta-hamburger" data-dev-todo="hidden-on-desktop">
+                    <button class="ta-mobile-header-links menu-icon" aria-label="${'togglenavigation' @i18n}"
+                        id="navigationToggle"></button>
+                </div>
+                <div class="language-switcher"
+                    data-sly-resource="${'lang-nav-mobile' @resourceType='/apps/talentacademy/components/structure/languagenavigation'}">
+                </div>
+            </div>
+        </div>
+        <div class="ta-navigation">
+            <a href="${HeaderConfig.lobbyUrl}" class="ta-header-back-button" role="link"
+                aria-label="${HeaderConfig.lobbyLabel}">
+                ${HeaderConfig.lobbyLabel}
+            </a>
+            <sly data-sly-resource="${'sec-nav' @resourceType='/apps/talentacademy/components/structure/navigation'}">
+            </sly>
+    </header>
+</sly>

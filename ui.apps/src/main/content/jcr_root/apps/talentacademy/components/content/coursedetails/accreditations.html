@@ -1,0 +1,15 @@
+<template data-sly-template.include="${@ accreditationsObj}">
+  <section class="ta-accreditations">
+    <h4 class="title6">${accreditationsObj.accHeader}</h4>
+    <div class="accreditation-content"
+      data-sly-repeat.accreditations="${accreditationsObj.accreditations.listChildren}">
+      <img data-sly-test="${accreditations.logo}" alt="${accreditations.altText}" src="${accreditations.logo}" />
+      <div class="accreditations-description">
+        <h5 class="captionM">${accreditations.title}</h5>
+        <p class="body4">
+          ${accreditations.description}
+        </p>
+      </div>
+    </div>
+  </section>
+</template>

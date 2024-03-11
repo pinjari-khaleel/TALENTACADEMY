@@ -1,0 +1,15 @@
+[dir="rtl"] {
+    .carousel-button__next:before,
+    .cta-link::after,
+    .has-back-arrow::before,
+    .info-item a::after,
+    .cta-link__text::after,
+    .info-item .tertiary svg{
+        transform: scale(-1, 1);
+    }
+    .carousel-button__prev.carousel-button-disabled::before,
+    .cta-arrow.carousel-button__prev::before,
+    .cta-link.has-back-arrow::before {
+        transform: rotate(0deg);
+    }        
+}         

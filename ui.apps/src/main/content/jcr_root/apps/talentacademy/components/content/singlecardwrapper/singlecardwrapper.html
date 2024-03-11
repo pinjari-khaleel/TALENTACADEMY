@@ -1,0 +1,26 @@
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}" class="panel-title">${'singlecardwrapper'
+	@i18n}</h3>
+<sly data-sly-use.singleCardModel="com.talentacademy.core.models.SingleCardWrapperModel"
+	data-sly-use.courseModel="com.talentacademy.core.models.CourseCardModel">
+	<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+	<div class="ta-single-card-wrapper" data-component="${analyticsModel.title}">
+		<h3 class="title5">${courseModel.title}</h3>
+		<p class="body4">${courseModel.description}</p>
+		<sly data-sly-test="${singleCardModel.singleCardVariation == 'staticCard'}">
+			<sly data-sly-include="/apps/talentacademy/components/content/coursecard/coursecard.html"></sly>
+		</sly>
+		<sly data-sly-test="${singleCardModel.singleCardVariation == 'dynamicCard'}">
+			<sly data-sly-list.details="${singleCardModel.singleCardWrapperDetails}">
+				<sly data-sly-list.localizedData="${details.courseLocalizedDataList}">
+					<sly data-sly-test="${localizedData.title && localizedData.locale == singleCardModel.currentPageLocale}"
+						data-sly-set.title="${localizedData.title}" />
+				</sly>
+				<sly data-sly-use.temp="${'talentacademy/components/content/coursecard/coursetemplate.html'}"
+					data-sly-call="${temp.include @ type = 'dynamic',  courseImage = details.imageUrl,
+	    carouselImageLabelText = details.loType, title = title, coursesCount = details.subLosCount, durationHours = details.durationHours,
+	    durationMinutes = details.durationMinutes, badgesList = details.courseBadgesList, contentTypeID = singleCardModel.courseid, pagePath = details.pagePath,  courseModel = courseModel}">
+				</sly>
+			</sly>
+		</sly>
+	</div>
+</sly>

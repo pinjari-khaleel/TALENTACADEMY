@@ -1,0 +1,27 @@
+{
+    "careercard": {
+        "jcr:primaryType":"nt:unstructured",
+        "sling:resourceType":"talentacademy/components/content/careercard",
+        "jobTitle":"Travel Advisor",
+        "careerLabel": "Learning Pathway",
+        "tileImage" : "/content/dam/talentacademy/tileimage.jpg",
+        "recruitmentStatus": "Actively Recruiting",
+        "jobRoleType" : "Tourism",
+        "experienceLevel" : "3-4 years EXPERIENCE",
+        "jobOpening" : "1100",
+        "expectedDemand" : "Expected demand",
+        "badgesWeRecommend" : "Badges we recommend",
+        "knowMoreCTALabel" : "Know more",
+        "knowMoreCTALink" : "/content/talentacademy/sa/en/career-in-neom",
+        "openInNewTab": "true",
+        "altTextForImage": "Alt text for Image",
+        "badgeList":{
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "badge":"/content/dam/talentacademy/badges/badge-1.svg",
+               "badgeAltText": "badge1"
+            },
+            "jcr:primaryType":"nt:unstructured"
+        }
+    }
+}

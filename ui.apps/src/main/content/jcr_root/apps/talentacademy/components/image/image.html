@@ -1,0 +1,22 @@
+<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+<figure data-sly-use.image="com.adobe.cq.wcm.core.components.models.Image"
+     data-cmp-is="image"
+     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-test="${image.src}"
+     class="cmp-image${!wcmmode.disabled ? ' cq-dd-image' : ''}"
+     data-component="${analyticsModel.title}">
+    <a data-sly-unwrap="${!image.imageLink.valid}"
+       class="cmp-image__link"
+       data-sly-attribute="${image.imageLink.htmlAttributes}"
+       data-cmp-clickable="${image.data ? true : false}">
+        <picture data-sly-set.mobileImage="${properties.fileReferenceMobile || image.src}">
+            <source media="(min-width: 901px)" srcset="${image.src}">
+            <source media="(min-width:768px)" srcset="${image.src}">
+            <source media="(min-width:320px)" srcset="${mobileImage}">
+            <img src="${image.src}" alt="${image.alt}">
+        </picture>
+    </a>
+    <figcaption class="cmp-image__title" itemprop="caption" data-sly-test="${!image.displayPopupTitle && image.title}">${image.title}</figcaption>
+    <meta itemprop="caption" content="${image.title}" data-sly-test="${image.displayPopupTitle && image.title}">
+</figure>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !image.src, classAppend = 'cmp-image cq-dd-image'}"></sly>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Career Card"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <careercardproperties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Career Card Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                granite:class="cq-RichText-FixedColumn-column"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <jobTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter the job title to show in the card."
+                                        fieldLabel="Enter job title"
+                                        name="./jobTitle"/>
+                                    <tileImage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                        fieldDescription="Please select the image from DAM."
+                                        fieldLabel="Enter card image"
+                                        fileNameParameter="./tileImage"
+                                        fileReferenceParameter="./tileImage"
+                                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                        name="./file"
+                                        rootPath="/content/dam/talentacademy"/>
+                                    <altTextForImage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Alt text for image"
+                                        name="./altTextForImage"/>
+                                    <careerLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter the career/job label."
+                                        fieldLabel="Enter career/job label"
+                                        name="./careerLabel"/>
+                                    <jobOpening
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                        fieldDescription="Please enter/select the count to show the job opening for this role."
+                                        fieldLabel="Enter number of job openings"
+                                        min="{Long}1"
+                                        name="./jobOpening"/>
+                                    <expectedDemand
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter the annual expected demand for this role."
+                                        fieldLabel="Enter the expected demand"
+                                        name="./expectedDemand"/>
+                                    <recruitmentStatus
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Please select the recruitment status for this role"
+                                        fieldLabel="Enter recruitment status"
+                                        name="./recruitmentStatus">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <select
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Select"
+                                                value="select"/>
+                                            <activelyRecruiting
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Actively Recruiting"
+                                                value="activelyrecruiting"/>
+                                            <futurePosition
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Future Position"
+                                                value="futureposition"/>
+                                        </items>
+                                    </recruitmentStatus>
+                                    <jobRoleType
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter the job role type."
+                                        fieldLabel="Enter job role type"
+                                        name="./jobRoleType"/>
+                                    <experienceLevel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter the experience level for this role."
+                                        fieldLabel="Enter experience level"
+                                        name="./experienceLevel"/>
+                                    <badgesWeRecommend
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter the label for recommended badge."
+                                        fieldLabel="Enter recommended badge label"
+                                        name="./badgesWeRecommend"/>
+                                    <badgeList
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldDescription="Please add the job related badges"
+                                        fieldLabel="Add the badges">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./badgeList">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <column
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <badge
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldLabel="Select badge"
+                                                            name="./badge"
+                                                            rootPath="/content/dam/talentacademy"/>
+                                                         <badgeAltText
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Alt text for badge"
+                                                            name="./badgeAltText"/>
+                                                    </items>
+                                                </column>
+                                            </items>
+                                        </field>
+                                    </badgeList>
+                                    <knowMoreCTALabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter the label for CTA button."
+                                        fieldLabel="Enter the label for CTA"
+                                        name="./knowMoreCTALabel"/>
+                                    <knowMoreCTALink
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldDescription="Please enter/select the path for CTA button."
+                                        fieldLabel="Select the path for the button"
+                                        name="./knowMoreCTALink"
+                                        rootPath="/content/talentacademy"/>
+                                    <openInNewTab
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        name="./openInNewTab"
+                                        text="Enable the checkbox to open link in new tab"
+                                        uncheckedValue="{Boolean}false"
+                                        value="{Boolean}true"/>
+                                </items>
+                            </column>
+                        </items>
+                    </careercardproperties>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

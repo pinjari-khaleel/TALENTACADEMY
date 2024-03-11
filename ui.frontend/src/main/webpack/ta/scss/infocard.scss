@@ -1,0 +1,79 @@
+.info-card {
+    border: 1px solid map-get($colors, "black20");
+    background-color: map-get($colors, "cream50");
+    padding: 1.875rem;
+    margin-bottom: 3.125rem;
+    .info-item {
+      margin-bottom: 1.5rem;
+      .title6 {
+        display: flex;
+        align-items: center;
+        svg {
+          margin-right: 0.625rem;
+          height: 1.125rem;
+          width: 1.125rem;
+        }
+      }
+      ul {
+      list-style: disc;
+      margin-left: 0.625rem;
+    }
+    }
+    .images-wrapper,
+    .badges-wrapper,
+    .course-images-wrapper {
+      display: flex;
+      margin-bottom: 0.625rem;
+      img {
+        margin-right: 0.625rem;
+      }
+    }
+    .badges-wrapper,
+    .course-images-wrapper {
+      img {
+        margin-right: -1.25rem;
+        border-radius: 50%;
+        width: 3.43rem;
+      }
+    }
+    .button {
+      text-transform: uppercase;
+      width: 100%;
+      &.button--primary_darkgold .cta-link__text::after {
+          display: none;
+      }
+      span {
+        text-align: center;
+        width: 100%;
+      }
+      & + .button {
+        margin-top: 0.625rem;
+      }
+    }
+
+    .captionM {
+        padding-bottom: 0.625rem;
+    } 
+
+    @include md {
+     
+        padding: 3.125rem 2.5rem;
+        width: 40%;
+        position: sticky;
+        z-index: 0;
+        top: 100px;
+        .info-item {
+          margin-bottom: 1.875rem;
+        }   
+    }
+  }
+
+  [dir="rtl"] .info-card{
+    .title6{      
+      svg{
+        transform: scaleX(-1);
+        margin-top: -4px;
+        margin-left: 20px;
+      }
+    }
+  }

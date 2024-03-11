@@ -1,0 +1,55 @@
+.ta-press-release-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .ta-spotlight {
+    height: calc(100vh - 120px);
+  }
+  &__container {
+    background-color: map-get($colors, "white");
+    max-width: 860px;
+    padding: 60px 20px;
+    animation: fadeInTranslate 0.6s ease forwards;
+    @keyframes fadeInTranslate {
+      0% {
+        opacity: 0;
+        transform: translateY(0);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(-120px);
+      }
+    }
+
+    article {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      p {
+        margin: 0;
+      }
+    }
+    @include md {
+      padding: 100px 110px;
+    }
+    .cta-link {
+      margin-top: 40px;
+      @include sm {
+        padding: 10px 20px 10px 30px;
+      }
+      &__text {
+        text-transform: uppercase;
+        letter-spacing: 0.72px;
+      }
+    }
+  }
+  &__content {
+      p {
+        @extend .body5;
+      }
+      p:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+}
+

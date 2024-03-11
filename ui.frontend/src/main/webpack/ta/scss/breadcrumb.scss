@@ -1,0 +1,56 @@
+@mixin breadcrumb() {
+    font-family: $brown;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-wrap: nowrap;
+
+    @include md() {
+        font-size: 12px;
+        letter-spacing: 1.44px;
+    }
+}
+
+.cmp-breadcrumb__item-link {
+    @include breadcrumb();
+    color: map-get($colors, "darkGold");
+    position: relative;
+
+    &::after {
+        content: url("../resources/images/breadcrumbarrow.svg");
+        display: inline-block;
+        margin-left: 5px;
+    }
+}
+
+.cmp-breadcrumb__item--active {
+    @include breadcrumb();
+    color: map-get($colors, "black");
+}
+
+.cmp-breadcrumb__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+    background: map-get($colors, "cream50");
+    padding: 20px;
+
+    @include md() {
+        padding: 20px 70px;
+    }
+}
+
+[dir="rtl"] {
+    .cmp-breadcrumb__item-link{
+      &::after {
+        margin: 0;
+        margin-right: 5px;
+        transform: rotate(180deg);
+      }
+    }
+  }

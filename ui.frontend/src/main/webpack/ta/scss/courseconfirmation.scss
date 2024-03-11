@@ -1,0 +1,28 @@
+.ta-course-confirmation {
+	&.ta-rich-text-container {
+		padding: 120px 20px 80px;
+
+		@include md {
+			width: 860px;
+			margin: auto;
+			padding: 120px 0 80px;
+		}
+	}
+
+	.cmp-text {
+		h2 {
+			@extend .title5;
+			margin-bottom: 30px;
+		}
+
+		p {
+			margin-bottom: 40px;
+		}
+
+		.button--primary_darkgold {
+		    color: map-get($colors, "white");
+		    text-decoration: none;
+			margin-bottom: 80px;
+		}
+	}
+}

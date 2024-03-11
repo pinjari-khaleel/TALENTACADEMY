@@ -1,0 +1,49 @@
+{
+	"jcr:primaryType": "cq:Page",
+	"jcr:content": {
+		"jcr:primaryType": "cq:PageContent",
+		"jcr:createdBy": "admin",
+		"jcr:title": "en",
+		"title": "course title",
+		"description": "course description",
+		"jcr:description": "testDesc",
+		"primaryButtonLabel": "Register Interest",
+		"primaryButtonLink": "External link",
+		"primaryButtonTarget": "true",
+		"secondaryButtonLabel": "Learn More",
+		"sling:resourceType": "neomtalentacademy/components/page",
+		"root": {
+			"jcr:primaryType": "nt:unstructured",
+			"sling:resourceType": "talentacademy/components/container",
+			"container": {
+				"jcr: primaryType": "nt:unstructured",
+				"sling: resourceType": "talentacademy/components/container",
+				"carouselcontainer": {
+					"jcr:primaryType": "nt:unstructured",
+					"sling:resourceType": "talentacademy/components/content/carouselcontainer",
+					"noofields": "10",
+					"dynamiccourse": {
+						"jcr:primaryType": "nt:unstructured",
+						"sling:resourceType": "talentacademy/components/content/coursecarouseldynamic"
+					},
+					"singleCardWrapperDetails": {
+						"jcr:primaryType": "nt:unstructured",
+						"sling:resourceType": "talentacademy/components/content/singlecardwrapperdynamic"
+					}
+				},
+				"carouselcontainer-2": {
+					"jcr:primaryType": "nt:unstructured",
+					"sling:resourceType": "talentacademy/components/content/carouselcontainer",
+					"dynamiccourse": {
+						"jcr:primaryType": "nt:unstructured",
+						"sling:resourceType": "talentacademy/components/content/coursecarouseldynamic"
+					},
+					"singleCardWrapperDetails": {
+						"jcr:primaryType": "nt:unstructured",
+						"sling:resourceType": "talentacademy/components/content/singlecardwrapperdynamic"
+					}
+				}
+			}
+		}
+	}
+}

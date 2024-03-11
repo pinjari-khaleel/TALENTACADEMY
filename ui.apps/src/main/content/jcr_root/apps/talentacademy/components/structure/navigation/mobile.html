@@ -1,0 +1,36 @@
+<template data-sly-template.mobilenav="${@ mobileitems='The navigation item'}">
+    <ul class="header-mobile-nav" role="menu">
+        <sly data-sly-list="${mobileitems}">
+	<sly data-sly-test.activeCheckNav="${item.path in currentPage.path}"></sly>
+            <li class="ta-mobile-link-list ${activeCheckNav == true ? 'ta-mobile-link-list-active' : '' }">
+                <a href="#" class="ta-mobile-nav-link" role="button" data-cmp-is="headerAccordian"
+                    aria-expanded="false">
+                    ${item.title}
+                </a>
+                <sly data-sly-test="${item.children.size > 0}">
+                    <ul class="ta-accordion-content" aria-hidden="true">
+                        <sly data-sly-list="${item.children}">
+			<sly data-sly-test.activeCheckSubMenu="${item.path == currentPage.path}"></sly>
+				<li class="ta-mobile-header-sublink ${activeCheckSubMenu == true ? 'ta-mobile-header-sublink-active' : '' }">
+                                <a class="ta-accordion-link" href="${item.URL}">${item.title}</a>
+                            </li>
+                            <sly data-sly-test="${itemList.last}">
+                                <sly
+                                    data-sly-use.pageConfig="${'com.talentacademy.core.models.PageConfigModel' @pathReference=item.path}">
+                                    <sly data-sly-test="${pageConfig.headerButtonLabel && pageConfig.headerButtonUrl}">
+	                                    <li>
+	                                        <a href="${pageConfig.headerButtonUrl}" class="ta-accordion-link ta-accordion-button"
+	                                            aria-label="${pageConfig.headerButtonLabel}">
+	                                            ${pageConfig.headerButtonLabel}
+	                                        </a>
+	                                    </li>
+                                    </sly>
+                                </sly>
+                            </sly>
+                        </sly>
+                    </ul>
+                </sly>
+            </li>
+        </sly>
+    </ul>
+</template>

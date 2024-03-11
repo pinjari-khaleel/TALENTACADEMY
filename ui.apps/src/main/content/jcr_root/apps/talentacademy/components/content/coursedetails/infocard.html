@@ -1,0 +1,71 @@
+<template data-sly-template.include="${@ infocardObj, details, type}">
+  <aside class="info-card">
+    <sly data-sly-set.contentTypeID="${infocardObj.learningPathwayID}" />
+    <sly data-sly-set.courseID="${'course' in contentTypeID ? contentTypeID : ''}" />
+    <sly data-sly-set.learningPathwayID="${'learningProgram' in contentTypeID ? contentTypeID : ''}" />
+
+    <sly data-sly-test="${infocardObj.currentPageLanguage == 'en' && details.skillsList}">
+        <sly data-sly-set.skillList="${details.skillsList}"/>
+    </sly>
+    <sly data-sly-test="${infocardObj.currentPageLanguage == 'ar' && details.arabicSkills}">
+        <sly data-sly-set.skillList="${details.arabicSkills}"/>
+    </sly>
+    <div data-sly-test="${skillList}" class="info-item">
+      <h4 class="captionM">${infocardObj.skillsLabel}</h4>
+      <ul class="body5"
+        data-sly-list="${skillList}">
+        <li>
+          ${item}
+        </li>
+      </ul>
+    </div>
+    <div class="info-item">
+	  <h4 class="captionM">${infocardObj.durationLabel @i18n}</h4>
+	  <sly data-sly-test="${type == 'dynamic'}">
+	    <sly data-sly-test="${details.noOfCourses}">
+	      <p class="captionL text-darkGold">${details.noOfCourses}</p>
+	    </sly>
+	    <sly data-sly-set.durHours="${details.durationHours}"></sly>
+	    <sly data-sly-set.durMins="${details.durationMinutes}"></sly>
+	    <sly data-sly-test="${(!details.noOfCourses) && (durHours || durMins)}">
+	      <sly data-sly-set.hours="${durHours} ${'hours' @i18n}"></sly>
+	      <sly data-sly-set.mins="${durMins} ${'minutes' @i18n}"></sly>
+	      <sly data-sly-test="${(durHours) && (durMins)}">
+	        <p class="captionL text-darkGold">${hours} ${mins}</p>
+	      </sly>
+	      <sly data-sly-test="${(durHours) && (!durMins)}">
+	        <p class="captionL text-darkGold">${hours}</p>
+	      </sly>
+	      <sly data-sly-test="${(!durHours) && (durMins)}">
+	        <p class="captionL text-darkGold">${mins}</p>
+	      </sly>
+	    </sly>
+	  </sly>
+	  <sly data-sly-test="${type == 'static'}">
+	    <p class="captionL text-darkGold">${infocardObj.duration}</p>
+	  </sly>
+	</div>
+    <div data-sly-test.badgesList="${details.courseBadgesList}" class="info-item">
+      <h4 class="captionM">${infocardObj.badgesLabel}</h4>
+      <div class="course-images-wrapper" data-sly-list.badges="${badgesList}">
+          <sly data-sly-test="${badgesList.count <= 3}">
+              <img alt="${badges.altText}" src="${badges.badgeImage}" />
+          </sly>
+      </div>
+    </div>
+    <div data-sly-test="${details.formatsList}" class="info-item">
+        <h4 class="captionM">${infocardObj.formatLabel}</h4>
+        <ul class="body5" data-sly-list="${details.formatsList}">
+            <li>
+                ${item @i18n}
+            </li>
+        </ul>
+    </div>
+      <div>
+        <a class="button button--primary_darkgold cta-link" href="${infocardObj.infoctaURL}" target="${infocardObj.infotarget}"
+            data-learningPathwayID="${learningPathwayID}" data-courseID="${courseID}">
+          <span class="cta-link__text">${infocardObj.infoctaLabel}</span>
+        </a>
+    </div>
+  </aside>
+</template>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="NTA Course Card Listing"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                    <basicdetails
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Basic details"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter the title to show on top"
+                                        fieldLabel="Enter the title"
+                                        name="./title"/>
+                                    <description
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                        fieldDescription="Please enter the description to show below the title"
+                                        fieldLabel="Enter the description"
+                                        name="./description"/>
+                                    <listingType
+                                        granite:class="cq-dialog-dropdown-showhide"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Select the listing type"
+                                        name="./listingType">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <static
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Static course listing"
+                                                value="static"/>
+                                            <dynamic
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Dynamic course listing"
+                                                value="dynamic"/>
+                                        </items>
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-dialog-dropdown-showhide-target=".dropdown-showhide"/>
+                                    </listingType>
+                                    <dynamic
+                                        granite:class="dropdown-showhide"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <catalogId
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please enter the catalog ID to get the specific courses for the catalog."
+                                                fieldLabel="Enter the catalog ID"
+                                                name="./catalogId"/>
+                                            <secondaryButtonLink
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Secondary Button Link"
+                                                name="./secondaryButtonLink"
+                                                rootPath="/content/talentacademy"/>
+                                            <secondaryButtonTarget
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="Select the checkbox to open link on new tab"
+                                                name="./secondaryButtonTarget"
+                                                text="Secondary Button Link Open in New Window?"
+                                                uncheckedValue="_self"
+                                                value="_blank"/>
+                                        </items>
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            showhidetargetvalue="dynamic"/>
+                                    </dynamic>
+                                    <static
+                                        granite:class="dropdown-showhide"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <rootDetailsPath
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldDescription="Please select the root path for the course details page to get the list of all page data."
+                                                fieldLabel="Select root path of details page"
+                                                name="./rootDetailsPath"
+                                                rootPath="/content/talentacademy"/>
+                                        </items>
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            showhidetargetvalue="static"/>
+                                    </static>
+                                    <loadMoreLimit
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                        fieldDescription="Please select/enter the count for showing number of cards per load."
+                                        fieldLabel="Select the count for showing number of cards per load"
+                                        max="{Long}12"
+                                        min="{Long}6"
+                                        name="./loadMoreLimit"
+                                        value="6"/>
+                                    <badgesEarned
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter the label for badges we recommend to show in the card."
+                                        fieldLabel="Enter badges earned label"
+                                        name="./badgesEarned"/>
+                                    <loadMoreCtaLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter the label for CTA load more button to load other cards in the list."
+                                        fieldLabel="Enter load more CTA button label"
+                                        name="./loadMoreCtaLabel"/>
+                                    <primaryButtonLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter the label for primary CTA button."
+                                        fieldLabel="Enter the label for primary CTA button"
+                                        name="./primaryButtonLabel"/>
+                                    <primaryButtonLink
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldDescription="Please enter the link for primary CTA button."
+                                        fieldLabel="Enter primary CTA button link"
+                                        name="./primaryButtonLink"/>
+                                    <primaryButtonTarget
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        name="./primaryButtonTarget"
+                                        text="Enable the checkbox to open link in new tab"
+                                        uncheckedValue="_self"
+                                        value="_blank"/>
+                                    <secondaryButtonLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter the label for secondary CTA button."
+                                        fieldLabel="Enter the label for secondary CTA button"
+                                        name="./secondaryButtonLabel"/>
+                                </items>
+                            </column>
+                        </items>
+                    </basicdetails>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

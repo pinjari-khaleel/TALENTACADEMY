@@ -1,0 +1,36 @@
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}" class="panel-title">${'icongrid'
+	@i18n}</h3>
+<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+<section data-sly-use.iconGridModel="com.talentacademy.core.models.IconGridModel"
+	class="bg-cream50 ta-icon-grid ${iconGridModel.gridType =='sectorsgrid' ? 'ta-sectors-grid' : 'ta-logo-grid' }"
+	data-component="${analyticsModel.title}">
+	<div class="ta-icon-grid__info">
+		<sly data-sly-test="${iconGridModel.caption}">
+			<h4 data-sly-test="${iconGridModel.caption}" class="captionM">${iconGridModel.caption}</h4>
+		</sly>
+		<sly data-sly-test="${iconGridModel.iconGridTitle}">
+			<h5 data-sly-test="${iconGridModel.iconGridTitle}" class="title4">${iconGridModel.iconGridTitle}</h5>
+		</sly>
+		<sly data-sly-test="${iconGridModel.iconGridDescription}">
+			<p data-sly-test="${iconGridModel.iconGridDescription}" class="body4">${iconGridModel.iconGridDescription}
+			</p>
+		</sly>
+	</div>
+	<div class="ta-icon-grid__container">
+		<sly data-sly-test="${iconGridModel.gridIconsList}">
+			<sly data-sly-list.iconsList="${iconGridModel.gridIconsList}">
+				<sly data-sly-test="${iconGridModel.gridType =='sectorsgrid'}">
+					<div class="ta-sector">
+						<div class="ta-sector__icon-wrapper">
+							<img src="${iconsList.icon}" alt="${iconsList.altText}">
+						</div>
+						<h6 class="captionS">${iconsList.iconText} </h6>
+					</div>
+				</sly>
+				<sly data-sly-test="${iconGridModel.gridType =='icongrid'}">
+					<img src="${iconsList.icon}" alt="${iconsList.altText}">
+				</sly>
+			</sly>
+		</sly>
+	</div>
+</section>

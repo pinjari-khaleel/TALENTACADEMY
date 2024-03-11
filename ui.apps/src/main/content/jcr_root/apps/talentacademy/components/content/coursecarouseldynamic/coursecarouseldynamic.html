@@ -1,0 +1,21 @@
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}" class="panel-title">${'courseCarouselDynamic'
+	@i18n}</h3>
+
+<sly data-sly-use.courseCarousel="com.talentacademy.core.models.DynamicCourseCarouselModel"
+	 data-sly-use.courseModel="com.talentacademy.core.models.CourseCardModel">
+	 <sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+	<div class="swiper-wrapper" data-component="${analyticsModel.title}" data-sly-list.details="${courseCarousel.courseDetails}">
+		<div class="swiper-slide" role="tabpanel">
+			<sly data-sly-list.localizedData="${details.courseLocalizedDataList}">
+				<sly data-sly-test="${localizedData.title && localizedData.locale == courseCarousel.currentPageLocale}"
+				     data-sly-set.title="${localizedData.title}"/>
+			</sly>
+			<sly data-sly-test="${courseCarousel.loId}" data-sly-set.imageUrl=""></sly>
+			<sly data-sly-test="${!courseCarousel.loId && details.imageUrl}" data-sly-set.imageUrl="${details.imageUrl}"></sly>
+		<sly data-sly-use.temp="${'talentacademy/components/content/coursecard/coursetemplate.html'}" data-sly-call="${temp.include @ type = 'dynamic',  courseImage = imageUrl,
+			carouselImageLabelText = details.loType, title = title, coursesCount = details.subLosCount, durationHours = details.durationHours,
+			durationMinutes = details.durationMinutes, badgesList = details.courseBadgesList, contentTypeID = details.id, pagePath = details.pagePath, courseModel = courseModel}">
+		</sly>
+		</div>
+	</div>
+</sly>

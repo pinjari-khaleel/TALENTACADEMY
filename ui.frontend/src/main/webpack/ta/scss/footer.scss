@@ -1,0 +1,206 @@
+.ta-footer {
+  background-color: map-get($colors, "black");
+  width: 100%;
+  border-top: 5px solid map-get($colors, "darkGold");
+  .footer-nav__top {
+    display: flex;
+    flex-direction: column;
+    margin-block: 1.875rem;
+    padding: 0 1.25rem;
+    @include md {
+      padding: 0 4.42rem;
+      flex-direction: row;
+      margin-top: 4.6rem;
+    }
+    .footer-navlink__container {
+      color: map-get($colors, "white");
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      position: relative;
+      @include md {
+        gap: 1.06rem;
+      }
+      h3 {
+        text-transform: uppercase;
+        display: none;
+        @include md {
+          display: block;
+        }
+      }
+      .footer-accordion__header {
+        text-transform: uppercase;
+        border: none;
+        border-radius: 0;
+        width: 100%;
+        background: transparent;
+        padding-block: 1.88rem;
+        text-align: left;
+        font-size: 1rem;
+        color: map-get($colors, "white");
+        border-bottom: 1px solid map-get($colors, "black90");
+        &::before {
+          content: "";
+          width: 16px;
+          height: 16px;
+          display: inline-block;
+          background: url("../resources/images/whitechevron.svg") no-repeat;
+          background-size: contain;
+          margin-right: 10px;
+          transition: transform 0.2s;
+          position: absolute;
+          right: 0;
+          top: 40%;
+          rotate: 0deg;
+        }
+        &[aria-expanded="true"] {
+          &::before {
+            top: 35%;
+            rotate: 180deg;
+          }
+        }
+        @include md {
+          display: none;
+        }
+      }
+      .footer-accordion__content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 250ms ease-out;
+        display: flex;
+        gap: 1.62rem;
+        flex-direction: column;
+        .footer-links {
+          color: map-get($colors, "black20");
+          &:hover {
+            color: map-get($colors, "gold"); 
+          }
+          @include md {
+            font-size: 1rem;
+          }
+        }
+        @include md {
+          max-height: fit-content;
+        }
+      }
+      .footer-accordion__open {
+        padding-bottom: 1.625rem;
+        margin-top: 1.88rem;
+        border-bottom: 1px solid map-get($colors, "black90");
+        max-height: fit-content;
+      }
+    }
+  }
+  .footer-nav__middle {
+    margin-top: 11.25rem;
+    margin-bottom: 4.375rem;
+    margin-inline: 1.25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .footer-social__header {
+      display: none;
+      @include md {
+        display: flex;
+        color: map-get($colors, "white");
+      }
+    }
+    .footer-social__links {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1.5625rem;
+      .footer-social__link {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+    @include md {
+      margin-inline: 4.42rem;
+      border-top: 1px solid map-get($colors, "black90");
+      margin-top: 9.46rem;
+      padding: 3.19rem 0;
+      margin-bottom: 0;
+      justify-content: space-between;
+    }
+  }
+  .footer-nav__bottom {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: map-get($colors, "black20");
+    background-color: map-get($colors, "deepBlack");
+    padding: 1.875rem 1.25rem;
+    gap: 0.625rem;
+    flex-direction: column;
+    .footer-links-section {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+    }
+    @include md {
+      padding: 0 4.42rem;
+      height: 5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .footer-copyright {
+      display: flex;
+      gap: 0.625rem;
+      .footer-copyright-text-links a {
+        text-transform: unset;
+        gap: 0.625rem;        
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        &::after {
+          content: "";
+          width: 0.437rem;
+          background-color: map-get($colors, "darkGold");
+          height: 0.437rem;
+          border-radius: 100%;
+        }
+      }
+    }
+    .footer-copyright-text {
+      white-space: nowrap;
+      @include md {
+        font-size: .75rem;
+      }
+    }
+    .footer-recaptcha-text {
+      color: map-get($colors, "black50");
+      font-size: 0.75rem;
+      text-align: center;
+      @include md {
+        white-space: nowrap;
+      }
+    }
+    p {
+      margin-left: 0.625rem;
+    }
+    a{
+      color: map-get($colors, "black20");
+    }
+  }
+}
+[dir="rtl"] {
+  .ta-footer {
+    .footer-nav__bottom {
+      p {
+        margin-left: 0;
+      }
+    }
+    .footer-nav__top .footer-navlink__container .footer-accordion__header {
+      text-align: right;
+      &::before {
+        left: 0;
+        right: unset;
+      }
+    }    
+  }  
+}
+
+

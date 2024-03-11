@@ -1,0 +1,18 @@
+{
+   "tabslider":{
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/content/tabslider",
+      "header":"Test Header",
+      "tabSliderDetails":{
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "tabName":"Test Tab Name",
+            "title":"Test Title",
+            "description":"Test Description",
+            "image": "/content/dam/test.jpg",
+            "imageAltText": "Test Image"
+         },
+         "jcr:primaryType":"nt:unstructured"
+      }   
+   }
+}

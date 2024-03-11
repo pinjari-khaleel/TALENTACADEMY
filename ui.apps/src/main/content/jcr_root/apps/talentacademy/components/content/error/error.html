@@ -1,0 +1,30 @@
+<sly data-sly-use.model="com.talentacademy.core.models.ErrorComponentModel">
+	<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+	<sly data-sly-use.imageTemplate="/apps/talentacademy/components/content/atoms/dmediaimage.html"></sly>
+    <section class="ta-error spotlight" data-component="${analyticsModel.title}">
+		<div class="ta-error__header">
+			<a href="${model.redirectURL}"><img src="${model.logo}" alt="${model.logoAltText}"/></a>
+		</div>
+        <div class="ta-error__content">
+            
+            <div class="ta-error__details">
+                <h1 class="ta-tag ta-tag_gold">${model.pretitle}</h1>
+                <h3 class="title6">${model.title}</h3>
+                <p class="body5">${model.description}</p>
+                
+            </div>
+            
+            <div class="ta-error__details ta-error--arabic">
+                <h1 class="ta-tag ta-tag_gold">${model.arPretitle}</h1>
+                <h3 class="title6">${model.arTitle}</h3>
+                <p class="body5">${model.arDescription}</p>
+                
+            </div>
+
+        </div>
+        <div class="ta-error__bg">
+			<sly data-sly-call="${imageTemplate.image @ 
+              	imagePath=model.fileReference, alt=model.altText, mobileImgWidth='360', desktopImgWidth='1440'}"></sly>
+        </div>
+    </section>
+</sly>

@@ -1,0 +1,157 @@
+{
+  "links": {
+    "self": "https://learningmanagereu.adobe.com/primeapi/v2/learningObjects/learningProgram:58512"
+  },
+  "data": {
+    "id": "learningProgram:58512",
+    "type": "learningObject",
+    "attributes": {
+      "bannerUrl": "https://example.com/eu/public/test.png",
+      "dateCreated": "2023-12-13T08:32:09.000Z",
+      "dateUpdated": "2024-02-05T09:29:58.000Z",
+      "duration": 70460,
+      "effectiveModifiedDate": "2024-02-05T10:02:47.000Z",
+      "effectivenessIndex": 35,
+      "enrollmentType": "Self Enroll",
+      "hasPreview": true,
+      "imageUrl": "https://example.com/eu/public/test.png",
+      "isEnhancedLP": true,
+      "isExternal": false,
+      "isMqaEnabled": false,
+      "isPrerequisiteEnforced": false,
+      "isSubLoOrderEnforced": false,
+      "loFormat": "Blended",
+      "loType": "learningProgram",
+      "moduleResetEnabled": false,
+      "state": "Published",
+      "unenrollmentAllowed": true,
+      "catalogLabels": [
+        {
+          "description": "Course ISIC4 ",
+          "mandatory": true,
+          "name": "Course-ISIC4",
+          "values": [
+            "Agriculture, forestry and fishing"
+          ]
+        }
+      ],
+      "localizedMetadata": [
+        {
+          "description": "This training is ideal for individuals aspiring to pursue a career in travel advisory, including travel consultants, aspiring travel agents, and those interested in mastering the art of planning and facilitating memorable journeys for clients. ",
+          "locale": "en-US",
+          "name": "JourneyCraft: Mastering the Art of Travel Advisory",
+          "overview": "In this learning pathway, you will delve into the intricacies of travel planning, client relationship management, crisis resolution, and effective communication. These courses offer a unique blend of theoretical insights and practical strategies, empowering learners to become proficient travel advisors..",
+          "richTextOverview": "<p>In this learning pathway, you will delve into the intricacies of travel planning, client relationship management, crisis resolution, and effective communication. These courses offer a unique blend of theoretical insights and practical strategies, empowering learners to become proficient travel advisors..</p>"
+        }
+      ],
+      "rating": {
+        "averageRating": 5,
+        "ratingsCount": 1
+      },
+      "sections": [
+        {
+          "loIds": [
+            "course:2042880"
+          ],
+          "mandatory": true,
+          "mandatoryLOCount": 1,
+          "sectionId": "57266"
+        },
+        {
+          "loIds": [
+            "course:2042928"
+          ],
+          "mandatory": true,
+          "mandatoryLOCount": 1,
+          "sectionId": "58059"
+        },
+        {
+          "loIds": [
+            "course:2089632",
+            "course:1757167"
+          ],
+          "mandatory": true,
+          "mandatoryLOCount": 2,
+          "sectionId": "58802"
+        }
+      ]
+    },
+    "relationships": {
+      "instances": {
+        "data": [
+          {
+            "id": "learningProgram:58512_63923",
+            "type": "learningObjectInstance"
+          }
+        ]
+      },
+      "skills": {
+        "data": [
+          {
+            "id": "course:1757167_64782",
+            "type": "learningObjectSkill"
+          },
+          {
+            "id": "course:2042880_73237",
+            "type": "learningObjectSkill"
+          },
+          {
+            "id": "course:2042880_73238",
+            "type": "learningObjectSkill"
+          },
+          {
+            "id": "course:2042880_76207",
+            "type": "learningObjectSkill"
+          },
+          {
+            "id": "course:2042928_64784",
+            "type": "learningObjectSkill"
+          },
+          {
+            "id": "course:2089632_64783",
+            "type": "learningObjectSkill"
+          },
+          {
+            "id": "course:2089632_73237",
+            "type": "learningObjectSkill"
+          },
+          {
+            "id": "course:2089632_73238",
+            "type": "learningObjectSkill"
+          },
+          {
+            "id": "course:2089632_76207",
+            "type": "learningObjectSkill"
+          },
+          {
+            "id": "learningProgram:58512_64781",
+            "type": "learningObjectSkill"
+          },
+          {
+            "id": "learningProgram:58512_73238",
+            "type": "learningObjectSkill"
+          }
+        ]
+      },
+      "subLOs": {
+        "data": [
+          {
+            "id": "course:1757167",
+            "type": "learningObject"
+          },
+          {
+            "type": "learningObject"
+          },
+          {
+            "id": "learningProgram:58512",
+            "type": "learningObject"
+          },
+          {
+            "id": "course:2089632",
+            "type": "learningObject"
+          }
+        ]
+      }
+    }
+  }
+}

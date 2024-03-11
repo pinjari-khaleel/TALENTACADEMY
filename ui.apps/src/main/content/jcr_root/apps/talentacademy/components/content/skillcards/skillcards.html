@@ -1,0 +1,69 @@
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}"  class="panel-title">
+    ${'Skill Cards' @ i18n}
+</h3>
+<sly data-sly-use.model="com.talentacademy.core.models.SkillCardsModel"/>
+<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+<sly data-sly-test.variation =  "${model.cardVariation}">
+    <sly data-sly-test.centerAlign = "${variation == 'typeOne' ? 'ta-skillcard-variant1' : 'ta-skill-cards--center'}"/>
+    <sly data-sly-test.bgColor = "${variation == 'typeFour' ? ' ' : (variation == 'typeFive' ? ' ': 'bg-cream25')}"/>
+    <sly data-sly-test.var="${variation == 'typeTwo' ? 'ta-skillcard-variant2':
+                             (variation == 'typeThree' ? 'ta-skill-cards--variant3':
+                             (variation == 'typeFour' ? 'bg-black ta-skill-cards--dark':
+                             (variation == 'typeFive' ? 'ta-skill-cards--variant5':' ')))}"/>
+    <section class='ta-skill-cards ${bgColor} ${centerAlign} ${var}' data-component="${analyticsModel.title}" data-max-items="1.2">
+        <sly data-sly-test = "${variation == 'typeFive'}">
+            <picture class="ta-skill-cards--variant5__image">
+                <source media="(min-width: 901px)" srcset="${model.fileReference}"/>
+                <source media="(min-width: 768px)" srcset="${model.fileReference}"/>
+                <source media="(min-width: 320px)" srcset="${model.fileReference}"/>
+                <img src="${model.fileReference}" alt=""/>
+            </picture>
+        </sly>
+
+        <div class="ta-skill-cards__container">
+            <div class='ta-skill-cards__info'>
+                <sly data-sly-test = "${variation != 'typeOne'}">
+                    <h4 class="captionM">${model.shortTitle}</h4>
+                </sly>
+                <h5 class="title5">${model.title}</h5>
+                <p class="body4">${model.description}</p>
+                <sly data-sly-test = "${variation == 'typeThree'}">
+                    <sly data-sly-resource="${@ path='button--primary_black', resourceType='talentacademy/components/button', decorationTagName='div'}"></sly>
+                    <div class="space-6"></div>
+                </sly>
+            </div>
+            <div class="nta-carousel__container cmp-carousel__content">
+                <div class="swiper-wrapper">
+                    <sly data-sly-list.card="${model.cardItems}">
+                        <div
+                                class="cmp-carousel__item cmp-carousel__item--active swiper-slide"
+                                aria-roledescription="slide"
+                                aria-label="Slide ${cardList.count} of ${model.cardItems.size}">
+                            <div class="ta-skill-card">
+                                <sly data-sly-test = "${(variation == 'typeFour' || variation == 'typeFive')}" >
+                                    <div class="ta-skill-card__icon-wrapper">
+                                        <img data-sly-test="${card.icon}" src="${card.icon}" alt="${'icon' @ i18n}" />
+                                    </div>
+                                </sly>
+                                <h6 class="${(variation == 'typeFour' || variation == 'typeFive') ? 'captionL': 'captionM'}">
+                                    ${card.title}
+                                </h6>
+                                <p class="body5">
+                                    ${card.description}
+                                </p>
+                            </div>
+                        </div>
+                    </sly>
+                </div>
+                <div class="swiper-pagination"></div>
+                <sly data-sly-test = "${variation == 'typeTwo'}" >
+                    <div class="space-4"></div>
+                    <sly data-sly-resource="${ @ path='button--secondary', resourceType='talentacademy/components/button', decorationTagName='div'}"></sly>
+                </sly>
+            </div>
+        </div>
+    </section>
+</sly>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.all @ categories='talentacademy.swiper'}"/>
+</sly>

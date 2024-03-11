@@ -1,0 +1,88 @@
+.ta-career-details {
+  .main {
+    padding: 0 1.25rem 1.25rem;
+  }
+  .info-list {
+    .info-item {
+      padding-bottom: 1.875rem;
+		a {
+			&::after {
+				content: '';
+				display: inline-flex;
+				width: 1.5rem;
+				height: 1.25rem;
+				background-image: url("../resources/images/arrow-dark.svg");
+				margin-left: 0.625rem;
+				background-size: 1.25rem;
+				background-repeat: no-repeat;
+				margin-top: 1px;
+			}
+		
+			font-size: 0.625rem;
+			color: map-get($colors, "black");
+			font-family: $brown;
+			text-decoration: none;
+			align-items: center;
+			display: inline-flex;
+		}
+    }
+    ul {
+      list-style: disc;
+      margin-left: 0.625rem;
+    }
+    h4 {
+      margin-bottom: 0.625rem;
+      color: map-get($colors, "black");
+    }
+    .body5 {
+      color: map-get($colors, "black90");
+    }
+    .box-style {
+      border: 1px solid map-get($colors, "black20");
+      padding: 1.125rem 1.125rem 1.125rem 2rem;
+      margin-left: 0;
+      background-color: map-get($colors, "white");
+      li {
+        line-height: 3;
+      }
+    }
+  }
+  @include md {
+    padding-top: 6.25rem;
+    .main {
+      display: flex;
+      align-items: flex-start;
+      max-width: 90rem;
+      margin: auto;
+      padding: 0 11.25rem 3.75rem;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+    .info-list {
+      width: 50%;
+      .info-item {
+        padding-bottom: 3.125rem;
+        h2 {
+          font-size: 1.75rem;
+          letter-spacing: .21rem;
+          line-height: 143%;
+        }
+        a {
+          font-size: 0.75rem;
+        }
+      }
+      .title6 {
+        margin-bottom: 1.25rem;
+      }
+      .box-list {
+        padding: 1.875rem 1.875rem 1.875rem 2.75rem;
+      }
+    }
+    .bookmark-nav {
+      .container {
+        padding-left: 11.25rem;
+        padding-right: 11.25rem;
+      }
+    }
+  }
+}

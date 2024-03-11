@@ -1,0 +1,25 @@
+<template data-sly-template.include="${@ model}">
+    <ul class="grid-listing dynamiccourse-listing" data-sly-list.cardDetail="${model.getCourseDetails}" data-locale="${model.getCurrentPageLocale}">
+        <sly data-sly-set.contentTypeID="${cardDetail.id}" />
+
+        <sly data-sly-list.localizedData="${cardDetail.courseLocalizedDataList}">
+            <sly data-sly-test="${localizedData.title && localizedData.locale == model.getCurrentPageLocale}"
+                 data-sly-set.courseTitle="${localizedData.title}"/>
+        </sly>
+
+        <li data-sly-test="${cardDetailList.index < model.loadMoreLimit}">
+            <sly data-sly-use.temp="${'talentacademy/components/content/coursecard/coursetemplate.html'}" data-sly-call="${temp.include @ type = 'dynamic',  courseImage = cardDetail.imageUrl,
+                altTextForImage = cardDetail.cardImageAltText, carouselImageLabelText = cardDetail.loType, title = courseTitle, coursesCount = cardDetail.numberOfCourses, durationHours = cardDetail.durationHours,
+                durationMinutes = cardDetail.durationMinutes, badgesTitle = model.badgesEarned, badgesList = cardDetail.courseBadgesList, contentTypeID = contentTypeID, pagePath = cardDetail.pagePath, courseModel = model}">
+            </sly>
+        </li>        
+    </ul>
+    
+    <input type="hidden" class="page-cursor" data-cursorId="${model.cursorIdValue}" />
+
+    <button class="button button--secondary load-button load-more-button cta-link" data-offset="2"
+        data-sly-test="${model.loadMoreCtaLabel}">
+        <span class="cta-link__text">${model.loadMoreCtaLabel}</span>
+    </button>
+    
+</template>

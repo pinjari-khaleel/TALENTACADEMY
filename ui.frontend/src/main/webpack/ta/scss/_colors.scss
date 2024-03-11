@@ -1,0 +1,36 @@
+//theme colors
+$colors: ( "cream": #F3EFE5,
+  "cream50": #F9F7F2,
+  "cream25": #FCFBF8,
+  "white": #FFFFFF,
+  "darkGold": #B89535,
+  "disabledGold": #d9c796,
+  "gold": #EBC03F,
+  "brightYellow": #FFD02A,
+  "yellowHover": #FFE973,
+  "deepBlack": #161719,
+  "black": #1D1F22,
+  "black90": #343538,
+  "black75": #565759,
+  "black50": #8E8F90,
+  "black20": #D2D2D3,
+  "black10": #E8E9E9,
+  "lightGreyBg": #F8F8F8,
+  "darkBlue": #003865,
+  "green": #006B44,
+  "orange": #F18825,
+  "lightBlue": #007BB5,
+  "red": #E0403F,
+  "darkBlack": #000000,
+  "blackfortag": #090909,
+  "errorRed": #ff8080
+);  
+
+@each $key, $val in $colors {
+  .text-#{$key} {
+    color: $val;
+  }
+  .bg-#{$key} {
+    background-color: $val;
+  }
+}

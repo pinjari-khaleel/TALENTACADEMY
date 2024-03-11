@@ -1,0 +1,41 @@
+{
+    "jcr:primaryType": "cq:Page",
+	"jcr:content": {
+		"jcr:primaryType": "cq:PageContent",
+		"jcr:createdBy": "admin",
+		"jcr:title": "en",
+		"flagsPath": "/content/dam/flags",
+		"countryCodeOptionsPath": "/content/talentacademy/jcr:content/country-code-options",
+		"required":"true",
+		"title":"Mobile",
+		"name":"phoneCode",
+		"errorMessage":"Select the phone country",
+		"jcr:description": "testDesc",
+		"sling:resourceType": "neomtalentacademy/components/page",
+		"country-code-options": {
+			"jcr:primaryType": "nt:unstructured",
+                "saudi-arabia": {
+                    "jcr:primaryType":"nt:unstructured",
+                    "text":"Saudi Arabia",
+                    "selected" : "false",
+                    "countryCode" : "SA",
+                    "value":"966"                    
+                },
+				"afghanistan": {
+                    "jcr:primaryType":"nt:unstructured",
+                    "text":"Afghanistan",
+                    "selected" : "false",
+                    "countryCode" : "AF",
+                    "value":"93"                    
+                },
+				"albania": {
+                    "jcr:primaryType":"nt:unstructured",
+                    "text":"Albania",
+                    "selected" : "false",
+                    "countryCode" : "AL",
+                    "value":"355"                    
+                }
+            
+        }
+    }
+}

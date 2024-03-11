@@ -1,0 +1,23 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "city": {
+    "jcr:primaryType": "nt:unstructured",
+    "text": "City",
+    "value": "city"
+  },
+  "country": {
+    "jcr:primaryType": "nt:unstructured",
+    "text": "Country of residence",
+    "value": "country"
+  },
+  "email": {
+    "jcr:primaryType": "nt:unstructured",
+    "text": "Email Address",
+    "value": "email"
+  },
+  "gender": {
+    "jcr:primaryType": "nt:unstructured",
+    "text": "gender",
+    "value": "gender"
+  }
+}

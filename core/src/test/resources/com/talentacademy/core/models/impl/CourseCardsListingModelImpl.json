@@ -1,0 +1,73 @@
+{
+    "jcr:primaryType": "cq:Page",
+	"jcr:content": {
+		"jcr:primaryType": "cq:PageContent",
+		"jcr:createdBy": "admin",
+		"jcr:title": "en",
+		"title": "course title",
+		"description": "course description",
+		"jcr:description": "testDesc",
+		"sling:resourceType": "neomtalentacademy/components/page",
+		"root": {
+			"jcr:primaryType": "nt:unstructured",
+			"sling:resourceType": "talentacademy/components/container",
+			"container": {
+				"jcr: primaryType": "nt:unstructured",
+				"sling: resourceType": "talentacademy/components/container",
+                "coursecardslisting": {
+                    "jcr:primaryType":"nt:unstructured",
+                    "sling:resourceType":"talentacademy/components/content/coursecardslisting",
+                    "title":"Start your learning today",
+                    "description" : "With thousands of job roles to explore in NEOM",
+                    "listingType" : "static",
+                    "rootDetailsPath":"/content/talentacademy/sa/courses",
+                    "loadMoreLimit" : 6,
+                    "badgesEarned":"Earned badges",
+                    "loadMoreCtaLabel" : "Load More",
+                    "primaryButtonLabel" : "Register Interest",
+                    "primaryButtonLink" : "External link",
+                    "primaryButtonTarget": "_self",
+                    "secondaryButtonLabel" : "Learn More",
+                    "secondaryButtonLink" : "Button Link",
+                    "secondaryButtonTarget" : "_self",
+                    "catalogId" : "29758",
+                    "dynamiccoursedetail-1": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "sling:resourceType": "talentacademy/components/content/coursecarouseldynamic"
+                    },
+                    "dynamiccoursedetail-2": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "sling:resourceType": "talentacademy/components/content/coursecarouseldynamic"
+                    }
+                    
+                },
+              "coursecardslisting1": {
+                "jcr:primaryType":"nt:unstructured",
+                "sling:resourceType":"talentacademy/components/content/coursecardslisting",
+                "title":"Start your learning today",
+                "description" : "With thousands of job roles to explore in NEOM",
+                "listingType" : "dynamic",
+                "loadMoreLimit" : 6,
+                "badgesEarned":"Earned badges",
+                "loadMoreCtaLabel" : "Load More",
+                "primaryButtonLabel" : "Register Interest",
+                "primaryButtonLink" : "External link",
+                "primaryButtonTarget": "_self",
+                "secondaryButtonLabel" : "Learn More",
+                "secondaryButtonLink" : "Button Link",
+                "secondaryButtonTarget" : "_self",
+                "catalogId" : "23445",
+                "dynamiccoursedetail-1": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "sling:resourceType": "talentacademy/components/content/coursecarouseldynamic"
+                },
+                "dynamiccoursedetail-2": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "sling:resourceType": "talentacademy/components/content/coursecarouseldynamic"
+                }
+
+              }
+            }
+        }
+    }
+}

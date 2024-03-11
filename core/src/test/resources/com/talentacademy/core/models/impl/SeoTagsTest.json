@@ -1,0 +1,46 @@
+{
+  "jcr:primaryType":"cq:Page",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:createdBy": "admin",
+    "jcr:title": "en",
+    "jcr:description": "testDesc",
+    "brandSlug_override": "true",
+    "robotsTags": [
+      "index",
+      "noindex",
+      "follow"
+    ],
+    "twitterCard": "summary",
+    "twitterSite": "Twitter Site Name",
+    "ogImage": "/content/dam/neomtalentacademy/asset.jpg",
+    "ogTitle": "og Title",
+    "pwaOrientation": "any",
+    "twitterDescription": "Twitter Description",
+    "cq:template": "/conf/neomtalentacademy/settings/wcm/templates/page-content",
+    "ogSite": "og Site Name",
+    "ogType": "product",
+    "twitterImage": "/content/dam/neomtalentacademy/asset.jpg",
+    "twitterTitle": "Twitter Title",
+    "brandSlug": "test",
+    "seoDescription": "SEO Description",
+    "cq:contextHubSegmentsPath": "/etc/segmentation/contexthub",
+    "jcr:created": "Wed Oct 18 2023 18:46:18 GMT+0530",
+    "pwaDisplay": "standalone",
+    "cq:robotsTags": [
+      "follow",
+      "nosnippet"
+    ],
+    "cq:lastModified": "Wed Oct 25 2023 08:21:26 GMT+0530",
+    "twitterImageText": "Twitter Image Alt Text",
+    "robotsTag": "noindex",
+    "ogImageText": "og Image Alt Text",
+    "pwaCachestrategy": "staleWhileRevalidate",
+    "pageTitle": "Neom Talent Academy",
+    "sling:resourceType": "neomtalentacademy/components/page",
+    "cq:contextHubPath": "/etc/cloudsettings/default/contexthub",
+    "seoTitle": "SEO Title",
+    "cq:lastModifiedBy": "admin",
+    "ogDescription": "Og Description"
+  }
+}

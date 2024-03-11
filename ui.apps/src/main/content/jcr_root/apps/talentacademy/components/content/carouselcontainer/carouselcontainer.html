@@ -1,0 +1,57 @@
+<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+<div data-sly-use.container="com.talentacademy.core.models.CarouselContainerModel"
+    class="cmp-carousel nta-carousel ${container.carouselType =='futureacademies' ? 'futureacademiescarousel' : 'coursecareercarousel' }"
+    data-component="${analyticsModel.title}"
+    data-placeholder-text="${wcmmode.edit && 'Please add Carousel components here' @ i18n}">
+    <div class="nta-carousel__top">
+        <div class="carousel-details nta-carousel__description"
+            data-sly-test="${container.caption ||  container.carouselTitle || container.carouselDescription || container.buttonLabel}">
+            <h4 data-sly-test="${container.caption}" class="captionM text-darkGold">${container.caption}</h4>
+            <h2 data-sly-test="${container.carouselTitle}" class="title4">${container.carouselTitle}</h2>
+            <p data-sly-test="${container.carouselDescription}" class="body4">${container.carouselDescription}</p>
+
+            <a data-sly-test="${container.buttonLabel && container.buttonLink}" class="button button--secondary has-arrow cta-link"
+                href="${container.buttonLink}" target="${container.openInNewTab == 'true' ? '_blank' : '_self'}">
+                <span class="cta-link__text">${container.buttonLabel}</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="cmp-carousel__actions nta-carousel__buttons">
+        <div class="nta-carousel__navigation">
+            <button class="cta-arrow cta-arrow-left cta-arrow-white carousel-button__prev" type="button"
+                data-cmp-hook-carousel="previous">
+            </button>
+            <button class="cta-arrow cta-arrow-white carousel-button__next" type="button" data-cmp-hook-carousel="next">
+            </button>
+        </div>
+    </div>
+
+    <div class="nta-carousel__container cmp-carousel__content">
+        <div class="swiper-wrapper" data-sly-test="${container.carouselType == 'futureacademies'}"
+            data-sly-list="${container.list}">
+            <sly data-sly-test.teaserNode="${['teaser', itemList.count] @ join='-'}"></sly>
+            <div data-sly-resource="${teaserNode @resourceType='talentacademy/components/teaser', decorationTagName='div'}"
+                 class="swiper-slide" role="tabpanel"></div>
+        </div>
+        <div class="swiper-wrapper" data-sly-test="${container.carouselType == 'staticcourse'}"
+             data-sly-list="${container.list}">
+            <sly data-sly-test.staticNode="${['static', itemList.count] @ join='-'}"></sly>
+            <div data-sly-resource="${staticNode @resourceType='talentacademy/components/content/coursecard'}"
+                 class="swiper-slide" role="tabpanel"></div>
+        </div>
+        <sly data-sly-test="${container.carouselType == 'dynamiccourse'}">
+            <sly data-sly-resource="${'dynamiccourse' @resourceType='talentacademy/components/content/coursecarouseldynamic'}"></sly>
+        </sly>
+        <div class="swiper-wrapper" data-sly-test="${container.carouselType == 'career'}"
+            data-sly-list="${container.list}">
+            <sly data-sly-test.careerNode="${['career', itemList.count] @ join='-'}"></sly>
+            <div data-sly-resource="${careerNode @resourceType='talentacademy/components/content/careercard'}"
+                 class="swiper-slide" role="tabpanel"></div>
+        </div>
+    </div>
+
+    <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+        <sly data-sly-call="${clientlib.all @ categories='talentacademy.swiper'}" />
+    </sly>
+</div>

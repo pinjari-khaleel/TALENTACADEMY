@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template"
+    allowedChildren="[/conf/talentacademy/settings/wcm/templates/base-page-template,/conf/talentacademy/settings/wcm/templates/placeholder-template,/conf/talentacademy/settings/wcm/templates/error-page-template,/conf/talentacademy/settings/wcm/templates/nta-immersive-page-template]">
+    <jcr:content
+        cq:templateType="/conf/talentacademy/settings/wcm/template-types/page-template-type"
+        jcr:description="NTA Placeholder Template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="NTA Placeholder page template"
+        status="enabled"/>
+</jcr:root>

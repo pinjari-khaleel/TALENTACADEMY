@@ -1,0 +1,5 @@
+.talentacademy-multifield[aria-invalid="true"] {
+    ._coral-Button--primary[aria-label="Add"] {
+        visibility: hidden;
+    }
+}

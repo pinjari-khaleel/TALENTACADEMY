@@ -1,0 +1,25 @@
+<sly data-sly-template.image="${@
+  imageModel='Image model with properties: src, alt',
+  className='class name for the picture tag',
+  imagePath='Image path which is not part of Image model',
+  loading='The ability to loading images by one of the parameters: lazy, eager, auto. Вy default, loading is lazy',
+  alt='Explicitly set alternative text for the image instead of the model alt property',
+  desktopImgWidth='desktop image width',
+  mobileImgWidth='mobile image width'
+  }">
+
+  <sly data-sly-set.imageValue="${imageModel.src || imagePath}"></sly>
+
+  <!--/* Dynamic Media variables */-->
+  <sly data-sly-use.dmModel="${'com.talentacademy.core.models.DynamicMediaModel' @
+       assetPath=imageValue, mobileWidth=mobileImgWidth, desktopWidth= desktopImgWidth}"></sly>
+
+  <picture class="${className ? className : 'a-image__picture'}" data-image-wrapper>
+    <source data-sly-test="${dmModel.desktopImage}" media="(min-width: 901px)" srcset="${dmModel.desktopImage}">
+    <source data-sly-test="${dmModel.desktopImage}" media="(min-width: 768px)" srcset="${dmModel.desktopImage}">
+    <source data-sly-test="${dmModel.mobileImage}" media="(min-width: 320px)" srcset="${dmModel.mobileImage}">
+    <img class="a-image__img" data-image-img
+      src="${dmModel.src || imageValue @ context='scriptComment'}" alt="${alt || imageModel.alt || ''}"
+      loading="${loading ? loading : 'lazy'}" />
+  </picture>
+</sly>

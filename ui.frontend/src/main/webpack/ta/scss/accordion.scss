@@ -1,0 +1,91 @@
+.ta-accordion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--primary-black-10, #e8e9e9);
+  background: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.625rem;
+}
+
+.accordion-item {
+  width: 100%;
+  padding: 2.5rem 1.875rem;
+}
+
+.accordion-item-header {
+  width: 100%;
+  display: flex;
+  border: none;
+  background-color: inherit;
+  gap: 1.25rem;
+  position: relative;
+  &::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url("../resources/images/goldchevron.svg") no-repeat;
+    background-size: contain;
+    transition: transform 150ms ease-in;
+    position: absolute;
+    right: 0;
+    top: 45%;
+    transform: rotate(180deg);
+  }
+  h5 {
+    flex-direction: column;
+    display: flex;
+    text-align: left;
+    align-items: flex-start;
+    margin: 0 1rem;
+    span {
+      color: map-get($colors, "black50");
+      font-size: 0.75rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%; /* 0.975rem */
+      letter-spacing: 0.045rem;
+      text-transform: uppercase;
+    }
+  }
+  .rounded-numbers {
+    width: 100%;
+    max-width: 2.25rem;
+    height: 2.25rem;
+    background: url("../resources/images/blackCircle.svg") no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    color: map-get($colors, "white");
+    font-weight: 700;
+  }
+}
+.accordion-item-header[aria-expanded="true"] {
+  &::after {
+    transform: rotate(0deg);
+  }
+}
+.accordion-item-content {
+  padding-top: 1.25rem;
+  display: none;
+  transition: all 0.2s ease-in;
+}
+
+.accordion-item-content-open {
+  display: block;
+}
+
+[dir="rtl"] {
+  .accordion-item-header {
+    h5 {
+      text-align: right;
+      margin-left: 1rem;
+      margin-right: 0;
+    }
+    &::after {
+      right: 100%;      
+    }
+  }
+}

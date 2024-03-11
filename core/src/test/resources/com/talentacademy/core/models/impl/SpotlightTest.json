@@ -1,0 +1,13 @@
+{
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "talentacademy/components/blinder",
+    "caption": "test Caption",
+    "learningPathway": "Learning Pathway",
+    "title": "test Title",
+    "description": "test description",
+    "desktopBackgroundImage": "/content/dam/test1.jpg",
+    "mobileBackgroundImage": "/content/dam/test2.jpg",
+    "imageAltText": "Image Alt Text",
+    "backgroundVideo": "/content/dam/testVideo.mp4",
+    "backgroundVideoPoster": "/content/dam/testVideo/poster.mp4"
+}

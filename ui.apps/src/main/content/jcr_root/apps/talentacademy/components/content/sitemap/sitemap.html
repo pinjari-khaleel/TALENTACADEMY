@@ -1,0 +1,26 @@
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}" class="panel-title">${'sitemap'
+    @i18n}</h3>
+<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+<section class="ta-sitemap bg-cream" data-component="${analyticsModel.title}" data-sly-use.navigation="com.talentacademy.core.models.SiteMapModel">
+    <sly data-sly-test="${navigation.heading}">
+        <h4 class="title4 ta-sitemap__heading">${navigation.heading}</h4>
+    </sly>
+    <sly data-sly-list.child="${navigation.getPagePath.listChildren}">
+        <div class="ta-sitemap__section" data-sly-test="${!child.properties.hideInSiteMap}">
+            <h5 class="captionL">
+                <sly
+                    data-sly-test.pageTitle="${child.properties.navTitle || child.properties.pageTitle || child.title}" />
+                ${pageTitle}
+            </h5>
+            <ul class="ta-sitemap__links"
+                data-sly-test="${!child.properties.hideInSiteMap && child.listChildren.hasNext}"
+                data-sly-list.secondchild="${child.listChildren}">
+                <sly data-sly-test="${!secondchild.properties.hideInSiteMap}">
+                    <sly
+                        data-sly-test.childPageTitle="${secondchild.properties.navTitle || secondchild.properties.pageTitle || secondchild.title}" />
+                    <li><a href="${secondchild.properties.pagePath || secondchild.path}.html">${childPageTitle}</a></li>
+                </sly>
+            </ul>
+        </div>
+    </sly>
+</section>

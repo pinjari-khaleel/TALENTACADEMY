@@ -1,0 +1,43 @@
+.ta-form-container {
+  .cmp-form-text {
+  }
+  .cmp-form-text__help-block {
+  }
+  .cmp-form-text__textarea {
+  }
+  .cmp-form-text__text {
+  }
+
+  .cmp-form-text__required:after {
+      content: " *";
+      color: map-get($colors, "red");
+  }
+
+  .cmp-form-text__hidetitle {
+      opacity: 0;
+  }
+
+  .cmp-form-text__error-block {
+        position: absolute;
+        bottom: 12px;
+        left: 0;
+        @include md {
+            bottom: 22px;
+        }
+        .cmp-form-text__error-message {
+            color: map-get($colors, "red");
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 400;
+            font-family: $brown;
+        }
+  }
+
+  .cmp-form-text__limit {
+      color: rgb(142, 143, 144);
+      font-family: $brown;
+      font-size: 12px;
+      font-weight: 300;
+      inset-inline-end: 0px;
+  }
+}

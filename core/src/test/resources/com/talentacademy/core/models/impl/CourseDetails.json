@@ -1,0 +1,1709 @@
+{
+  "links": {
+    "self": "https://learningmanagereu.adobe.com/primeapi/v2/learningObjects?page[limit]=10&include=skills.skillLevel.badge, instances.badge&filter.loTypes=course,learningProgram&sort=-date&filter.ignoreEnhancedLP=true",
+    "next": "https://learningmanagereu.adobe.com/primeapi/v2/learningObjects?page[limit]=10&include=skills.skillLevel.badge, instances.badge&filter.loTypes=course,learningProgram&sort=-date&filter.ignoreEnhancedLP=true&page[cursor]=nc_1f6975c8-f5ba-414c-8ef5-004788a8336c;10"
+  },
+  "data": [
+    {
+      "id": "course:1757270",
+      "type": "learningObject",
+      "attributes": {
+        "authorNames": [
+          "Emerald Works"
+        ],
+        "catalogLabels": [
+          {
+            "name": "arabic-course-formats",
+            "values": [
+              "Class Room",
+              "E Learning"
+            ]
+          },
+          {
+            "name": "arabic-skills",
+            "values": [
+              "Test Skill 1",
+              "Test Skill 2"
+            ]
+          }
+        ],
+        "dateCreated": "2023-06-08T02:16:14.000Z",
+        "datePublished": "2023-06-08T02:16:14.000Z",
+        "dateUpdated": "2023-12-07T09:04:36.000Z",
+        "duration": 3600,
+        "effectiveModifiedDate": "2023-12-07T09:04:36.000Z",
+        "enrollmentType": "Self Enroll",
+        "hasOptionalLoResources": false,
+        "hasPreview": false,
+        "imageUrl": "https://media.test.jpg",
+        "instanceSwitchEnabled": false,
+        "isBookmarked": false,
+        "isExternal": false,
+        "isMqaEnabled": false,
+        "isPrerequisiteEnforced": false,
+        "isSubLoOrderEnforced": true,
+        "loFormat": "Self Paced",
+        "loType": "course",
+        "moduleResetEnabled": false,
+        "multienrollmentEnabled": false,
+        "state": "Published",
+        "unenrollmentAllowed": false,
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "Self Development 101 from Mind Tools for Business (Emerald Works)",
+            "overview": "About Self Development 101 from Mind Tools for Business by Emerald Works:\nThis interactiveself study e-learning course provides an introduction to self-development. Using a range of realistic examples, scenarios and challenges, it is the ideal starting point to put together a plan of development activities. \nSelf Development 101 is for anyone looking for a clear, easy to understand introduction to the topic of development. It is part of Mind Tools for Business' 101 Suite, designed to help you build your personal effectiveness as a manager or leader. \nBy completing Self Development 101 you will be able to: \ndefine self development \n explain the importance and benefits of self development \n identify your own self development needs  \n describe different methods of self development \n",
+            "richTextOverview": "<p><strong>About Self Development 101 from Mind Tools for Business by Emerald Works:</strong></p> \n<p>This interactiveself study e-learning course provides an introduction to self-development. Using a range of realistic examples, scenarios and challenges, it is the ideal starting point to put together a plan of development activities.&nbsp;</p> \n<p><strong>Self Development 101</strong> is for anyone looking for a clear, easy to understand introduction to the topic of development. It is part of <strong>Mind Tools for Business' 101 Suite</strong>, designed to help you build your personal effectiveness as a manager or leader.&nbsp;</p> \n<p>By completing Self Development 101 you will be able to:&nbsp;</p> \n<ul> \n <li>define self development</li> \n <li>explain the importance and benefits of self development</li> \n <li>identify your own self development needs&nbsp;</li> \n <li>describe different methods of self development</li> \n</ul>"
+          }
+        ],
+        "rating": {
+          "averageRating": 0,
+          "ratingsCount": 0
+        }
+      },
+      "relationships": {
+        "enrollment": {
+          "data": {
+            "id": "course:1757270_1823466_11912450",
+            "type": "learningObjectInstanceEnrollment"
+          }
+        },
+        "instances": {
+          "data": [
+            {
+              "id": "course:1757270_1823466",
+              "type": "learningObjectInstance"
+            }
+          ]
+        },
+        "skills": {
+          "data": [
+            {
+              "id": "course:1757270_64781",
+              "type": "learningObjectSkill"
+            },
+            {
+              "id": "course:1757270_73238",
+              "type": "learningObjectSkill"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "learningProgram:58307",
+      "type": "learningObject",
+      "attributes": {
+        "catalogLabels": [
+          {
+            "name": "arabic-course-formats",
+            "values": [
+              "Class Room",
+              "E Learning"
+            ]
+          },
+          {
+            "name": "arabic-skills",
+            "values": [
+              "Test Skill 1",
+              "Test Skill 2"
+            ]
+          }
+        ],
+        "dateCreated": "2023-11-21T09:42:38.000Z",
+        "dateUpdated": "2023-12-06T06:23:35.000Z",
+        "duration": 6000,
+        "effectiveModifiedDate": "2023-12-07T09:04:36.000Z",
+        "enrollmentType": "Self Enroll",
+        "hasPreview": false,
+        "imageUrl": "https://cpcontents.adobe.com/eu/public/account/9668/thumbnails/learningplans/58307/2023-12-06%2006:23:36.557language%20academy_5c88102b98c141f18366235f430ca5ec.png?cp_oauth_jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwIjoidXJsIiwicmFuZCI6ImRhNGIxMzIxNDQ4OWI4MjliMjFlMmUyYmU0ZDM2ZTFkIiwidiI6IjEiLCJvcmlnaW5hbFVybEhhc2giOiJkYTZiOGJkNjVlZTdlNjc3NzE4NGNhOGVhYTUyYjQ2NzVmZWFlYTI4IiwiZXhwIjoxNzAyODc4Mzc0LCJyaWQiOiI3Mjg0MzU3IiwiaWF0IjoxNzAyMjczNTc0LCJjaWQiOiIxIn0.Dw9f__62PisbOZJ7c-BV-qlW8vMZtlzCNHs91Q3shyk",
+        "isBookmarked": false,
+        "isEnhancedLP": false,
+        "isExternal": false,
+        "isMqaEnabled": false,
+        "isPrerequisiteEnforced": false,
+        "isSubLoOrderEnforced": true,
+        "loFormat": "Self Paced",
+        "loType": "learningProgram",
+        "moduleResetEnabled": false,
+        "state": "Published",
+        "unenrollmentAllowed": false,
+        "localizedMetadata": [
+          {
+            "description": "",
+            "locale": "en-US",
+            "name": "Test Learning Path",
+            "overview": "In this learning pathway, you will delve into the intracacies of travel planning, client relationship management, crisis resolution, and effective communication. These courses offer a unique blend of theoretical insights and practical strategies, empowering learners to become proficient travel advisors. Who should take this training? This training is ideal for individuals aspiring to pursue a career in travel advisory, including travel consultants, aspiring travel agents, and those interested in mastering the art of planning and facilitating memorable journeys for clients. When you complete this training, you will be able to: Master the skills needed for travel planning Know how to build and maintain strong client relationships Understand strategies for crisis resolution to travel-related issues Hone the communication and interpersonal skills essential for success Before you begin, you must have: Competency in spoken and written English Basic computer skills A passion for the travel industry",
+            "richTextOverview": "<p>In this learning pathway, you will delve into the intracacies of travel planning, client relationship management, crisis resolution, and effective communication. These courses offer a unique blend of theoretical insights and practical strategies, empowering learners to become proficient travel advisors. <strong>Who should take this training?</strong> This training is ideal for individuals aspiring to pursue a career in travel advisory, including travel consultants, aspiring travel agents, and those interested in mastering the art of planning and facilitating memorable journeys for clients. <strong>When you complete this training, you will be able to:</strong> Master the skills needed for travel planning Know how to build and maintain strong client relationships Understand strategies for crisis resolution to travel-related issues Hone the communication and interpersonal skills essential for success <strong>Before you begin, you must have:</strong> Competency in spoken and written English Basic computer skills A passion for the travel industry</p>"
+          }
+        ],
+        "rating": {
+          "averageRating": 0,
+          "ratingsCount": 0
+        },
+        "sections": [
+          {
+            "loIds": [
+              "course:1757270",
+              "course:1757271",
+              "course:1757272"
+            ],
+            "mandatory": true,
+            "mandatoryLOCount": 3,
+            "sectionId": "56829"
+          }
+        ]
+      },
+      "relationships": {
+        "enrollment": {
+          "data": {
+            "id": "learningProgram:58307_63557_11912450",
+            "type": "learningObjectInstanceEnrollment"
+          }
+        },
+        "instances": {
+          "data": [
+            {
+              "id": "learningProgram:58307_63557",
+              "type": "learningObjectInstance"
+            }
+          ]
+        },
+        "skills": {
+          "data": [
+            {
+              "id": "course:1757270_64781",
+              "type": "learningObjectSkill"
+            },
+            {
+              "id": "course:1757270_73238",
+              "type": "learningObjectSkill"
+            },
+            {
+              "id": "course:1757271_64781",
+              "type": "learningObjectSkill"
+            },
+            {
+              "id": "course:1757272_64781",
+              "type": "learningObjectSkill"
+            },
+            {
+              "id": "learningProgram:58307_73237",
+              "type": "learningObjectSkill"
+            },
+            {
+              "id": "learningProgram:58307_73238",
+              "type": "learningObjectSkill"
+            }
+          ]
+        },
+        "subLOs": {
+          "data": [
+            {
+              "id": "course:1757270",
+              "type": "learningObject"
+            },
+            {
+              "id": "course:1757271",
+              "type": "learningObject"
+            },
+            {
+              "id": "course:1757272",
+              "type": "learningObject"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:2036629",
+      "type": "learningObject",
+      "attributes": {
+        "authorNames": [
+          "TA Dev Team"
+        ],
+        "catalogLabels": [
+          {
+            "name": "arabic-course-formats",
+            "values": [
+              "Class Room",
+              "E Learning"
+            ]
+          },
+          {
+            "name": "arabic-skills",
+            "values": [
+              "Test Skill 1",
+              "Test Skill 2"
+            ]
+          }
+        ],
+        "dateCreated": "2023-11-30T10:53:00.000Z",
+        "datePublished": "2023-11-30T10:53:55.000Z",
+        "dateUpdated": "2023-11-30T10:53:55.000Z",
+        "duration": 100,
+        "effectiveModifiedDate": "2023-11-30T13:45:17.000Z",
+        "enrollmentType": "Self Enroll",
+        "hasOptionalLoResources": false,
+        "hasPreview": false,
+        "instanceSwitchEnabled": false,
+        "isBookmarked": false,
+        "isExternal": false,
+        "isMqaEnabled": false,
+        "isPrerequisiteEnforced": false,
+        "isSubLoOrderEnforced": false,
+        "loFormat": "Self Paced",
+        "loResourceCompletionCount": 1,
+        "loType": "course",
+        "moduleResetEnabled": false,
+        "multienrollmentEnabled": false,
+        "state": "Published",
+        "unenrollmentAllowed": false,
+        "localizedMetadata": [
+          {
+            "description": "Multilingual course description",
+            "locale": "en-US",
+            "name": "Multilingual course"
+          },
+          {
+            "description": "Multilingual arabic course description",
+            "locale": "ar-SA",
+            "name": "Multilingual arabic course name"
+          }
+        ],
+        "rating": {
+          "averageRating": 0,
+          "ratingsCount": 0
+        }
+      },
+      "relationships": {
+        "authors": {
+          "data": [
+            {
+              "id": "11912450",
+              "type": "user"
+            }
+          ]
+        },
+        "enrollment": {
+          "data": {
+            "id": "course:2036629_2115114_11912450",
+            "type": "learningObjectInstanceEnrollment"
+          }
+        },
+        "instances": {
+          "data": [
+            {
+              "id": "course:2036629_2115114",
+              "type": "learningObjectInstance"
+            }
+          ]
+        },
+        "skills": {
+          "data": [
+            {
+              "id": "course:2036629_64783",
+              "type": "learningObjectSkill"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:2036021",
+      "type": "learningObject",
+      "attributes": {
+        "authorNames": [
+          "Saleem Rizvi"
+        ],
+        "catalogLabels": [
+          {
+            "name": "arabic-course-formats",
+            "values": [
+              "Class Room",
+              "E Learning"
+            ]
+          },
+          {
+            "name": "arabic-skills",
+            "values": [
+              "Test Skill 1",
+              "Test Skill 2"
+            ]
+          }
+        ],
+        "dateCreated": "2023-11-29T16:17:29.000Z",
+        "datePublished": "2023-11-29T16:18:33.000Z",
+        "dateUpdated": "2023-11-29T16:18:33.000Z",
+        "duration": 250,
+        "effectiveModifiedDate": "2023-11-29T16:37:57.000Z",
+        "enrollmentType": "Self Enroll",
+        "hasOptionalLoResources": false,
+        "hasPreview": false,
+        "instanceSwitchEnabled": false,
+        "isBookmarked": false,
+        "isExternal": false,
+        "isMqaEnabled": false,
+        "isPrerequisiteEnforced": false,
+        "isSubLoOrderEnforced": false,
+        "loFormat": "Self Paced",
+        "loResourceCompletionCount": 1,
+        "loType": "course",
+        "moduleResetEnabled": false,
+        "multienrollmentEnabled": false,
+        "state": "Published",
+        "unenrollmentAllowed": false,
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "English Course Name"
+          },
+          {
+            "description": "وصف المقررات العربية",
+            "locale": "ar-SA",
+            "name": "اسم الدورة العربية"
+          }
+        ],
+        "rating": {
+          "averageRating": 0,
+          "ratingsCount": 0
+        }
+      },
+      "relationships": {
+        "authors": {
+          "data": [
+            {
+              "id": "11906473",
+              "type": "user"
+            }
+          ]
+        },
+        "instances": {
+          "data": [
+            {
+              "id": "course:2036021_2114439",
+              "type": "learningObjectInstance"
+            },
+            {
+              "id": "course:2036021_2114442",
+              "type": "learningObjectInstance"
+            },
+            {
+              "id": "course:2036021_2114443",
+              "type": "learningObjectInstance"
+            }
+          ]
+        },
+        "skills": {
+          "data": [
+            {
+              "id": "course:2036021_64782",
+              "type": "learningObjectSkill"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:2034478",
+      "type": "learningObject",
+      "attributes": {
+        "authorNames": [
+          "TA Dev Team"
+        ],
+        "catalogLabels": [
+          {
+            "name": "arabic-course-formats",
+            "values": [
+              "Class Room",
+              "E Learning"
+            ]
+          },
+          {
+            "name": "arabic-skills",
+            "values": [
+              "Test Skill 1",
+              "Test Skill 2"
+            ]
+          }
+        ],
+        "dateCreated": "2023-11-24T08:38:30.000Z",
+        "datePublished": "2023-11-24T08:43:29.000Z",
+        "dateUpdated": "2023-11-27T12:54:51.000Z",
+        "duration": 3600,
+        "effectiveModifiedDate": "2023-11-28T04:34:00.000Z",
+        "enrollmentType": "Self Enroll",
+        "hasOptionalLoResources": false,
+        "hasPreview": false,
+        "instanceSwitchEnabled": false,
+        "isBookmarked": false,
+        "isExternal": false,
+        "isMqaEnabled": false,
+        "isPrerequisiteEnforced": false,
+        "isSubLoOrderEnforced": false,
+        "loFormat": "Blended",
+        "loResourceCompletionCount": 2,
+        "loType": "course",
+        "moduleResetEnabled": false,
+        "multienrollmentEnabled": false,
+        "state": "Published",
+        "unenrollmentAllowed": false,
+        "localizedMetadata": [
+          {
+            "description": "",
+            "locale": "en-US",
+            "name": "Test course"
+          }
+        ],
+        "rating": {
+          "averageRating": 0,
+          "ratingsCount": 0
+        }
+      },
+      "relationships": {
+        "authors": {
+          "data": [
+            {
+              "id": "11912450",
+              "type": "user"
+            }
+          ]
+        },
+        "instances": {
+          "data": [
+            {
+              "id": "course:2034478_2112539",
+              "type": "learningObjectInstance"
+            },
+            {
+              "id": "course:2034478_2113396",
+              "type": "learningObjectInstance"
+            }
+          ]
+        },
+        "skills": {
+          "data": [
+            {
+              "id": "course:2034478_64781",
+              "type": "learningObjectSkill"
+            },
+            {
+              "id": "course:2034478_73238",
+              "type": "learningObjectSkill"
+            }
+          ]
+        },
+        "supplementaryLOs": {
+          "data": [
+            {
+              "id": "jobAid:22842",
+              "type": "learningObject"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:1757273",
+      "type": "learningObject",
+      "attributes": {
+        "authorNames": [
+          "Emeritus"
+        ],
+        "catalogLabels": [
+          {
+            "name": "arabic-course-formats",
+            "values": [
+              "Class Room",
+              "E Learning"
+            ]
+          },
+          {
+            "name": "arabic-skills",
+            "values": [
+              "Test Skill 1",
+              "Test Skill 2"
+            ]
+          }
+        ],
+        "dateCreated": "2023-06-08T02:16:14.000Z",
+        "datePublished": "2023-06-08T02:16:14.000Z",
+        "dateUpdated": "2023-06-08T02:16:14.000Z",
+        "duration": 2820,
+        "effectiveModifiedDate": "2023-12-07T11:57:04.000Z",
+        "enrollmentType": "Self Enroll",
+        "hasOptionalLoResources": false,
+        "hasPreview": false,
+        "imageUrl": "https://media.go1static.com/image/upload/w_800/v1651062717/o6hwdbjvtf80sf8ebeno.jpg?cp_oauth_jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwIjoidXJsIiwicmFuZCI6ImRhNGIxMzIxNDQ4OWI4MjliMjFlMmUyYmU0ZDM2ZTFkIiwidiI6IjEiLCJvcmlnaW5hbFVybEhhc2giOiI4YThkZDliYTQzNTVhNDEyOWZmMmFkOGE3M2YxMTUyMWIwM2Y3ZDNhIiwiZXhwIjoxNzAyODc4Mzc0LCJyaWQiOiI3Mjg0MzU3IiwiaWF0IjoxNzAyMjczNTc0LCJjaWQiOiIxIn0.RFPr9Lvqa2l2KAdxOpbfRxEauTYNjPsokfGweS8DyfE",
+        "instanceSwitchEnabled": false,
+        "isBookmarked": false,
+        "isExternal": false,
+        "isMqaEnabled": false,
+        "isPrerequisiteEnforced": false,
+        "isSubLoOrderEnforced": true,
+        "loFormat": "Self Paced",
+        "loType": "course",
+        "moduleResetEnabled": false,
+        "multienrollmentEnabled": false,
+        "state": "Published",
+        "unenrollmentAllowed": false,
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "Stories To Inspire And Motivate Your Team",
+            "overview": "Why should managers use storytelling to keep teams focused? Author Paul Smith uses motivating tales to build a case for storytelling. It inspires, realigns, and helps overcome challenges. Pick your stories to retell in the correct setting from this collection.\n ",
+            "richTextOverview": "<p>Why should managers use storytelling to keep teams focused? Author Paul Smith uses motivating tales to build a case for storytelling. It inspires, realigns, and helps overcome challenges. Pick your stories to retell in the correct setting from this collection.</p> \n<p>&nbsp;</p>"
+          }
+        ],
+        "rating": {
+          "averageRating": 0,
+          "ratingsCount": 0
+        }
+      },
+      "relationships": {
+        "instances": {
+          "data": [
+            {
+              "id": "course:1757273_1823469",
+              "type": "learningObjectInstance"
+            }
+          ]
+        },
+        "skills": {
+          "data": [
+            {
+              "id": "course:1757273_64781",
+              "type": "learningObjectSkill"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:1757274",
+      "type": "learningObject",
+      "attributes": {
+        "authorNames": [
+          "ej4"
+        ],
+        "catalogLabels": [
+          {
+            "name": "arabic-course-formats",
+            "values": [
+              "Class Room",
+              "E Learning"
+            ]
+          },
+          {
+            "name": "arabic-skills",
+            "values": [
+              "Test Skill 1",
+              "Test Skill 2"
+            ]
+          }
+        ],
+        "dateCreated": "2023-06-08T02:16:14.000Z",
+        "datePublished": "2023-06-08T02:16:14.000Z",
+        "dateUpdated": "2023-06-08T02:16:14.000Z",
+        "duration": 360,
+        "effectiveModifiedDate": "2023-06-08T02:29:03.000Z",
+        "enrollmentType": "Self Enroll",
+        "hasOptionalLoResources": false,
+        "hasPreview": false,
+        "imageUrl": "https://media.go1static.com/image/upload/w_800/v1591456322/ukjrpkbfho5lefektfnm.jpg?cp_oauth_jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwIjoidXJsIiwicmFuZCI6ImRhNGIxMzIxNDQ4OWI4MjliMjFlMmUyYmU0ZDM2ZTFkIiwidiI6IjEiLCJvcmlnaW5hbFVybEhhc2giOiJiMDY4OTE1MWRlNWI0ZmMwZjNjOGRkNzIzYzZhZjFkMTgwYjRiMDdlIiwiZXhwIjoxNzAyODc4Mzc0LCJyaWQiOiI3Mjg0MzU3IiwiaWF0IjoxNzAyMjczNTc0LCJjaWQiOiIxIn0.T9oDYru9oKQ1ucsoU0et4uFZIO8HCnSMefzHg_33QTs",
+        "instanceSwitchEnabled": false,
+        "isBookmarked": false,
+        "isExternal": false,
+        "isMqaEnabled": false,
+        "isPrerequisiteEnforced": false,
+        "isSubLoOrderEnforced": true,
+        "loFormat": "Self Paced",
+        "loType": "course",
+        "moduleResetEnabled": false,
+        "multienrollmentEnabled": false,
+        "state": "Published",
+        "unenrollmentAllowed": false,
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "The Art of Saying No",
+            "overview": "The humorist Josh Billings said, \"Half of the troubles of this life can be traced to saying yes too quickly, and not saying no soon enough.\" If you've done either of these things, you are not alone. Many of us, on regular occasion, have trouble saying no. Enter this course. We'll explore why we tend toward \"Yes,\" and then break down how to get to the \"No\" more easily, and with less guilt. And we'll all be feeling better in \"no\" time.",
+            "richTextOverview": "<p>The humorist Josh Billings said, \"Half of the troubles of this life can be traced to saying yes too quickly, and not saying no soon enough.\" If you've done either of these things, you are not alone. Many of us, on regular occasion, have trouble saying no. Enter this course. We'll explore why we tend toward \"Yes,\" and then break down how to get to the \"No\" more easily, and with less guilt. And we'll all be feeling better in \"no\" time.</p>"
+          }
+        ],
+        "rating": {
+          "averageRating": 0,
+          "ratingsCount": 0
+        }
+      },
+      "relationships": {
+        "instances": {
+          "data": [
+            {
+              "id": "course:1757274_1823470",
+              "type": "learningObjectInstance"
+            }
+          ]
+        },
+        "skills": {
+          "data": [
+            {
+              "id": "course:1757274_64781",
+              "type": "learningObjectSkill"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:1757275",
+      "type": "learningObject",
+      "attributes": {
+        "authorNames": [
+          "Mindscaling"
+        ],
+        "catalogLabels": [
+          {
+            "name": "arabic-course-formats",
+            "values": [
+              "Class Room",
+              "E Learning"
+            ]
+          },
+          {
+            "name": "arabic-skills",
+            "values": [
+              "Test Skill 1",
+              "Test Skill 2"
+            ]
+          }
+        ],
+        "dateCreated": "2023-06-08T02:16:14.000Z",
+        "datePublished": "2023-06-08T02:16:14.000Z",
+        "dateUpdated": "2023-06-08T02:16:14.000Z",
+        "duration": 3000,
+        "effectiveModifiedDate": "2023-06-08T02:29:03.000Z",
+        "enrollmentType": "Self Enroll",
+        "hasOptionalLoResources": false,
+        "hasPreview": false,
+        "imageUrl": "https://media.go1static.com/image/upload/w_800/v1647361434/youaolgorhyhp9uwdaxt.jpg?cp_oauth_jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwIjoidXJsIiwicmFuZCI6ImRhNGIxMzIxNDQ4OWI4MjliMjFlMmUyYmU0ZDM2ZTFkIiwidiI6IjEiLCJvcmlnaW5hbFVybEhhc2giOiJlNDA4ZjcwZjhjZmI4NTRmZTgzMDg2MDlkYTFjNmJiZWMxMGJmODk1IiwiZXhwIjoxNzAyODc4Mzc0LCJyaWQiOiI3Mjg0MzU3IiwiaWF0IjoxNzAyMjczNTc0LCJjaWQiOiIxIn0.lj2MeiDrJCTIE8Y6RlwlAe3_FxCDr0lvGin6n-5Cq1M",
+        "instanceSwitchEnabled": false,
+        "isBookmarked": false,
+        "isExternal": false,
+        "isMqaEnabled": false,
+        "isPrerequisiteEnforced": false,
+        "isSubLoOrderEnforced": true,
+        "loFormat": "Self Paced",
+        "loType": "course",
+        "moduleResetEnabled": false,
+        "multienrollmentEnabled": false,
+        "state": "Published",
+        "unenrollmentAllowed": false,
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "The Innovation Series from Mindscaling",
+            "overview": "Innovation is not simply creating new products or services. Innovation means staying relevant. And only your customers - internal or external customers - get to decide if your value is still relevant.\nIn this series from Mindscaling, you will learn a proven, and repeatable process to developing consistent innovation with your teams.",
+            "richTextOverview": "<p>Innovation is not simply creating new products or services. Innovation means staying relevant. And only your customers - internal or external customers - get to decide if your value is still relevant.</p> \n<p>In this series from Mindscaling, you will learn a proven, and repeatable process to developing consistent innovation with your teams.</p>"
+          }
+        ],
+        "rating": {
+          "averageRating": 0,
+          "ratingsCount": 0
+        }
+      },
+      "relationships": {
+        "instances": {
+          "data": [
+            {
+              "id": "course:1757275_1823471",
+              "type": "learningObjectInstance"
+            }
+          ]
+        },
+        "skills": {
+          "data": [
+            {
+              "id": "course:1757275_64781",
+              "type": "learningObjectSkill"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:1757276",
+      "type": "learningObject",
+      "attributes": {
+        "authorNames": [
+          "Bob's Business"
+        ],
+        "dateCreated": "2023-06-08T02:16:14.000Z",
+        "datePublished": "2023-06-08T02:16:14.000Z",
+        "dateUpdated": "2023-06-08T02:16:14.000Z",
+        "duration": 1200,
+        "effectiveModifiedDate": "2023-06-08T02:29:03.000Z",
+        "enrollmentType": "Self Enroll",
+        "hasOptionalLoResources": false,
+        "hasPreview": false,
+        "imageUrl": "https://media.go1static.com/image/upload/w_800/v1673019925/dv20si7slsduqdqr49gs.png?cp_oauth_jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwIjoidXJsIiwicmFuZCI6ImRhNGIxMzIxNDQ4OWI4MjliMjFlMmUyYmU0ZDM2ZTFkIiwidiI6IjEiLCJvcmlnaW5hbFVybEhhc2giOiJhNDgwMzBhZGFhZjRlMDdiNjAxODVlMzgwM2U4MmI4M2I5NDY5YTUwIiwiZXhwIjoxNzAyODc4Mzc0LCJyaWQiOiI3Mjg0MzU3IiwiaWF0IjoxNzAyMjczNTc0LCJjaWQiOiIxIn0.CqHHd82RJh-h0dchhBaWoV6QPi5gTORMSPUomqxu9MQ",
+        "instanceSwitchEnabled": false,
+        "isBookmarked": false,
+        "isExternal": false,
+        "isMqaEnabled": false,
+        "isPrerequisiteEnforced": false,
+        "isSubLoOrderEnforced": true,
+        "loFormat": "Self Paced",
+        "loType": "course",
+        "moduleResetEnabled": false,
+        "multienrollmentEnabled": false,
+        "state": "Published",
+        "unenrollmentAllowed": false,
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "The Phishing Simulation Game - Hook, line and Sinker",
+            "overview": "With phishing emails being behind 90% of all successful cyber-attacks, it’s more important than ever for you to learn the tools to spot them.\nThat’s why we created Think Before You Click: The Game, our fully-gamified learning experience. Through the principles of experiential learning you will not only learn how to identify phishing, smishing and vishing attacks, but also how to stop them before they can cause harm to your and your organisation.",
+            "richTextOverview": "<p>With phishing emails being behind 90% of all successful cyber-attacks, it’s more important than ever for you to learn the tools to spot them. </p>\n<p>That’s why we created Think Before You Click: The Game, our fully-gamified learning experience. Through the principles of experiential learning you will not only learn how to identify phishing, smishing and vishing attacks, but also how to stop them before they can cause harm to your and your organisation.</p>"
+          }
+        ],
+        "rating": {
+          "averageRating": 0,
+          "ratingsCount": 0
+        }
+      },
+      "relationships": {
+        "instances": {
+          "data": [
+            {
+              "id": "course:1757276_1823472",
+              "type": "learningObjectInstance"
+            }
+          ]
+        },
+        "skills": {
+          "data": [
+            {
+              "id": "course:1757276_64781",
+              "type": "learningObjectSkill"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:1757277",
+      "type": "learningObject",
+      "attributes": {
+        "authorNames": [
+          "Emerald Works"
+        ],
+        "catalogLabels": [
+          {
+            "name": "arabic-course-formats",
+            "values": [
+              "Class Room",
+              "E Learning"
+            ]
+          },
+          {
+            "name": "arabic-skills",
+            "values": [
+              "Test Skill 1",
+              "Test Skill 2"
+            ]
+          }
+        ],
+        "dateCreated": "2023-06-08T02:16:14.000Z",
+        "datePublished": "2023-06-08T02:16:14.000Z",
+        "dateUpdated": "2023-06-08T02:16:14.000Z",
+        "duration": 600,
+        "effectiveModifiedDate": "2023-06-08T02:29:03.000Z",
+        "enrollmentType": "Self Enroll",
+        "hasOptionalLoResources": false,
+        "hasPreview": false,
+        "imageUrl": "https://media.go1static.com/image/upload/w_800/v1608195277/deimhfiqaopbuadrlfzr.jpg?cp_oauth_jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwIjoidXJsIiwicmFuZCI6ImRhNGIxMzIxNDQ4OWI4MjliMjFlMmUyYmU0ZDM2ZTFkIiwidiI6IjEiLCJvcmlnaW5hbFVybEhhc2giOiI5NGZjY2ZmYWQxNWFhMzA4YjRiMTI0MzQ5NDJiNjhkYzQ3MDhkZTVhIiwiZXhwIjoxNzAyODc4Mzc0LCJyaWQiOiI3Mjg0MzU3IiwiaWF0IjoxNzAyMjczNTc0LCJjaWQiOiIxIn0.sLNpgrlRDr_pg1rBgAMutRUKWaJKWaMFLF99OVgA8vI",
+        "instanceSwitchEnabled": false,
+        "isBookmarked": false,
+        "isExternal": false,
+        "isMqaEnabled": false,
+        "isPrerequisiteEnforced": false,
+        "isSubLoOrderEnforced": true,
+        "loFormat": "Self Paced",
+        "loType": "course",
+        "moduleResetEnabled": false,
+        "multienrollmentEnabled": false,
+        "state": "Published",
+        "unenrollmentAllowed": false,
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "The Shadow of Empowerment",
+            "overview": "For many people the idea of empowering employees to work more independently can be daunting. Managers worry about giving up control and employees can be afraid of the extra burden of responsibility. This short animation addresses those concerns, explains how to conquer them and make empowerment work for everyone.",
+            "richTextOverview": "<p>For many people the idea of empowering employees to work more independently can be daunting. Managers worry about giving up control and employees can be afraid of the extra burden of responsibility. This short animation addresses those concerns, explains how to conquer them and make empowerment work for everyone.</p>"
+          }
+        ],
+        "rating": {
+          "averageRating": 0,
+          "ratingsCount": 0
+        }
+      },
+      "relationships": {
+        "instances": {
+          "data": [
+            {
+              "id": "course:1757277_1823473",
+              "type": "learningObjectInstance"
+            }
+          ]
+        },
+        "skills": {
+          "data": [
+            {
+              "id": "course:1757277_64781",
+              "type": "learningObjectSkill"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "course:1757270_1823466",
+      "type": "learningObjectInstance",
+      "attributes": {
+        "dateCreated": "2023-06-08T02:16:14.000Z",
+        "isDefault": true,
+        "isFlexible": false,
+        "state": "Active",
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "Default instance"
+          }
+        ]
+      },
+      "relationships": {
+        "enrollment": {
+          "data": {
+            "id": "course:1757270_1823466_11912450",
+            "type": "learningObjectInstanceEnrollment"
+          }
+        },
+        "learningObject": {
+          "data": {
+            "id": "course:1757270",
+            "type": "learningObject"
+          }
+        },
+        "loResources": {
+          "data": [
+            {
+              "id": "course:1757270_1823466_2094544_1",
+              "type": "learningObjectResource"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "learningProgram:58307_63557",
+      "type": "learningObjectInstance",
+      "attributes": {
+        "dateCreated": "2023-11-21T09:43:51.000Z",
+        "isDefault": true,
+        "isFlexible": false,
+        "state": "Active",
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "Default instance"
+          }
+        ]
+      },
+      "relationships": {
+        "learningObject": {
+          "data": {
+            "id": "learningProgram:58307",
+            "type": "learningObject"
+          }
+        },
+        "subLoInstances": {
+          "data": [
+            {
+              "id": "course:1757270_1823466",
+              "type": "learningObjectInstance"
+            },
+            {
+              "id": "course:1757271_1823467",
+              "type": "learningObjectInstance"
+            },
+            {
+              "id": "course:1757272_1823468",
+              "type": "learningObjectInstance"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:2036629_2115114",
+      "type": "learningObjectInstance",
+      "attributes": {
+        "dateCreated": "2023-11-30T10:53:00.000Z",
+        "isDefault": true,
+        "isFlexible": false,
+        "state": "Active",
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "Default instance"
+          }
+        ]
+      },
+      "relationships": {
+        "badge": {
+          "data": {
+            "id": "113166",
+            "type": "badge"
+          }
+        },
+        "enrollment": {
+          "data": {
+            "id": "course:2036629_2115114_11912450",
+            "type": "learningObjectInstanceEnrollment"
+          }
+        },
+        "learningObject": {
+          "data": {
+            "id": "course:2036629",
+            "type": "learningObject"
+          }
+        },
+        "loResources": {
+          "data": [
+            {
+              "id": "course:2036629_2115114_2438290_0",
+              "type": "learningObjectResource"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:2036021_2114439",
+      "type": "learningObjectInstance",
+      "attributes": {
+        "dateCreated": "2023-11-29T16:17:29.000Z",
+        "isDefault": true,
+        "isFlexible": false,
+        "state": "Active",
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "Default instance"
+          }
+        ]
+      },
+      "relationships": {
+        "learningObject": {
+          "data": {
+            "id": "course:2036021",
+            "type": "learningObject"
+          }
+        },
+        "loResources": {
+          "data": [
+            {
+              "id": "course:2036021_2114439_2437413_0",
+              "type": "learningObjectResource"
+            },
+            {
+              "id": "course:2036021_2114439_2437414_0",
+              "type": "learningObjectResource"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:2036021_2114442",
+      "type": "learningObjectInstance",
+      "attributes": {
+        "dateCreated": "2023-11-29T16:25:10.000Z",
+        "isDefault": false,
+        "isFlexible": false,
+        "state": "Active",
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "Instance 2"
+          }
+        ]
+      },
+      "relationships": {
+        "learningObject": {
+          "data": {
+            "id": "course:2036021",
+            "type": "learningObject"
+          }
+        },
+        "loResources": {
+          "data": [
+            {
+              "id": "course:2036021_2114442_2437413_0",
+              "type": "learningObjectResource"
+            },
+            {
+              "id": "course:2036021_2114442_2437414_0",
+              "type": "learningObjectResource"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:2036021_2114443",
+      "type": "learningObjectInstance",
+      "attributes": {
+        "dateCreated": "2023-11-29T16:25:50.000Z",
+        "isDefault": false,
+        "isFlexible": false,
+        "state": "Active",
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "Instance 3"
+          }
+        ]
+      },
+      "relationships": {
+        "learningObject": {
+          "data": {
+            "id": "course:2036021",
+            "type": "learningObject"
+          }
+        },
+        "loResources": {
+          "data": [
+            {
+              "id": "course:2036021_2114443_2437413_0",
+              "type": "learningObjectResource"
+            },
+            {
+              "id": "course:2036021_2114443_2437414_0",
+              "type": "learningObjectResource"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:2034478_2112539",
+      "type": "learningObjectInstance",
+      "attributes": {
+        "dateCreated": "2023-11-24T08:38:30.000Z",
+        "isDefault": true,
+        "isFlexible": false,
+        "state": "Active",
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "Default instance"
+          }
+        ]
+      },
+      "relationships": {
+        "badge": {
+          "data": {
+            "id": "113166",
+            "type": "badge"
+          }
+        },
+        "learningObject": {
+          "data": {
+            "id": "course:2034478",
+            "type": "learningObject"
+          }
+        },
+        "loResources": {
+          "data": [
+            {
+              "id": "course:2034478_2112539_2434638_0",
+              "type": "learningObjectResource"
+            },
+            {
+              "id": "course:2034478_2112539_2435484_0",
+              "type": "learningObjectResource"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:2034478_2113396",
+      "type": "learningObjectInstance",
+      "attributes": {
+        "dateCreated": "2023-11-28T04:28:01.000Z",
+        "isDefault": false,
+        "isFlexible": false,
+        "state": "Retired",
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "Instance Nov 28, 2023"
+          }
+        ]
+      },
+      "relationships": {
+        "badge": {
+          "data": {
+            "id": "113167",
+            "type": "badge"
+          }
+        },
+        "learningObject": {
+          "data": {
+            "id": "course:2034478",
+            "type": "learningObject"
+          }
+        },
+        "loResources": {
+          "data": [
+            {
+              "id": "course:2034478_2113396_2434638_0",
+              "type": "learningObjectResource"
+            },
+            {
+              "id": "course:2034478_2113396_2435484_0",
+              "type": "learningObjectResource"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:1757273_1823469",
+      "type": "learningObjectInstance",
+      "attributes": {
+        "dateCreated": "2023-06-08T02:16:14.000Z",
+        "isDefault": true,
+        "isFlexible": false,
+        "state": "Active",
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "Default instance"
+          }
+        ]
+      },
+      "relationships": {
+        "badge": {
+          "data": {
+            "id": "113170",
+            "type": "badge"
+          }
+        },
+        "learningObject": {
+          "data": {
+            "id": "course:1757273",
+            "type": "learningObject"
+          }
+        },
+        "loResources": {
+          "data": [
+            {
+              "id": "course:1757273_1823469_2094547_1",
+              "type": "learningObjectResource"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:1757274_1823470",
+      "type": "learningObjectInstance",
+      "attributes": {
+        "dateCreated": "2023-06-08T02:16:14.000Z",
+        "isDefault": true,
+        "isFlexible": false,
+        "state": "Active",
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "Default instance"
+          }
+        ]
+      },
+      "relationships": {
+        "learningObject": {
+          "data": {
+            "id": "course:1757274",
+            "type": "learningObject"
+          }
+        },
+        "loResources": {
+          "data": [
+            {
+              "id": "course:1757274_1823470_2094548_1",
+              "type": "learningObjectResource"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:1757275_1823471",
+      "type": "learningObjectInstance",
+      "attributes": {
+        "dateCreated": "2023-06-08T02:16:14.000Z",
+        "isDefault": true,
+        "isFlexible": false,
+        "state": "Active",
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "Default instance"
+          }
+        ]
+      },
+      "relationships": {
+        "learningObject": {
+          "data": {
+            "id": "course:1757275",
+            "type": "learningObject"
+          }
+        },
+        "loResources": {
+          "data": [
+            {
+              "id": "course:1757275_1823471_2094549_1",
+              "type": "learningObjectResource"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:1757276_1823472",
+      "type": "learningObjectInstance",
+      "attributes": {
+        "dateCreated": "2023-06-08T02:16:14.000Z",
+        "isDefault": true,
+        "isFlexible": false,
+        "state": "Active",
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "Default instance"
+          }
+        ]
+      },
+      "relationships": {
+        "learningObject": {
+          "data": {
+            "id": "course:1757276",
+            "type": "learningObject"
+          }
+        },
+        "loResources": {
+          "data": [
+            {
+              "id": "course:1757276_1823472_2094550_1",
+              "type": "learningObjectResource"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "course:1757277_1823473",
+      "type": "learningObjectInstance",
+      "attributes": {
+        "dateCreated": "2023-06-08T02:16:14.000Z",
+        "isDefault": true,
+        "isFlexible": false,
+        "state": "Active",
+        "localizedMetadata": [
+          {
+            "locale": "en-US",
+            "name": "Default instance"
+          }
+        ]
+      },
+      "relationships": {
+        "learningObject": {
+          "data": {
+            "id": "course:1757277",
+            "type": "learningObject"
+          }
+        },
+        "loResources": {
+          "data": [
+            {
+              "id": "course:1757277_1823473_2094551_1",
+              "type": "learningObjectResource"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "113166",
+      "type": "badge",
+      "attributes": {
+        "imageUrl": "https://cpcontents.adobe.com/eu/public/account/9668/accountassets/9668/badges/badge_blackbelt.png",
+        "name": "BLACK BELT",
+        "state": "Active"
+      }
+    },
+    {
+      "id": "113167",
+      "type": "badge",
+      "attributes": {
+        "imageUrl": "https://cpcontents.adobe.com/eu/public/account/9668/accountassets/9668/badges/badge_captain.png",
+        "name": "CAPTAIN",
+        "state": "Active"
+      }
+    },
+    {
+      "id": "113170",
+      "type": "badge",
+      "attributes": {
+        "imageUrl": "https://cpcontents.adobe.com/eu/public/account/9668/accountassets/9668/badges/badge_hero.png",
+        "name": "HERO",
+        "state": "Active"
+      }
+    },
+    {
+      "id": "course:1757270_64781",
+      "type": "learningObjectSkill",
+      "attributes": {
+        "credits": 1,
+        "learningObjectId": "course:1757270"
+      }
+    },
+    {
+      "id": "course:1757270_73238",
+      "type": "learningObjectSkill",
+      "attributes": {
+        "credits": 20,
+        "learningObjectId": "course:1757270"
+      },
+      "relationships": {
+        "skillLevel": {
+          "data": {
+            "id": "73238_1",
+            "type": "skillLevel"
+          }
+        }
+      }
+    },
+    {
+      "id": "course:1757271_64781",
+      "type": "learningObjectSkill",
+      "attributes": {
+        "credits": 1,
+        "learningObjectId": "course:1757271"
+      },
+      "relationships": {
+        "skillLevel": {
+          "data": {
+            "id": "64781_1",
+            "type": "skillLevel"
+          }
+        }
+      }
+    },
+    {
+      "id": "course:1757272_64781",
+      "type": "learningObjectSkill",
+      "attributes": {
+        "credits": 1,
+        "learningObjectId": "course:1757272"
+      },
+      "relationships": {
+        "skillLevel": {
+          "data": {
+            "id": "64781_1",
+            "type": "skillLevel"
+          }
+        }
+      }
+    },
+    {
+      "id": "learningProgram:58307_73237",
+      "type": "learningObjectSkill",
+      "attributes": {
+        "credits": 10,
+        "learningObjectId": "learningProgram:58307"
+      },
+      "relationships": {
+        "skillLevel": {
+          "data": {
+            "id": "73237_1",
+            "type": "skillLevel"
+          }
+        }
+      }
+    },
+    {
+      "id": "learningProgram:58307_73238",
+      "type": "learningObjectSkill",
+      "attributes": {
+        "credits": 20,
+        "learningObjectId": "learningProgram:58307"
+      },
+      "relationships": {
+        "skillLevel": {
+          "data": {
+            "id": "73238_1",
+            "type": "skillLevel"
+          }
+        }
+      }
+    },
+    {
+      "id": "course:2036629_64783",
+      "type": "learningObjectSkill",
+      "attributes": {
+        "credits": 12,
+        "learningObjectId": "course:2036629"
+      },
+      "relationships": {
+        "skillLevel": {
+          "data": {
+            "id": "64783_1",
+            "type": "skillLevel"
+          }
+        }
+      }
+    },
+    {
+      "id": "course:2036021_64782",
+      "type": "learningObjectSkill",
+      "attributes": {
+        "credits": 100,
+        "learningObjectId": "course:2036021"
+      },
+      "relationships": {
+        "skillLevel": {
+          "data": {
+            "id": "64782_1",
+            "type": "skillLevel"
+          }
+        }
+      }
+    },
+    {
+      "id": "course:2034478_64781",
+      "type": "learningObjectSkill",
+      "attributes": {
+        "credits": 1,
+        "learningObjectId": "course:2034478"
+      },
+      "relationships": {
+        "skillLevel": {
+          "data": {
+            "id": "64781_1",
+            "type": "skillLevel"
+          }
+        }
+      }
+    },
+    {
+      "id": "course:2034478_73238",
+      "type": "learningObjectSkill",
+      "attributes": {
+        "credits": 20,
+        "learningObjectId": "course:2034478"
+      },
+      "relationships": {
+        "skillLevel": {
+          "data": {
+            "id": "73238_1",
+            "type": "skillLevel"
+          }
+        }
+      }
+    },
+    {
+      "id": "course:1757273_64781",
+      "type": "learningObjectSkill",
+      "attributes": {
+        "credits": 1,
+        "learningObjectId": "course:1757273"
+      },
+      "relationships": {
+        "skillLevel": {
+          "data": {
+            "id": "64781_1",
+            "type": "skillLevel"
+          }
+        }
+      }
+    },
+    {
+      "id": "course:1757274_64781",
+      "type": "learningObjectSkill",
+      "attributes": {
+        "credits": 1,
+        "learningObjectId": "course:1757274"
+      },
+      "relationships": {
+        "skillLevel": {
+          "data": {
+            "id": "64781_1",
+            "type": "skillLevel"
+          }
+        }
+      }
+    },
+    {
+      "id": "course:1757275_64781",
+      "type": "learningObjectSkill",
+      "attributes": {
+        "credits": 1,
+        "learningObjectId": "course:1757275"
+      },
+      "relationships": {
+        "skillLevel": {
+          "data": {
+            "id": "64781_1",
+            "type": "skillLevel"
+          }
+        }
+      }
+    },
+    {
+      "id": "course:1757276_64781",
+      "type": "learningObjectSkill",
+      "attributes": {
+        "credits": 1,
+        "learningObjectId": "course:1757276"
+      },
+      "relationships": {
+        "skillLevel": {
+          "data": {
+            "id": "64781_1",
+            "type": "skillLevel"
+          }
+        }
+      }
+    },
+    {
+      "id": "course:1757277_64781",
+      "type": "learningObjectSkill",
+      "attributes": {
+        "credits": 1,
+        "learningObjectId": "course:1757277"
+      },
+      "relationships": {
+        "skillLevel": {
+          "data": {
+            "id": "64781_1",
+            "type": "skillLevel"
+          }
+        }
+      }
+    },
+    {
+      "id": "64781_1",
+      "type": "skillLevel",
+      "attributes": {
+        "level": "1",
+        "maxCredits": 1,
+        "name": ""
+      },
+      "relationships": {
+        "skill": {
+          "data": {
+            "id": "64781",
+            "type": "skill"
+          }
+        }
+      }
+    },
+    {
+      "id": "73238_1",
+      "type": "skillLevel",
+      "attributes": {
+        "level": "1",
+        "maxCredits": 20,
+        "name": "Level 1"
+      },
+      "relationships": {
+        "badge": {
+          "data": {
+            "id": "113167",
+            "type": "badge"
+          }
+        },
+        "skill": {
+          "data": {
+            "id": "73238",
+            "type": "skill"
+          }
+        }
+      }
+    },
+    {
+      "id": "64782_1",
+      "type": "skillLevel",
+      "attributes": {
+        "level": "1",
+        "maxCredits": 100,
+        "name": "Level 1"
+      },
+      "relationships": {
+        "skill": {
+          "data": {
+            "id": "64782",
+            "type": "skill"
+          }
+        }
+      }
+    },
+    {
+      "id": "64783_1",
+      "type": "skillLevel",
+      "attributes": {
+        "level": "1",
+        "maxCredits": 100,
+        "name": "Level 1"
+      },
+      "relationships": {
+        "skill": {
+          "data": {
+            "id": "64783",
+            "type": "skill"
+          }
+        }
+      }
+    },
+    {
+      "id": "73237_1",
+      "type": "skillLevel",
+      "attributes": {
+        "level": "1",
+        "maxCredits": 10,
+        "name": "Level 1"
+      },
+      "relationships": {
+        "badge": {
+          "data": {
+            "id": "113166",
+            "type": "badge"
+          }
+        },
+        "skill": {
+          "data": {
+            "id": "73237",
+            "type": "skill"
+          }
+        }
+      }
+    }
+  ]
+}

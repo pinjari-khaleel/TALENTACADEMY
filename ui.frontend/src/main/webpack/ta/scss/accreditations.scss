@@ -1,0 +1,28 @@
+.ta-accreditations {
+  padding: 2.5rem 0 3.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.875rem;
+}
+.ta-accreditations img {
+  width: 4.0625rem;
+  height: 4.0625rem;
+  @include md() {
+    width: 8.07575rem;
+    height: 8.07575rem;
+  }
+}
+.accreditation-content {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+  h5 {
+    margin-bottom: 0.625rem;
+  }
+  @include md() {
+    p {
+      font-size: 1rem;
+    }
+  }
+}

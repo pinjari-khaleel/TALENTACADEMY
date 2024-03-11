@@ -1,0 +1,8 @@
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}" class="panel-title">${'coursecard'
+	@i18n}</h3>
+
+<sly data-sly-use.courseModel="com.talentacademy.core.models.CourseCardModel"
+	 data-sly-use.temp="${'coursetemplate.html'}" data-sly-call="${temp.include @ type = 'static', courseImage = courseModel.carouselImage, altTextForImage = courseModel.altTextForImage,
+	  	carouselImageLabelText = courseModel.carouselImageLabelText, title = courseModel.headingText, coursesCount = courseModel.coursesCount,
+		badgesTitle = courseModel.badgesTitle, badgesList = courseModel.badgesList, contentTypeID = courseModel.learningPathwayID, pagePath = courseModel.secondaryButtonLink, courseModel = courseModel}">
+</sly>

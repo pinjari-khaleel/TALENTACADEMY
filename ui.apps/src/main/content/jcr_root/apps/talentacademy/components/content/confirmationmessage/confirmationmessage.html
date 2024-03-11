@@ -1,0 +1,14 @@
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}" class="panel-title">${'confirmationmessage' @i18n}</h3>
+<sly data-sly-use.model="com.talentacademy.core.models.ConfirmationMessageModel"
+     data-sly-use.formPreLoadModel="com.talentacademy.core.models.FormContainerPreLoadModel">
+     <sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+  <div class="ta-form-confirmation text-center" data-component="${analyticsModel.title}" id="confirmation" data-recaptcha="${formPreLoadModel.recaptchaToken}" data-email="${formPreLoadModel.email}" data-form-submission-state="${formPreLoadModel.isSuccessfulPageSubmission ? 'true' : 'false'}">
+    <div class="ta-form-confirmation__inner">
+    <h1 data-sly-test="${model.title}" class="title5">${model.title}</h1>
+      <p data-sly-test="${model.description}" class="body4">${model.description @context='html'}</p>
+      <div class="button button--primary_darkgold button--small simple-button has-no-arrow">
+        <sly data-sly-resource="${ @ path='button1', resourceType='talentacademy/components/button', decorationTagName='div'}"></sly>
+      </div>
+    </div>
+  </div>
+</sly>

@@ -1,0 +1,6 @@
+{
+   "basicFormContainerDefault": {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/ntaformcontainer"
+   }
+}

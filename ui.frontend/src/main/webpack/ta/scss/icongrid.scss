@@ -1,0 +1,126 @@
+.ta-icon-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ta-sectors-grid {
+  padding: 40px 0px;
+
+  @include md {
+    padding: 140px 0px;
+  }
+
+  .ta-icon-grid {
+    &__info {
+      max-width: 300px;
+      padding-bottom: 50px;
+
+      @include md {
+        max-width: 950px;
+        padding-bottom: 80px;
+      }
+    }
+
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+
+      @include md {
+        grid-template-columns: repeat(7, 1fr);
+        grid-gap: 10px;
+      }
+
+      @include lg {
+        grid-template-columns: repeat(7, 1fr);
+        grid-gap: 65px;
+      }
+
+      .ta-sector {
+        width: 130px;
+        height: 120px;
+        padding-bottom: 36px;
+
+        &__icon-wrapper {
+          width: 120px;
+          height: 60px;
+          padding-bottom: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            max-height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .captionM {
+    color: map-get($colors, "darkGold");
+    margin-bottom: 20px;
+
+    @include md {
+      margin-bottom: 30px;
+    }
+  }
+
+  .title4 {
+    margin-bottom: 20px;
+
+    @include md {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.ta-logo-grid {
+  padding: 80px 20px;
+
+  @include md {
+    padding: 190px 250px;
+  }
+
+  img {
+    max-width: none;
+    height: 115px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .ta-icon-grid {
+    &__info {
+      width: 100%;
+      height: auto;
+      padding-bottom: 50px;
+
+      @include md {
+        padding-bottom: 70px;
+      }
+    }
+
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 60px;
+      justify-items: center;
+      align-items: center;
+
+      @include md {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 129px;
+      }
+    }
+  }
+
+  .title4 {
+    margin-bottom: 20px;
+
+    @include md {
+      margin-bottom: 40px;
+    }
+  }
+}

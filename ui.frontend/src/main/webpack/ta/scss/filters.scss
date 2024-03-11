@@ -1,0 +1,256 @@
+.grid-filters {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+
+    @include md() {
+        flex-direction: row;
+        position: unset;
+    }
+
+    .grid-filter-header {
+        background: map-get($colors, "cream25");
+        border: none;
+        border-radius: 0;
+        align-items: center;
+        display: inline-flex;
+        justify-content: space-between;
+        padding: 1.75rem 1.25rem;
+        text-transform: uppercase;
+        border-top: 1px solid map-get($colors, "black20");
+        border-bottom: 1px solid map-get($colors, "black20");
+
+        &::after {
+            content: url("../resources/images/filter-icon.svg");
+            display: inline-block;
+            height: 24px;
+            width: 24px;
+        }
+
+        @include md {
+            cursor: default;
+            display: none;            
+            border: none;
+            width: fit-content;
+        }
+    }
+
+    .grid-filter-modal {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        top: 100%;
+        background: map-get($colors, "cream25");
+        box-shadow: 0 5px 15px #0000001a;
+
+        @include md() {
+            display: flex;
+            position: unset;
+            flex-direction: row;
+            background: none;
+            box-shadow: none;
+            justify-content: flex-end; 
+            &::before {
+                content: '';
+                background: url("../resources/images/filter-icon.svg");
+                display: inline-block;
+                height: 24px;
+                width: 24px;
+                margin: 4.0625rem 2.25rem 4.0625rem;
+            }
+        }
+
+        .ta-accordion {
+            margin: 0;
+            background: none;
+            border-bottom: 1px solid map-get($colors, "black20");
+
+            @include md() {
+                border: none;
+                width: fit-content;
+            }
+
+            .accordion-item {
+                padding: 1.75rem 1.25rem;
+                background: map-get($colors, "cream50");
+
+                .accordion-item-header {
+                    text-transform: uppercase;
+                    font-size: 0.75rem;
+
+                    &::after {
+                        top: 0;
+                        height: 0.35713rem;
+                    }
+
+                    &[aria-expanded="true"] {
+                        color: map-get($colors, "darkGold");
+
+                        &::after {
+                            top: 6px;
+                        }
+                    }
+                }
+
+                @include md() {
+                    background: none;
+                    width: max-content;
+                    padding: 0;
+
+                    .accordion-item-header {
+                        border-inline: 1px solid transparent;
+                        cursor: pointer;
+                        padding: 4.0625rem 1.5625rem;
+                        padding-right: 2.25rem;
+
+                        &::after {
+                            top: 49%;
+                            width: 0.4375rem;
+                            height: 0.25rem;
+                            right: 0.95rem;
+                        }
+
+                        &[aria-expanded="true"] {
+                            color: map-get($colors, "black90");
+                            border-color: map-get($colors, "black20");
+                            z-index: 10;
+                            background: map-get($colors, "cream25");
+
+                            &::after {
+                                top: 49%;
+                            }
+
+                        }
+                    }
+                }
+
+                .accordion-item-content-open {
+                    display: flex;
+                    gap: 0.6875rem;
+                    flex-wrap: wrap;
+
+                    @include md() {
+                        background-color: map-get($colors, "cream25");
+                        border-bottom: 1px solid map-get($colors, "black20");
+                        border-top: 1px solid map-get($colors, "black20");
+                        position: absolute;
+                        width: 100%;
+                        left: 0;
+                        padding: 3.125rem 4.375rem;
+                        gap: 1.25rem;
+                        bottom: -8.6rem;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .grid-filter-buttons {
+        display: flex;
+        padding: 1.75rem;
+        justify-content: space-between;
+        background-color: map-get($colors, "white");
+
+        @include md() {
+            display: none;
+            position: absolute;
+            bottom: -14.8rem;
+            height: 100px;
+            padding-inline: 4.17rem;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+            left: 0;
+            justify-content: flex-start;
+            box-shadow: 0 5px 15px #0000001a;
+            z-index: 2;
+        }
+
+        .ta-cancel-button {
+            border: none;
+            position: relative;
+            padding-right: 2.625rem;
+            cursor: pointer;
+
+            &::after {
+                background: url("../resources/images/closeicon.svg") no-repeat;
+                position: absolute;
+                content: "";
+                width: 0.75rem;
+                height: 0.75rem;
+                display: inline-block;
+                top: 18px;
+                right: 1.25rem;
+                background-size: contain;
+
+                @include md() {
+                    top: 4px;
+                }
+            }
+        }
+    }
+}
+
+.grid-filters-open {
+    .grid-filter-header {
+        background: map-get($colors, "cream50");
+        padding: 1.5625rem 1.25rem;
+
+        &::after {
+            content: url("../resources/images/closeicon.svg");
+            padding: 1.12rem;
+            background-color: map-get($colors, "white");
+            border-radius: 100%;
+            box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+            width: 60px;
+            height: 60px;
+        }
+
+        .body5 {
+            font-size: 1.3125rem;
+            line-height: 135%;
+            text-transform: capitalize;
+        }
+    }
+
+    .grid-filter-modal {
+        background: map-get($colors, "cream50");
+        display: flex;
+        z-index: 10;
+    }
+}
+
+[dir="rtl"] {
+    .grid-filters .grid-filter-modal {
+        .ta-accordion .accordion-item {     
+            .accordion-item-header {
+                padding-left: 2.25rem;
+                padding-right: 1.5625rem;
+                &::after {
+                    content: none;
+                }
+                &::before {          
+                    content: "";            
+                    display: inline-block;
+                    background: url("../resources/images/goldchevron.svg") no-repeat;
+                    background-size: contain;
+                    position: absolute;                   
+                    top: 49%;
+                    width: 0.4375rem;
+                    height: 0.25rem;
+                    left: 0.95rem;
+                    rotate: 180deg;
+                }
+                &[aria-expanded="true"] {
+                    &::before {
+                        top: 49%;
+                        rotate: 0deg;
+                    }
+                }        
+            }            
+        }
+    }
+}

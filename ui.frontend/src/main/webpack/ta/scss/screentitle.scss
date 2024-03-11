@@ -1,0 +1,14 @@
+.screen-title {
+    padding: 1.25rem;
+    .tag {
+        margin-top: 1.25rem;
+    }
+    @include md {
+        max-width: 90rem;
+        margin: auto;
+        padding: 3.75rem 11.25rem;
+        .tag {
+            margin-top: 1.875rem;
+        }
+    }    
+}    

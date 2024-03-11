@@ -1,0 +1,43 @@
+{
+	"jcr:primaryType": "cq:Page",
+	"jcr:createdBy": "admin",
+	"jcr:created": "Fri Jun 26 2020 14:20:05 GMT+0530",
+	"jcr:content": {
+		"jcr:primaryType": "cq:PageContent",
+		"jcr:createdBy": "admin",
+		"jcr:title": "Sitemap",
+		"twitterCard": "summary",
+		"disableAudioEye": "true",
+		"disableGTM": "true",
+		"cq:template": "/conf/talentacademy/settings/wcm/templates/content-page",
+		"hideInBreadcrumb": "true",
+		"ogType": "Website",
+		"jcr:created": "Fri Jun 26 2020 14:20:05 GMT+0530",
+		"cq:lastModified": "Mon Jun 29 2020 16:25:00 GMT+0530",
+		"disableAdobeLaunch": "true",
+		"jcr:description": "Sitemap page",
+		"hideInNav": "true",
+		"sling:resourceType": "talentacademy/components/structure/page",
+		"disableFeedback": "true",
+		"hideInSitemap": "true",
+		"cq:lastModifiedBy": "admin",
+		"root": {
+			"jcr:primaryType": "nt:unstructured",
+			"sling:resourceType": "wcm/foundation/components/responsivegrid",
+			"responsivegrid": {
+				"jcr:primaryType": "nt:unstructured",
+				"sling:resourceType": "wcm/foundation/components/responsivegrid",
+				"sitemap": {
+					"jcr:primaryType": "nt:unstructured",
+					"jcr:createdBy": "admin",
+					"jcr:lastModifiedBy": "admin",
+					"jcr:created": "Mon Jun 22 2020 13:34:40 GMT+0530",
+					"rootPage": "/content/talentacademy/language-masters/en",
+					"heading": "Sitemap",
+					"jcr:lastModified": "Mon Jun 29 2020 16:25:00 GMT+0530",
+					"sling:resourceType": "talentacademy/components/content/sitemap"
+				}
+			}
+		}
+	}
+}

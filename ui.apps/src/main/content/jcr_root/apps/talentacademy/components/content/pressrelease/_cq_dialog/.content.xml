@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Press Release"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <rootDetailsPath
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldDescription="Please select the root path for the press release details page to get the list of all page data."
+                        fieldLabel="Select root path of details page"
+                        name="./rootDetailsPath"
+                        rootPath="/content/talentacademy"/>
+                    <loadMoreLimit
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                        fieldDescription="Please select/enter the count for showing number of cards per load."
+                        fieldLabel="Select the count for showing number of cards per load"
+                        max="{Long}12"
+                        min="{Long}6"
+                        name="./loadMoreLimit"
+                        value="2"/>
+                    <knowMoreCtaLabel
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Please enter the label for CTA button."
+                        fieldLabel="Enter know more CTA button label"
+                        name="./knowMoreCtaLabel"/>
+                    <loadMoreCtaLabel
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldDescription="Please enter the label for CTA button."
+                            fieldLabel="Enter load more CTA button label"
+                            name="./loadMoreCtaLabel"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

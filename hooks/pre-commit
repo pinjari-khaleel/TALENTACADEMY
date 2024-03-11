@@ -1,0 +1,41 @@
+#!/bin/bash
+
+function linters() {
+  # Set ESLint config file path (adjust if needed)
+  ESLINT_CONFIG_FILE=ui.frontend/.eslintrc.js
+
+  # Run ESLint check
+  npx eslint --config "$ESLINT_CONFIG_FILE" ui.frontend/src/**/*.js
+
+  # Exit with non-zero code if errors found
+  if [ $? -ne 0 ]; then
+    echo "ESLint errors found. Please fix them before committing."
+    exit 1
+  fi
+
+  echo "Git hook for linters ran without errors"
+}
+
+function prevent_large_files() {
+  # Maximum size (e.g., 2MB)
+  MAX_SIZE=2000000
+
+  # Get the list of files about to be committed
+  FILES=$(git diff --cached --name-only)
+
+  # Check the size of each file
+  for FILE in $FILES; do
+    SIZE=$(git ls-files -- "$FILE" | xargs du -k | cut -f1)
+    echo "Currently analyzing $FILE for size constraints"
+    if [ "$SIZE" -gt "$MAX_SIZE" ]; then
+      echo "Error: File $FILE exceeds the maximum allowed size of ${MAX_SIZE}KB."
+      exit 1
+    fi
+  done  # Close the "for" loop
+
+  echo "Git hook to prevent large files ran successfully"
+}
+
+# Call the functions to execute them
+linters
+prevent_large_files

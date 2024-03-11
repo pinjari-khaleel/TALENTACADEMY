@@ -1,0 +1,107 @@
+.teaser.nta-future-academy-card {
+    width: 100%;
+    height: 500px;
+
+    .cmp-teaser {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .cmp-teaser__content {
+        position: absolute;
+        font-family: $brown;
+        font-weight:300;
+        z-index: 3;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: 0 24px 40px;
+        @include md {
+            left: 100px;
+            right: 100px;
+            bottom: 76px;
+            padding: 0;
+        }
+    }
+    .cmp-teaser__title {
+        color: #fff;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 51.8px */
+        text-transform: uppercase;
+        font-family: inherit;
+        @include md {
+            font-size: 2.3125rem;
+            line-height: 140%; /* 3.2375rem */
+            letter-spacing: 0.2775rem;
+        }
+    }
+    .cmp-teaser__description p {
+        padding: 30px 0;
+        color: map-get($colors, "lightGreyBg");
+        @extend .body3;
+        max-width: 500px;
+        @include md {
+            font-size: 1.3125rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 148%;
+        }
+    }
+    .cmp-teaser__action-link {
+        border-radius: 30px;
+        border: 1px solid var(--primary-black-20, map-get($colors, "black20"));
+        display: inline-flex;
+        background: var(--primary-white, #fff);
+        color: #000;
+        text-transform: uppercase;
+        font-size: 0.625rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.075rem;
+        padding: 17px 30px;
+        @include md {
+            font-size: 0.75rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.09rem;
+        }
+    }
+    .cmp-teaser__image {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        .cmp-image {
+            width: 100%;
+            height: 100%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: linear-gradient(81deg, rgba(0, 0, 0, 0.5) -20.33%, rgba(0, 0, 0, 0) 105.49%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 0;
+        }
+    }
+}
+
+[dir="rtl"] {
+    .teaser.nta-future-academy-card .cmp-teaser__title {
+        letter-spacing: normal;
+    }
+}

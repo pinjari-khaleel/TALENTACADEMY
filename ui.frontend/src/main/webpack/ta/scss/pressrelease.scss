@@ -1,0 +1,92 @@
+.ta-press-release {
+  &__wrapper {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tb {
+      padding: 100px 70px;
+    }
+    @include md {
+      max-width: 1780px;
+      margin: 0 auto;
+    }
+  }
+  &__list{
+    display: inline-flex;
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    @include tb {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0 auto;
+      gap: 80px 20px;
+    }
+    @include md {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  &__grid-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    @include sm {
+      margin-bottom: 20px;
+    }
+  }
+  &__image {
+    display: block;
+    margin-bottom: 20px;
+    img {
+      object-fit: cover;
+      width:100%;
+      height:248px;
+      @include md{
+        height:280px;
+      }
+    }
+  }
+  &__content {
+    flex-grow: 1;
+    margin-bottom: 20px;
+  }
+  &__link {
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+    margin-top: auto;
+    .cta-link__text {
+          display: inline-flex;
+          align-items: center;
+          line-height: normal;
+          gap: 15px;
+          &::after {
+            content: "";
+            position: relative;
+            width: 24px;
+            height: 24px;
+            background: url(../resources/images/arrow-dark.svg) no-repeat center
+              center;
+            background-size: contain;
+          }
+        }
+  }
+  .captionL {
+    margin-bottom: 20px;
+  }
+  .body6 {
+    margin-bottom: 20px;
+    color: map-get($colors, "black75");
+  }
+  .cta-link {
+    margin-top: 30px;
+    width: 100%;
+    @include tb {
+      width: auto;
+    }
+    @include md {
+      margin-top: 100px;
+    }
+  }
+}
+

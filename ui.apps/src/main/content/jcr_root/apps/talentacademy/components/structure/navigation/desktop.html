@@ -1,0 +1,27 @@
+<template data-sly-template.desktopNavItem="${@ desktopNavItems='The navigation item'}">
+    <div class="ta-subheader-subsection">
+        <sly data-sly-list="${desktopNavItems}">
+            <sly data-sly-test.activeCheckNav="${item.path in currentPage.path}"></sly>
+            <ul class="ta-header-sublinks ${activeCheckNav == true ? 'ta-header-sublinks-active' : '' }">
+                <li class="ta-header-sublinks-heading">${item.title}</li>
+                <sly data-sly-list="${item.children}">
+                    <sly data-sly-test.activeCheckSubMenu="${item.path == currentPage.path}"></sly>
+                    <li class="ta-header-sublink ${activeCheckSubMenu == true ? 'ta-header-sublink-active' : '' }"
+                        role="menuitem"><a class="ta-header-sublink" href="${item.URL}">${item.title}</a>
+                    </li>
+                    <sly data-sly-test="${itemList.last}">
+                        <sly
+                            data-sly-use.pageConfig="${'com.talentacademy.core.models.PageConfigModel' @pathReference=item.path}">
+                            <sly data-sly-test="${pageConfig.headerButtonLabel && pageConfig.headerButtonUrl}">
+	                            <a href="${pageConfig.headerButtonUrl}" class="ta-header-button button--secondary header--button"
+	                                aria-label="${pageConfig.headerButtonLabel}">
+	                                ${pageConfig.headerButtonLabel}
+	                            </a>
+                            </sly>
+                        </sly>
+                    </sly>
+                </sly>
+            </ul>
+        </sly>
+    </div>
+</template>

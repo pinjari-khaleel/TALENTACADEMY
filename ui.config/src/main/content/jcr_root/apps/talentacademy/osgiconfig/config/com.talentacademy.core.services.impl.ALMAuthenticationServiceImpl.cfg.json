@@ -1,0 +1,10 @@
+{
+  "clientId": "$[secret:ALM_CLIENT_ID]",
+  "clientSecret": "$[secret:ALM_CLIENT_SECRET]",
+  "refreshToken": "$[secret:ALM_REFRESH_TOKEN]",
+  "accessTokenUrl": "https://learningmanagereu.adobe.com/oauth/token/refresh",
+  "almBaseUrl":"https://learningmanagereu.adobe.com",
+  "prefix": "primeapi",
+  "version": "v2",
+  "learningObjectsApi":"{almUrl}/{prefix}/{version}/learningObjects"
+}

@@ -1,0 +1,63 @@
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}" class="panel-title">
+	${'careerdetails' @i18n}</h3>
+<sly data-sly-use.model="com.talentacademy.core.models.CareerDetailsModel">
+	<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+	<div class="bg-cream25 career-details" data-component="${analyticsModel.title}">
+		<section class="screen-title">
+			<h3 data-sly-test="${model.jobTitle}" class="title3">${model.jobTitle}</h3>
+			<sly data-sly-test="${model.recruitmentStatus}">
+				<div class="ta-tag ta-tag_with-border ta-tag_orange" data-sly-test="${model.recruitmentStatus == 'activelyrecruiting'}">
+					${'activelyrecruiting' @i18n}
+				</div>
+				<div class="ta-tag ta-tag_with-border ta-tag_blue" data-sly-test="${model.recruitmentStatus == 'futureposition'}">
+					${'futureposition' @i18n}
+				</div>
+			</sly>
+		</section>
+		<section class="main">
+			<aside class="info-card">
+				<div class="info-item" data-sly-test="${model.demandGrowthLabel && model.demandGrowthValue}">
+					<h4 class="captionM text-black">${model.demandGrowthLabel}
+					</h4>
+					<h5 class="text-darkGold title6">
+						<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 0 18 18"
+							fill="#B89535">
+							<path
+								d="M16.0732 2.66497L15.798 3.28429C15.5897 3.75219 15.2971 4.17773 14.9347 4.53962L1.47428 18L0 16.5257L13.4604 3.06534C13.8223 2.70293 14.2478 2.41029 14.7157 2.20204L15.335 1.92678L13.8753 2.08526H5.16103V0H18V12.839H15.9147V4.19764L16.0732 2.66288V2.66497Z" />
+						</svg>
+						${model.demandGrowthValue}
+					</h5>
+				</div>
+
+				<div class="info-item" data-sly-test="${model.salaryRangeLabel && model.salaryRangeValue}">
+					<h4 class="captionM text-black">${model.salaryRangeLabel}</h4>
+					<p class="captionL text-darkGold">${model.salaryRangeValue}</p>
+				</div>
+
+				<div class="info-item" data-sly-test="${model.potentialEmployersLabel}">
+					<h4 class="captionM text-black">${model.potentialEmployersLabel}</h4>
+					<div class="images-wrapper" data-sly-list.employerIcons="${model.employerIcons.listChildren}">
+						<img src="${employerIcons.employers}" alt="employers${itemList.count}">
+					</div>
+				</div>
+
+				<a data-sly-test="${model.registerInterestCtaLabel}" class="button button--primary_darkgold cta-link has-no-arrow"
+					href="${model.registerInterestCtaLink}" target="${model.openInNewTab == 'true' ? '_blank' : '_self'}">
+					<span class="cta-link__text">${model.registerInterestCtaLabel}</span>
+				</a>
+				
+			</aside>
+
+			<div class="info-list">
+				<sly data-sly-list.roledetails="${model.roleDetails.listChildren}">
+					<div class="info-item" id="${roledetails.label}">
+						<h6 class="title6" data-sly-test="${roledetails.label}">${roledetails.label}:</h6>
+						<div class="body5" data-sly-test="${roledetails.description}" data-sly-unwrap="${false}">
+							${roledetails.description @ context = 'html'}</div>
+					</div>
+				</sly>
+			</div>
+
+		</section>
+	</div>
+</sly>

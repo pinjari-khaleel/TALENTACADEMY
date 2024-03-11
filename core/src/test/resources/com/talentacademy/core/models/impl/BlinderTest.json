@@ -1,0 +1,112 @@
+{
+  "staticblinder": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "talentacademy/components/blinder",
+    "header": "test Title",
+    "variation": "static",
+    "blinderDetails": {
+      "jcr:primaryType": "nt:unstructured",
+      "item0": {
+        "jcr:primaryType": "nt:unstructured",
+        "fileReference": "/content/dam/test1.jpg",
+        "header": "sample text 1",
+        "description": "sample desc 1",
+        "altText": "image 1"
+      },
+      "item1": {
+        "jcr:primaryType": "nt:unstructured",
+        "fileReference": "/content/dam/test2.jpg",
+        "header": "sample text 2",
+        "description": "sample desc 2",
+        "altText": "image 2"
+      }
+    }
+  },
+  "dynamicblinder": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "talentacademy/components/blinder",
+    "header": "test Title",
+    "variation": "dynamic",
+    "pages": {
+      "jcr:primaryType": "nt:unstructured",
+      "item0": {
+        "pagePath": "/content/language-academy"
+      }
+    }
+  },
+  "dynamicblinderpages": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "talentacademy/components/blinder",
+    "header": "test Title",
+    "variation": "dynamic"
+  },
+  "dynamicblinderpagepath": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "talentacademy/components/blinder",
+    "header": "test Title",
+    "variation": "dynamic",
+    "pages": {
+      "jcr:primaryType": "nt:unstructured",
+      "item0": {
+      }
+    }
+  },
+  "dynamicblinderincorrectpath": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "talentacademy/components/blinder",
+    "header": "test Title",
+    "variation": "dynamic",
+    "pages": {
+      "jcr:primaryType": "nt:unstructured",
+      "item0": {
+        "pagePath": "/content/language-acad"
+      }
+    }
+  },
+  "language-academy": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:title": "Language Academy",
+      "cq:template": "/conf/talentacademy/settings/wcm/templates/page-content-template",
+      "sling:resourceType": "talentacademy/components/structure/page",
+      "root": {
+        "jcr:primaryType": "nt:unstructured",
+        "layout": "responsiveGrid",
+        "sling:resourceType": "talentacademy/components/container",
+        "container": {
+          "jcr:primaryType": "nt:unstructured",
+          "layout": "responsiveGrid",
+          "sling:resourceType": "talentacademy/components/container",
+          "contentblock": {
+            "jcr:primaryType": "nt:unstructured",
+            "description": "language academy detail page Build your future in Language Academy. Learn project management from planning to execution. Construct your career.",
+            "fileReference": "/content/dam/talentacademy/language academy.jpg",
+            "header": "Overview",
+            "altText": "language academy",
+            "sling:resourceType": "talentacademy/components/content/contentblock",
+            "shortDescription": "language academy detail page short description",
+            "contentDetails": {
+              "jcr:primaryType": "nt:unstructured",
+              "item0": {
+                "jcr:primaryType": "nt:unstructured",
+                "label": "SECTOR FOCUS",
+                "value": "Lnageued"
+              },
+              "item1": {
+                "jcr:primaryType": "nt:unstructured",
+                "label": "AVAILABLE COURSES",
+                "value": "94"
+              },
+              "item2": {
+                "jcr:primaryType": "nt:unstructured",
+                "label": "PROJECTED LEARNERS",
+                "value": "534"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

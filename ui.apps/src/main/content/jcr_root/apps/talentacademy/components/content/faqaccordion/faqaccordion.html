@@ -1,0 +1,23 @@
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}" class="panel-title">
+    ${'FAQ Accordion' @ i18n}
+</h3>
+
+<sly data-sly-use.model="com.talentacademy.core.models.FAQAccordionModel">
+	<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+    <section class="ta-faq" data-component="${analyticsModel.title}" data-sly-test="${model.title || model.faq}">
+        <input type="hidden" class="faq-rootPath" data-rootPath="${currentPage.path}" />
+        <h4 class="title4">${model.title}</h4>
+        <ul class="faq-container">
+            <sly data-sly-list="${model.faq}">
+                <li data-sly-test="${itemList.index < model.loadMoreLimit}">
+                    <sly data-sly-use.faq="${'accordion.html'}" data-sly-call="${faq.include @  accordionObj=item}" />
+                </li>
+            </sly>
+        </ul>
+        <sly data-sly-test="${model.loadMoreLimit < model.faq.size}">
+            <button class="button button--secondary load-button load-more-button cta-link" id="load-more-faq" data-offset="2">
+                <span class="cta-link__text">${model.loadMoreText}</span>
+            </button>
+        </sly>
+    </section>
+</sly>

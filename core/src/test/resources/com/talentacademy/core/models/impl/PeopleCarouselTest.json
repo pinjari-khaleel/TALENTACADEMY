@@ -1,0 +1,16 @@
+{
+	"jcr:primaryType": "nt:unstructured",
+	"caption": "Caption",
+	"description": "Description",
+	"peopleCarouselList": {
+		"jcr:primaryType": "nt:unstructured",
+		"item0": {
+			"jcr:primaryType": "nt:unstructured",
+			"image": "/content/dam/dummyicon.png",
+			"altText": "Alt Text",
+			"name": "Neom",
+			"role": "Director",
+			"description": "Test Description"
+		}
+	}
+}

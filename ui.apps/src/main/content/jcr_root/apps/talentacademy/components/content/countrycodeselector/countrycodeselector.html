@@ -1,0 +1,31 @@
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}" class="panel-title">
+  ${'countrycodeselector' @i18n}</h3>
+<sly data-sly-use.model="com.talentacademy.core.models.CountryCodeSelectorModel">
+  <sly data-sly-set.compTitle="${component.title}"
+    data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+  <sly data-sly-test="${model.countrySelectorList}" data-sly-set.countryList="${model.countrySelectorList}">
+    <fieldset data-fieldid="${model.name}" class="cmp-form-options cmp-form-options--drop-down "
+      data-component="${analyticsModel.title}">
+      <label
+        class="${model.required == 'true' ? 'cmp-form-options__required' : 'cmp-form-options__label'}">${model.title}</label>
+      <div class="ta-custom-dropdown" aria-labelledby="dropdownLabel" aria-expanded="false">
+        <input type="hidden" data-cmp-hook-form-text="input" name="${model.name}" required="${model.required}" value="" class="cmp-form-options--hidden-field">
+        <button data-error-message="${model.errorMessage}" class="custom-dropdown__button" id="selectedValue" type="button" aria-haspopup="listbox" aria-expanded="false">
+          <span class="custom-dropdown__country-code">+00</span>
+        </button>
+        <ul class="custom-dropdown__list" style="display: none">
+          <sly data-sly-list.country="${countryList}">
+            <li class="custom-dropdown__item" tabindex="0" data-code="${country.value}" data-initials="${country.countryCode}">
+              <img src="${model.flagsPath}/${country.countryCodeLowerCase}.png" alt="${country.text}" />
+              <span>${country.text}</span>
+              <span>${country.value}</span>
+            </li>
+          </sly>
+        </ul>
+      </div>
+      <div class="cmp-form-options__error-block">
+        <div class="cmp-form-options__error-message" data-error-message="" style="display: none;"></div>
+      </div>
+    </fieldset>
+  </sly>
+</sly>

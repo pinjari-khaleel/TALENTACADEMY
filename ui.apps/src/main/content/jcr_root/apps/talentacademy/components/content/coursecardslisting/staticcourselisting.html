@@ -1,0 +1,17 @@
+<template data-sly-template.include="${@ model}">
+    <ul class="grid-listing" data-sly-list.cardDetail="${model.getCourseDetailsdata}">
+        <sly data-sly-set.contentTypeID="${cardDetail.learningPathwayID}" />
+
+        <li data-sly-test="${cardDetailList.index < model.loadMoreLimit}">
+            <sly data-sly-use.temp="${'talentacademy/components/content/coursecard/coursetemplate.html'}" data-sly-call="${temp.include @ type = 'static',  courseImage = cardDetail.cardImage,
+                altTextForImage = cardDetail.cardImageAltText, carouselImageLabelText = cardDetail.courseTag, title = cardDetail.courseTitle, coursesCount = cardDetail.numberOfCourses, durationHours = '',
+                durationMinutes = '', badgesTitle = model.badgesEarned, badgesList = cardDetail.badges, contentTypeID = contentTypeID, pagePath = cardDetail.pagePath, courseModel = model}">
+            </sly>
+        </li>
+    </ul>
+
+    <button class="button button--secondary load-button load-more-button cta-link" data-offset="2"
+        data-sly-test="${model.getCourseDetailsdata.size > model.loadMoreLimit && model.loadMoreCtaLabel}">
+        <span class="cta-link__text">${model.loadMoreCtaLabel}</span>
+    </button>
+</template>

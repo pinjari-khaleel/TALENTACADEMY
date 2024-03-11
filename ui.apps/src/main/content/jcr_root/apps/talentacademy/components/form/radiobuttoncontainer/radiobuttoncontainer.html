@@ -1,0 +1,29 @@
+<sly data-sly-use.options="com.talentacademy.core.models.RadioButtonContainerModel"
+     data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     data-sly-use.grid="com.day.cq.wcm.foundation.model.responsivegrid.ResponsiveGrid"
+     data-sly-test.isNotEmpty="${options.items.size}">
+    <sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+    <fieldset class="cmp-form-options cmp-form-options--${options.type}"
+              data-cmp-is="formRadioButtonContainer"
+              data-cmp-data-layer="${options.configHideShowData}"
+              data-component="${analyticsModel.title}">
+        <legend class="${properties.required ? 'cmp-form-options__required' : 'cmp-form-options__legend'}">${options.title}</legend>
+        <label class="cmp-form-options__field-label" data-sly-repeat.optionItem="${options.items}">
+            <input class="cmp-form-options__field cmp-form-options__field--${options.type}"
+                   name="${options.name}"
+                   value="${optionItem.value}" checked="${optionItem.selected}" disabled="${optionItem.disabled}"
+                   type="${options.type}"
+                   data-sly-attribute.aria-describedby="${options.helpMessage ? [options.id, 'helpMessage'] : '' @ join = '-'}"/>
+            <span class="cmp-form-options__field-description">${optionItem.text}</span>
+        </label>
+
+        <p id="${options.id}-helpMessage" class="cmp-form-options__help-message" data-sly-test="${options.helpMessage}">
+            ${options.helpMessage}</p>
+    </fieldset>
+</sly>
+
+<sly data-sly-call="${template.placeholder @ isEmpty=!isNotEmpty, classAppend='cmp-form-options'}"></sly>
+<sly data-sly-repeat.paragraph="${grid.paragraphs}"
+     data-sly-resource="${paragraph.path @ resourceType=paragraph.resourceType, decorationTagName='div', cssClassName=paragraph.cssClass}"></sly>
+<sly data-sly-resource="${resource.path @ resourceType=options.resourceTypeForDropArea, appendPath='/*', decorationTagName='div', cssClassName='new section aem-Grid-newComponent'}"
+     data-sly-test="${wcmmode.edit || wcmmode.preview}"></sly>

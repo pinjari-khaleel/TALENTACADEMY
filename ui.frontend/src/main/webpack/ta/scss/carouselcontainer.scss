@@ -1,0 +1,229 @@
+.carouselcontainer {
+    width: 100%;
+    overflow: hidden;
+}
+.coursecareercarousel{
+    .swiper-slide{
+        max-width: 500px;
+    }
+}
+
+.carouselcontainer.inside-immersive-popup {
+	margin-top: -180px; // to fix extra space inside immersive popup iframe only
+}
+
+.nta-carousel {
+	padding: 40px 0;
+	max-width: 1780px;
+    margin: auto;
+    overflow: visible;
+	@include md {
+		padding: 100px 70px;
+		display: grid;
+		grid-template-columns: repeat(12, minmax(0, 1fr));
+		gap: 0px;
+	}
+
+	&__top {
+		padding: 0 20px;
+
+		@include md {
+			margin-bottom: 60px;
+			grid-column: 1 / span 12;
+			grid-row-start: 1;
+			padding: 0;
+		}
+
+		.captionM {
+			@include sm {
+				font-size: 0.625rem;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 120%;
+			}
+		}
+
+		.title2 {
+			@include sm {
+				font-size: 1.5rem;
+				font-style: normal;
+				font-weight: 400;
+			}
+		}
+
+		.body4 {
+			margin: 0;
+
+			@include sm {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	&__description {
+		max-width: 856px;
+
+		// .button {
+		// 	@include md {
+		// 		margin-top: 30px;
+		// 	}
+		// }
+	}
+
+	.swiper-wrapper{
+		height: auto;
+	  }
+}
+
+.nta-carousel__description {
+    .title4 {
+        padding: 20px 0;
+    }
+	
+    .body4 {
+        padding-bottom: 20px;
+
+		@include md {
+            padding-bottom: 30px;
+        }
+    }
+
+    a.button{
+        &.cta-link{
+            .cta-link__text{
+                &::after{
+                    display: none;
+                }
+            }
+        }
+    } 
+}
+
+.nta-carousel__container {
+	overflow: visible;
+	position: relative;
+	padding-left: 20px;
+
+	@include md {
+		padding: 0;
+		overflow-x: visible;
+		grid-column: 1 / span 12;
+		grid-row-start: 2;
+	}
+
+	.swiper {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+
+		@include md {
+			overflow-x: visible;
+		}
+	}
+
+}
+
+.nta-carousel__buttons {
+	margin: 30px 0 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+
+	@include md {
+		grid-column: 12 / span 1;
+		grid-row-start: 1;
+	}
+
+	@include sm {
+		margin: 20px 0 40px;
+	}
+}
+
+.nta-carousel__navigation {
+	display: none;
+	justify-content: center;
+	gap: 20px;
+
+	@include md {
+		display: flex;
+	}
+}
+
+.carousel-cream-bg {
+
+	background-color: map-get($colors, "cream50");
+
+	.title4,
+	.body4 {
+		color: map-get($colors, "black");
+	}
+
+	.nta-carousel__description {
+        .cta-link {
+            background: map-get($colors, "black");
+            color: map-get($colors, "white");
+			border: 1px solid map-get($colors, "black20");
+
+			&:hover {
+				border: 1px solid map-get($colors, "darkGold");
+			}
+
+			&:disabled {
+				border: 1px solid #a9a8a8;
+				background-color: #fefdfc;
+				color: map-get($colors, "black20");
+			}
+
+            &::after {
+                background: url("../resources/images/arrow-right.svg") no-repeat center center;
+            }
+        }
+    }
+}
+
+.carousel-dark-bg {
+
+	background-color: map-get($colors, "deepBlack");
+
+	.title4,
+	.body4 {
+		color: map-get($colors, "white");
+	}
+}
+
+.carouselcontainer {
+	.career-card .career-card__description .course-card__title {
+		height: 62px;
+	}
+
+	.career-card.career-card-short {
+		min-height: auto;
+	}
+	.course-card__title {
+        min-height: 77px;
+    }
+	.career-card__titles {
+		margin-bottom: 20px;
+
+		@include md {
+			margin-bottom: 42px;
+		}
+	}
+
+	.career-card {
+		min-height: 620px;
+	}
+
+	.swiper-wrapper {
+		height: auto;
+	}
+
+	.course-card__description {
+		@include sm {
+			padding: 20px 25px;
+			.cta-link.button--small {
+                padding: 1.0625rem 1.25rem;
+            }
+		}
+	}
+}

@@ -1,0 +1,25 @@
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}" class="panel-title">
+    ${'pressReleaseDetails' @i18n}</h3>
+<sly data-sly-use.model="com.talentacademy.core.models.PressReleaseDetailsModel">
+	<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+	<sly data-sly-use.imageTemplate="/apps/talentacademy/components/content/atoms/dmediaimage.html"></sly>
+    <div class="ta-press-release-details spotlight bg-cream25" data-component="${analyticsModel.title}">
+        <section class="ta-spotlight">
+            <div class="ta-spotlight__image">
+				<sly data-sly-call="${imageTemplate.image @ 
+              imagePath=model.getHeroImage, alt=model.getImageAlt, mobileImgWidth='360', desktopImgWidth='810'}"></sly>
+            </div>
+        </section>
+        <section class="ta-press-release-details__container">
+            <article>
+                <p class="body6">${model.getDate}</p>
+                <h3 class="captionL">${model.getHeading}</h3>
+				<div class="ta-press-release-details__content">${model.getLongDescription @context='html'}</div>
+            </article>
+            <a href="${model.getCTAUrl}"
+                    class="button button--secondary has-back-arrow cta-link">
+                <span class="cta-link__text">${model.getCTALabel}</span>
+            </a>
+        </section>
+    </div>
+</sly>

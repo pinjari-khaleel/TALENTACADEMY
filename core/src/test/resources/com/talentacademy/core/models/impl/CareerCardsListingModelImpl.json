@@ -1,0 +1,14 @@
+{
+    "careercardslisting": {
+        "jcr:primaryType":"nt:unstructured",
+        "sling:resourceType":"talentacademy/components/content/careercardslisting",
+        "rootDetailsPath":"/content/talentacademy/sa/future-career",
+        "badgesEarned":"Earned badges",
+        "knowMoreCtaLabel" : "Know More",
+        "loadMoreCtaLabel" : "Load More",
+        "applyFilterLabel" : "Apply Filters",
+        "clearFilterLabel" : "Clear Filters",
+        "filtersLabel" : "Filters",
+        "loadMoreLimit" : 12
+    }
+}

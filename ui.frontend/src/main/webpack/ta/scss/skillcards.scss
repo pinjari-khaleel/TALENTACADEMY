@@ -1,0 +1,291 @@
+.ta-skill-card {
+  padding: 43px 35px;
+  border: 1px solid map-get($colors, "black20");
+  flex: 0 0 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: flex 0.5s ease-in-out, margin-right 0.5s ease-in-out;
+  margin: 0 -1px -1px 0;
+  .captionM {
+    margin-bottom: 20px;
+  }
+}
+
+.ta-skill-cards {
+  // padding: 80px 15px;
+  padding: 80px 20px;
+  overflow: hidden;
+  &__container {
+    max-width: 1080px;
+    margin: auto;
+  }
+  &__info {
+    .captionM {
+      margin-bottom: 20px;
+      color: map-get($colors, "darkGold");
+      @include md {
+        margin-bottom: 30px;
+      }
+    }
+    h5 {
+      margin-bottom: 20px;
+      max-width: 700px;
+      @include md {
+        margin-bottom: 30px;
+      }
+    }
+    p {
+      margin-bottom: 20px;
+      max-width: 856px;
+      @include md {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .nta-carousel__container.cmp-carousel__content {
+    .swiper-pagination {
+      background-color: transparent;
+      position: static;
+      margin-top: 40px;
+      @include md {
+        display: none;
+      }
+      .swiper-pagination-bullet {
+        background: map-get($colors, "black");
+        margin: 0 10px;
+      }
+      .swiper-pagination-bullet-active {
+        background: map-get($colors, "darkGold");
+      }
+    }
+    .swiper-wrapper {
+      @include md {
+        transform: none !important;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+      }
+    }
+    .swiper-slide {
+      @include md {
+        width: 100% !important;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.ta-skill-cards--center {
+  text-align: center;
+  .ta-skill-cards__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ta-skill-card {
+    align-items: center;
+  }
+}
+
+//Spacing
+
+.space-4 {
+  height: var(--spacing-4, 30px);
+}
+.space-6 {
+  height: var(--spacing-6, 50px);
+}
+//Block list type 1
+
+.ta-skillcard-variant1 {
+  .ta-skill-card {
+    height: 300px;
+    padding: 47px 25px;
+    @include md {
+      height: 340px;
+    }
+    .captionM {
+      height: 62px;
+    }
+  }
+}
+//Block list type 2
+
+.ta-skillcard-variant2 {
+  .ta-skill-card {
+    padding: 47px 25px;
+    height: 350px;
+    @include md {
+      height: 400px;
+    }
+    .captionM {
+      height: 82px;
+    }
+  }
+}
+
+//Block list type 3
+
+.ta-skill-cards--variant3 {
+  .ta-skill-card {
+    padding: 47px 40px;
+    height: 350px;
+    @include md {
+      height: 380px;
+    }
+    .captionM {
+      height: 82px;
+    }
+  }
+  .swiper-wrapper {
+    @include md {
+      grid-template-columns: repeat(3, 1fr) !important;
+      max-width: 930px;
+    }
+  }
+  .nta-carousel__container {
+    @include md {
+      display: grid;
+      justify-content: center;
+    }
+  }
+}
+
+// Blocklist type 4
+
+.ta-skill-cards--dark {
+  .ta-skill-card {
+    border-color: map-get($colors, "black90");
+    height: 379px;
+    padding: 59px 40px;
+    @include md {
+      height: 460px;
+      padding: 94px 40px 58px 40px;
+    }
+  }
+  .captionL {
+    color: map-get($colors, "white");
+    height: 78px;
+    margin-bottom: 10px;
+  }
+  .title5,
+  .body5,
+  .body4 {
+    color: map-get($colors, "white");
+  }
+  .ta-skill-cards {
+    &__container {
+      max-width: 930px;
+    }
+    &__info {
+      .captionM {
+        color: map-get($colors, "darkGold");
+        margin-bottom: 20px;
+        @include md {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+  .swiper-wrapper {
+    @include md {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+  }
+  .swiper-pagination-bullet {
+    background: map-get($colors, "white") !important;
+  }
+  .swiper-pagination-bullet-active {
+    background: map-get($colors, "darkGold") !important;
+  }
+}
+
+// Blocklist 5
+
+.ta-skill-cards--variant5 {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  img,
+  picture {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .ta-skill-card {
+    height: 379px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    @include md {
+      height: 446px;
+    }
+    .captionL {
+      color: map-get($colors, "white");
+      margin-bottom: 30px;
+    }
+    .ta-skill-card__icon-wrapper {
+      margin-bottom: 30px;
+    }
+  }
+  .title5,
+  .body5,
+  .body4 {
+    color: map-get($colors, "white");
+  }
+  .ta-skill-cards {
+    &__container {
+      max-width: 930px;
+    }
+    &__info {
+      .captionM {
+        color: map-get($colors, "white");
+        margin-bottom: 20px;
+        @include md {
+          margin-bottom: 30px;
+        }
+      }
+      p {
+        margin-bottom: 60px;
+      }
+    }
+  }
+  .swiper-wrapper {
+    @include md {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+  }
+  .swiper-pagination-bullet {
+    background: map-get($colors, "white") !important;
+  }
+  .swiper-pagination-bullet-active {
+    background: map-get($colors, "white") !important;
+  }
+}
+
+.ta-skill-card__icon-wrapper {
+  display: flex;
+  width: 70px;
+  height: 70px;
+  padding: 14.583px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  img {
+    height: auto;
+  }
+  @include md {
+    margin-bottom: 14px;
+    width: 80px;
+    height: 80px;
+    padding: 16.667px;
+  }
+}

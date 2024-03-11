@@ -1,0 +1,68 @@
+{
+   "formcontainerDefault" : {
+      "actionType": "talentacademy/components/form/actions/ntaactionform",
+      "errorMessage" : ["error message in the form"],
+      "jcr: primary" : "nt:unstructured",
+      "sling:resourceType" : "talentacademy/components/form/container",
+      "redirect" : "/content/talentacademy/en/ksa/overview"
+   },
+   "formcontainerDefaultWithIdForm" : {
+      "actionType": "talentacademy/components/form/actions/ntaactionform",
+      "errorMessage" : ["error message in the form"],
+      "jcr: primary" : "nt:unstructured",
+      "sling:resourceType" : "talentacademy/components/form/container",
+      "redirect" : "/content/talentacademy/en/ksa/overview",
+      "id" : "id_form_123"
+   },
+   "formcontainerDefaultNoRedirect" : {
+      "actionType": "talentacademy/components/form/actions/ntaactionform",
+      "errorMessage" : ["error message in the form"],
+      "jcr: primary" : "nt:unstructured",
+      "sling:resourceType" : "talentacademy/components/form/container"
+   },
+   "formcontainerNoErrorMessageKey" : {
+      "actionType": "talentacademy/components/form/actions/ntaactionform",
+      "jcr: primary" : "nt:unstructured",
+      "sling:resourceType" : "talentacademy/components/form/container"
+   },
+   "formcontainerEmptyErrorMessage" : {
+      "actionType": "talentacademy/components/form/actions/ntaactionform",
+      "errorMessage" : [],
+      "jcr: primary" : "nt:unstructured",
+      "sling:resourceType" : "talentacademy/components/form/container"
+   },
+   "formPageWithRecaptcha" : {
+      "jcr:primaryType": "cq:Page",
+      "jcr:content" : {
+         "cq:cloudserviceconfigs": "/etc/cloudservices/google-recaptcha/Google-Recaptcha-2",
+         "sling:resourceType": "talentacademy/components/structure/page",
+         "jcr:primaryType": "cq:PageContent",
+         "root": {
+            "container" : {
+               "actionType": "talentacademy/components/form/actions/ntaactionform",
+               "errorMessage" : ["error message in the form"],
+               "jcr: primary" : "nt:unstructured",
+               "sling:resourceType" : "talentacademy/components/form/container",
+               "redirect" : "/content/talentacademy/en/ksa/overview"
+            }
+         }
+      }
+   },
+   "formPageNoPagePrimaryType" : {
+      "jcr:primaryType": "",
+      "jcr:content" : {
+         "cq:cloudserviceconfigs": "/etc/cloudservices/google-recaptcha/Google-Recaptcha-2",
+         "sling:resourceType": "talentacademy/components/structure/page",
+         "jcr:primaryType": "cq:PageContent",
+         "root": {
+            "container" : {
+               "actionType": "talentacademy/components/form/actions/ntaactionform",
+               "errorMessage" : ["error message in the form"],
+               "jcr: primary" : "nt:unstructured",
+               "sling:resourceType" : "talentacademy/components/form/container",
+               "redirect" : "/content/talentacademy/en/ksa/overview"
+            }
+         }
+      }
+   }
+}

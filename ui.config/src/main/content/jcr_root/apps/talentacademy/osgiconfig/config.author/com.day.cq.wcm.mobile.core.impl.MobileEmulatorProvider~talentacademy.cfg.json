@@ -1,0 +1,6 @@
+{
+  "mobile.resourceTypes": [
+    "talentacademy/components/structure/page"
+  ],
+  "README": "Indicate which page resource types should display the mobile emulators."
+}

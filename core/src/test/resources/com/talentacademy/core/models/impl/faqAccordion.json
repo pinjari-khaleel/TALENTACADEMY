@@ -1,0 +1,26 @@
+{
+  "faqaccordion" : {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:createdBy": "admin",
+    "jcr:lastModifiedBy": "admin",
+    "jcr:created": "Thu Nov 02 2023 23:12:59 GMT+0530",
+    "title": "Frequently Asked Questions",
+    "loadMoreText": "Load More",
+    "loadMoreLimit": 2,
+    "jcr:lastModified": "Fri Nov 03 2023 10:43:54 GMT+0530",
+    "sling:resourceType": "talentacademy/components/faqaccordion",
+    "faq": {
+          "jcr:primaryType": "nt:unstructured",
+          "item0": {
+            "jcr:primaryType": "nt:unstructured",
+            "answer": "Following courses are right for you",
+            "question": "Which courses are right for me?"
+          },
+          "item1": {
+            "jcr:primaryType": "nt:unstructured",
+            "answer": "Below skill level",
+            "question": "What Skill level is required for the course?"
+          }
+    }
+  }
+}

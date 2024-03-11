@@ -1,0 +1,17 @@
+{
+   "error":{
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/content/error",
+      "pretitle":"oops",
+      "title":"Something went wrong",
+      "description":"dummy description",
+      "arPretitle":"dummy ar pretitle",
+      "arTitle":"dummy ar title",
+      "arDescription":"dummy ar description",
+      "logo":"/content/dam/dummy/logo.png",
+      "logoAltText":"alt text for logo",
+      "redirectURL":"/content/ta/redirect",
+      "fileReference":"/content/dam/dummy/image.png",
+      "altText":"alt text for image"   
+   }
+}

@@ -1,0 +1,35 @@
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}" class="panel-title">
+	${'pressRelease' @i18n}</h3>
+<sly data-sly-use.model="com.talentacademy.core.models.PressReleaseModel">
+<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+<sly data-sly-use.imageTemplate="/apps/talentacademy/components/content/atoms/dmediaimage.html"></sly>
+	<input type="hidden" class="newscardlistingdetails" data-rootDetailsPath="${model.rootDetailsPath}"
+		   data-knowMoreCtaLabel="${model.knowMoreCtaLabel}" data-loadMoreLimit="${model.loadMoreLimit}">
+
+	<section class="ta-press-release bg-cream25" data-component="${analyticsModel.title}">
+		<div class="ta-press-release__wrapper">
+			<ul class="ta-press-release__container" data-sly-list.cardDetail="${model.getPressReleaseDetails}"
+				 data-sly-test="${model.getPressReleaseDetails.size}">
+				<li class = "ta-press-release__list" data-sly-test="${model.loadMoreLimit > cardDetailList.index}">
+				<article class="ta-press-release__grid-item">
+					<sly data-sly-call="${imageTemplate.image @ 
+                imagePath=cardDetail.getCardImage, alt=cardDetail.getCourseImageAltText, mobileImgWidth='360', desktopImgWidth='420', className='ta-press-release__image'}"></sly>
+					<div class="ta-press-release__content">
+						<p class="body6">${cardDetail.getCreatedDate}</p>
+						<h3 class="captionL">${cardDetail.getHeading}</h3>
+						<p class="body5">${cardDetail.getShortDescription}</p>
+					</div>
+					<a href="${cardDetail.getPagePath}"
+					   class="button--small ta-press-release__link">
+						<span class="cta-link__text">${model.getKnowMoreCtaLabel}</span>
+					</a>
+				</article>
+				</li>
+			</ul>
+			<button id="press-release-loadmore" class="button button--secondary cta-link" data-offset="2"
+					data-sly-test="${model.getPressReleaseDetails.size > model.loadMoreLimit && model.loadMoreCtaLabel}">
+				<span class="cta-link__text">${model.getLoadMoreCtaLabel}</span>
+			</button>
+		</div>
+	</section>
+</sly>

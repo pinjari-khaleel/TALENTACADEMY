@@ -1,0 +1,46 @@
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}" class="panel-title">${'careercarouselcard' @i18n}</h3>
+<sly data-sly-use.model="com.talentacademy.core.models.CareerCardModel">
+	<sly data-sly-use.imageTemplate="/apps/talentacademy/components/content/atoms/dmediaimage.html"></sly>
+	<sly data-sly-set.isImage="${model.tileImage}" />    
+	<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+    <div class="course-card career-card ${!isImage ? 'career-card-short' : ''}" data-component="${analyticsModel.title}">
+        <div class="career-card__image" data-sly-test="${isImage}">
+			<sly data-sly-call="${imageTemplate.image @ 
+              imagePath=isImage, alt=model.altTextForImage, mobileImgWidth='280', desktopImgWidth='420'}"></sly>
+        </div>
+    
+        <div class="course-card__description career-card__description ${!isImage ? 'course-card__description--left' : ''}">
+            <sly data-sly-test="${!isImage && model.recruitmentStatus}">
+				<div class="ta-tag ta-tag_with-border ta-tag_orange" data-sly-test="${model.recruitmentStatus == 'activelyrecruiting'}">
+					${'activelyrecruiting' @i18n}
+				</div>
+				<div class="ta-tag ta-tag_with-border ta-tag_blue" data-sly-test="${model.recruitmentStatus == 'futureposition'}">
+					${'futureposition' @i18n}
+				</div>
+			</sly>
+            <div class="ta-tag ta-tag_black bg-white ta-tag_small" data-sly-test="${model.careerLabel && isImage}">${model.careerLabel}</div>
+			<div class="course-card__title">
+				<h3 class="captionL ${isImage ? 'text-white' : ''}" data-sly-test="${model.jobTitle}">${model.jobTitle}</h3>
+			</div>
+			<div class="career-card__titles">
+				<h4 class="captionM ${isImage ? 'text-white' : ''}" data-sly-test="${model.jobOpening && isImage}">${'jobopening' @i18n}: ${model.jobOpening}</h4>
+				<h5 class="captionS ${isImage ? 'text-white' : ''}" data-sly-test="${model.expectedDemand  && isImage}">${'expecteddemand' @i18n}: ${model.expectedDemand}</h5>
+				<h5 class="captionS" data-sly-test="${!isImage && model.jobRoleType}">${model.jobRoleType}</h5>
+				<h4 class="captionM" data-sly-test="${!isImage && model.experienceLevel}">${model.experienceLevel}</h4>
+				<h6 class="captionS ${isImage ? 'text-white' : ''} course-badges-title" data-sly-test="${model.badgesWeRecommend}">${model.badgesWeRecommend}</h6>
+				<ul class="course-badges" data-sly-list.badgeList="${model.badgeList.listChildren}">
+					<li data-sly-test="${badgeList.badge}">
+						<img src="${badgeList.badge}" alt="${badgeList.badgeAltText}">
+					</li>
+				</ul>
+			</div>
+			
+			<div class="course-card__buttons" data-sly-test="${model.knowMoreCTALabel}">
+				<a class="button button--primary_black has-no-arrow button--small cta-link ${isImage ? 'bg-black' : ''}"
+					href="${model.knowMoreCTALink}" target="${model.openInNewTab == 'true' ? '_blank' : '_self'}">
+					<span class="cta-link__text">${model.knowMoreCTALabel}</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</sly>

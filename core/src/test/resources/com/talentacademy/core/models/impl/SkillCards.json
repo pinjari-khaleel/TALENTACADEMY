@@ -1,0 +1,29 @@
+{
+  "skillCards" : {
+    "jcr:primaryType": "nt:unstructured",
+    "title": "Our Offerings",
+    "description": "Unlock your potential and acquire the skills you need to secure your dream role.",
+    "sling:resourceType": "talentacademy/components/content/skillcards",
+    "cardVariation": "fourCardsLeftAlign",
+    "fileReference": "/content/dam/talentacademy",
+    "link": "/content",
+    "altText": "Background Image",
+    "shortTitle": "short Title",
+    "buttonLabel": "Read More",
+    "cardItems": {
+      "jcr:primaryType": "nt:unstructured",
+      "item0": {
+        "jcr:primaryType": "nt:unstructured",
+        "title": "Language Proficiency",
+        "description": "Help learners achieve proficiency",
+        "icon": "/content"
+      },
+      "item1": {
+        "jcr:primaryType": "nt:unstructured",
+        "title": "Communication Skills",
+        "description": "Develop learners ability to communicate",
+        "icon": "/content"
+      }
+    }
+  }
+}

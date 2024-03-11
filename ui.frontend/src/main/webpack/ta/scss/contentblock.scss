@@ -1,0 +1,224 @@
+@mixin ta-cb-stat-headings() {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 1.68px;
+  text-transform: uppercase;
+  font-family: $brown;
+  @include md() {
+    font-size: 16px;
+    letter-spacing: 1.92px;
+    word-wrap: break-word;
+    width: min-content;
+  }
+}
+ 
+.ta-content-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  background: map-get($colors, "cream25");
+}
+.ta-single-academy .ta-content-block {
+  flex-direction: column-reverse;
+  padding: 0;
+}
+ 
+.ta-single-academy .ta-cb-content-section {
+  padding: 30px 20px 40px;
+}
+.ta-cb-image {
+  width: 100%;
+  object-fit: contain;
+  margin-top: 30px;
+  @include md() {
+    height: 484px;
+    object-fit: cover;
+    margin: 0;
+    width: 50%;
+  }
+}
+.ta-single-academy .ta-cb-image {
+  margin: 0;
+}
+.ta-cb-section {
+  flex: 1;
+}
+ 
+.ta-single-academy .title4 {
+  padding: 0 0 20px;
+}
+.ta-cb-description {
+  color: map-get($colors, "black75");
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+}
+.ta-cb-stat-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
+  margin-bottom: 1.25rem;
+}
+.ta-cb-stat-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ta-cb-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ta-cb-stat-header {
+  @include ta-cb-stat-headings();
+  color: map-get($colors, "black75");
+  @include md {
+    min-height: 2.75rem;
+  }
+}
+.ta-cb-stat-subheader {
+  @include ta-cb-stat-headings();
+  color: map-get($colors, "darkGold");
+}
+.ta-cb-stat-numbers {
+  color: map-get($colors, "darkGold");
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-family: $brown;
+  line-height: 115%;
+  letter-spacing: 3.36px;
+  text-transform: uppercase;  
+  @include md() {
+    font-size: 24px;
+    line-height: 135%;
+    font-weight: 300;
+  }
+}
+@include md() {
+  .ta-content-block {
+    flex-direction: row;
+    padding: 160px 70px;
+    gap: 8.65%;
+  }
+  .ta-single-academy .ta-content-block {
+    gap: 0;
+  }
+  .ta-single-academy .ta-cb-content-section {
+    padding: 90px 70px;
+    width: 50%;
+  }
+  .ta-single-academy .ta-content-block {
+    flex-direction: row-reverse;
+    padding: 0;
+  }
+  .ta-single-academy-left .ta-content-block {
+    flex-direction: row;
+  }
+  .ta-single-academy .ta-cb-image {
+    height: 100%;
+    min-height: 720px;
+  }
+  .ta-single-academy .title4 {
+    font-size: 50px;
+    line-height: 120%;
+    letter-spacing: 6px;
+    margin-bottom: 40px;
+  }
+  .ta-content-block .title4 {
+    font-size: 50px;
+    line-height: 120%;
+    letter-spacing: 6px;
+    margin-bottom: 40px;
+  }
+  .ta-cb-description {
+    max-width: 533px;
+    font-size: 21px;
+    line-height: 148%;
+  }
+  .ta-cb-stat-section {
+    flex-direction: row;
+    max-width: 533px;
+    justify-content: space-between;
+    margin-bottom: 3.125rem;
+  }
+  .ta-cb-stat-column {
+    margin-top: 40px;
+  }
+  .ta-cb-stats {
+    flex-direction: row;
+  }
+}
+.ta-contentblock {
+  padding: 60px 30px;
+  background: map-get($colors, "cream");
+  @include md {
+    padding: 140px 250px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .captionM {
+      color: map-get($colors, "darkGold");
+      margin-bottom: 20px;
+      @include md {
+        margin-bottom: 50px;
+      }
+    }
+    .title4 {
+      margin-bottom: 20px;
+      @include md {
+        margin-bottom: 50px;
+      }
+    }
+    p {
+      @extend .body3;
+      margin-bottom: 30px;
+      color: map-get($colors, "black75");
+      @include md {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+.content-block-dark .ta-contentblock {
+  background: map-get($colors, "black");
+  .captionM {
+    color: map-get($colors, "gold");
+  }
+  .title4 {
+    color: map-get($colors, "white");
+  }
+  &__container p {
+    @extend .body4;
+    color: map-get($colors, "white");
+    margin-bottom: 30px;
+    @include md {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.ta-contentblock-variant-4 {
+  background: map-get($colors, "cream50");
+  .ta-contentblock__container p {
+    @extend .body2;
+    color: map-get($colors, "deepBlack");
+  }
+}
+
+[dir="rtl"] {
+  .ta-cb-stat-header, .ta-cb-stat-subheader {
+    letter-spacing: normal;
+  }
+}

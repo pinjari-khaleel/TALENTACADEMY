@@ -1,0 +1,41 @@
+<sly data-sly-use.containerPreLoad="com.talentacademy.core.models.FormContainerPreLoadModel"
+     data-sly-test="${!containerPreLoad.isSameConfirmationPage}">
+     <sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+    <form data-sly-use.container="com.adobe.cq.wcm.core.components.models.form.Container"
+          data-sly-use.grid="com.day.cq.wcm.foundation.model.responsivegrid.ResponsiveGrid"
+          method="${container.method}" action="${containerPreLoad.formActionPath @ selectors='ntaFormHandler' , extension='form'}" id="${container.id}" name="${container.name}"
+          enctype="${container.enctype}"
+          class="cmp-form ${grid.cssClass}"
+          data-component="${analyticsModel.title}">
+        <div data-sly-test="${container.errorMessages}"
+             data-sly-list.item="${container.errorMessages}"
+             class="cmp-form-error">
+            <p class="cmp-form-error__item">${item}</p>
+        </div>
+        <input type="hidden" name="_charset_" value="utf-8"/>
+        <input type="hidden" name="form_id" value="${properties.formId}"/>
+        <input data-sly-test="${container.redirect}" type="hidden" name=":redirect" value="${container.redirect @ extension='html'}"/>
+        <sly data-sly-repeat.paragraph="${grid.paragraphs}"
+             data-sly-resource="${paragraph.path @ resourceType=paragraph.resourceType, decorationTagName='div', cssClassName=paragraph.cssClass}"></sly>
+        <sly data-sly-resource="${resource.path @ resourceType=container.resourceTypeForDropArea, appendPath='/*', decorationTagName='div', cssClassName='new section aem-Grid-newComponent'}"
+             data-sly-test="${wcmmode.edit || wcmmode.preview}"></sly>
+    </form>
+</sly>
+<sly data-sly-test="${containerPreLoad.isSameConfirmationPage}">
+    <div class="ta-na-form-samepage__feedback" id="same_page_confirmation" data-recaptcha="${formPreLoadModel.recaptchaToken}" data-email="${containerPreLoad.email}" data-form-submission-state="${containerPreLoad.isSuccessfulPageSubmission ? 'true' : 'false'}">
+        <h2 class="title5 text-white">
+            ${properties.samePageConfirmationMessage}
+        </h2>
+    </div>
+</sly>
+<sly data-sly-use.image="com.adobe.cq.wcm.core.components.models.Image">
+    <picture class="ta-na-form-image__bg">
+        <source media="(min-width: 901px)" srcset="${image.fileReference}">
+        <source media="(min-width:768px)" srcset="${image.fileReference}">
+        <source media="(min-width:320px)" srcset="${image.fileReference}">
+        <img src="${image.fileReference}" alt="">
+    </picture>
+</sly>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.js @ categories='talentacademy.formanalyticsscripts'}" />
+</sly>

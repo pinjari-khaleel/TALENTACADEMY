@@ -1,0 +1,13 @@
+{
+  "form-collector": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:title": "Neom Form Media Monks",
+      "url": "test/forms/submission",
+      "apiKey": "testKey",
+      "cq:template": "/apps/neom/components/cloudservices/form-media-monks/template",
+      "sling:resourceType": "neom/components/cloudservices/form-media-monks/component"
+    }
+  }
+}

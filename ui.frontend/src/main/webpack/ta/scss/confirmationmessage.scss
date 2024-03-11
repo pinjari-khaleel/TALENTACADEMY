@@ -1,0 +1,19 @@
+.ta-form-confirmation{
+    padding: 80px 30px;
+    @include md {
+        padding: 80px 0px;
+    }
+    .title5{
+        margin-bottom: 30px;
+    }
+    button.button{
+        margin-top: 15px;
+    }
+}
+.ta-form-confirmation__inner{
+    width: auto;
+    @include md {
+        width: 640px;
+        margin: auto;
+    }
+}

@@ -1,0 +1,364 @@
+.ta-form-container {
+    color: map-get($colors, "black");
+    background: map-get($colors, "cream50");
+    padding: 60px 20px;
+
+    @include md {
+        padding: 90px 0;
+    }
+    h1.cmp-title__text {
+        margin-bottom: 20px;
+        @extend .title5;
+    }
+    h2.cmp-title__text {
+        @extend .title6;
+        margin: 60px 0;
+    }
+
+    .column-wrapper {
+        position: relative;
+    }
+    form {
+        max-width: 860px;
+        margin: auto;
+        .ta-rich-text-content-wrapper p {
+            @extend .body4;
+            padding-bottom: 0;
+        }
+        & > .aem-GridColumn:nth-child(7){
+            p{
+                @extend .body6;
+                margin-bottom: 44px;
+            }
+        }
+    }
+    label,
+    legend {
+        display: block;
+        color: map-get($colors, "black");
+        width: 100%;
+        margin-bottom: 5px;
+        font-family: $brown;
+        font-weight: normal;
+        @extend .body6
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="date"],
+    select,
+    .custom-dropdown__button,
+    textarea {
+        padding: 18px 20px;
+        border-radius: 4px;
+        // black10
+        border: 1px solid map-get($colors, "black10");
+        background: map-get($colors, "white");
+        width: 100%;
+        font-family: $brown;
+        font-weight: 300;
+        margin-bottom: 30px;
+        @include md {
+            margin-bottom: 40px;
+        }
+        &::placeholder {
+            color: #8e8f90;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 150%; /* 24px */
+            // text-transform: uppercase;
+        }
+        &:focus {
+            outline: none;
+            box-shadow: rgb(226, 224, 218) 0px 0px 0px 4px;
+        }
+        &.-hasError{
+            border: 1px solid map-get($colors, "red");
+        }
+    }
+    fieldset {
+        margin-bottom: 40px;
+    }
+    .column-wrapper .options fieldset {
+        margin-bottom: 0px;
+    }
+    textarea {
+        height: 200px;
+    }
+    fieldset {
+        border: none;
+    }
+    select, 
+    .custom-dropdown__button {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: "";
+        color: #8e8f90;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 150%; /* 24px */
+        position: relative;
+        background: url("../resources/images/chevrondown.svg") no-repeat;
+        background-color: #fff;
+        background-position-y: center;
+        background-position-x: calc(100% - 30px);
+
+        &::-ms-expand {
+            display: none;
+        }
+    }
+    input[type="date"] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url("../resources/images/calendar.svg");
+        background-repeat: no-repeat;
+        background-position-x: calc(100% - 24px);
+        background-position-y: center;
+        direction: ltr;
+    }
+    input[type="date"]::-webkit-inner-spin-button {
+        display: none;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        opacity: 0;
+    }
+
+    button[type="submit"] {
+        display: flex;
+        padding: 18px 40px 17px 40px;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        color: map-get($colors, "white");
+        background: map-get($colors, "darkGold");
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        letter-spacing: 0.96px;
+        text-transform: uppercase;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        &:disabled{
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+    .cmp-form-error {
+        border-radius: 7px;
+        background: #f9d8cd;
+        padding: 30px;
+        margin: 44px 0;
+        p {
+            @extend .body4;
+            color: map-get($colors, "red");
+        }
+    }
+    .cmp-form-options--drop-down {
+        position: relative;
+    }
+    .cmp-form-options__field-label {
+        span {
+            &::before {
+                border: 1px solid #e8e9e9;
+            }
+        }
+    }
+}
+
+.ta-form-container_newsletter {
+    padding: 150px 20px 52px 29px;
+    background: #000;
+    font-family: $brown;
+    font-weight: 400;
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+
+    @include md {
+        padding: 75px 70px 80px;
+    }
+    form.cmp-form{
+        @include md {
+            width: 900px;
+        }
+        
+    }
+    h2.cmp-title__text {
+        @extend .title6;
+        @extend .text-white;
+        margin-bottom: 20px;
+        @include md {
+            width: 550px;
+        }
+
+    }
+    h3.cmp-title__text {
+        @extend .body4;
+        @extend .text-white;
+        margin-bottom: 5px;
+        
+    }
+    .cmp-form-text{
+        position: relative;
+    }
+    .cmp-form-error{
+        @extend .captionS;
+        color: map-get($colors, "errorRed");
+        margin-bottom: 18px;
+    }
+    picture{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            opacity: 0.8;
+            background: linear-gradient(182deg, rgba(29, 31, 34, 0.00) 1.28%, #000 63.8%);
+            @include md {
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 31.2%, rgba(0, 0, 0, 0) 103.07%);
+    
+            }
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    
+
+    input {
+        border-radius: 30px;
+        background: map-get($colors, "white");
+        width: 100%;
+        padding: 12px 30px;
+        border: 1px solid;
+        border-color: transparent;
+        @include md {
+            padding: 18px 30px;
+        }
+        @extend .body5;
+        &::placeholder {
+            font-style: normal;
+            font-weight: 300;
+        }
+        &.-hasError {
+            border: 1px solid map-get($colors, "errorRed");
+        }
+    }
+    .cmp-form-text__error-block{
+        @extend .captionS;
+        color: map-get($colors, "errorRed");
+        text-transform: uppercase;
+        position: absolute;
+        top: calc(100% + 8px);
+    }
+    p.body4 {
+        margin-top: 20px;
+    }
+    button[type="submit"] {
+        @extend .button;
+        @extend .button--primary_darkgold;
+        @extend .button--small;
+        @extend .cta-link;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    .options {
+        fieldset {
+                border: none;
+        }
+        .cmp-form-options__field-label {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            color: #fff;
+            cursor: pointer;
+            margin: 40px 0 30px;
+            input {
+                position: absolute;
+                opacity: 0;
+            }
+            span {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 13px;
+                @extend .captionS;
+                &::before {
+                    content: "";
+                    width: 18px;
+                    height: 18px;
+                    display: block;
+                    background: map-get($colors, "white");
+                    aspect-ratio: 1;
+                    transition: 0.3s all;
+                    border: 1px solid #e8e9e9;
+                }
+            }
+            &:focus + span::before {
+                box-shadow: rgb(226, 224, 218) 0px 0px 0px 4px;
+            }
+            input[type="radio"] + span {
+                &::before {
+                    border-radius: 50%;
+                }
+            }
+            input[type="radio"]:checked + span::before {
+                background: map-get($colors, "darkGold");
+            }
+            input[type="checkbox"] + span {
+                &::before {
+                    border-radius: 4px;
+                }
+            }
+            input[type="checkbox"]:checked + span {
+                &::before {
+                    background: url("../resources/images/checkmark.svg") no-repeat center center;
+                }
+            }
+        }
+    }
+    .cmp-form-text__hidetitle,.cmp-form-options__legend_hidetitle{
+        visibility: hidden;
+        opacity: 0;
+        height: 0px;
+    }
+    .ta-na-form-samepage__feedback {
+        position: relative;
+        z-index: 9;
+        padding: 80px 0 115px;
+        h2.title5 {
+            @include md {
+                max-width: 695px;
+            }
+        }
+    }
+}
+[dir="rtl"] {
+    .ta-form-container { 
+        select {
+            background-position-x: 30px;
+        }
+    }
+}

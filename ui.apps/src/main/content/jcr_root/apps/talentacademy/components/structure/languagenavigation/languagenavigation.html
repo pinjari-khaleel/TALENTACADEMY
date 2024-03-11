@@ -1,0 +1,11 @@
+<sly data-sly-use.languageNavigation="com.adobe.cq.wcm.core.components.models.LanguageNavigation"
+  data-sly-test.hasContent="${languageNavigation.items.size > 0}" data-cmp-data-layer="${languageNavigation.data.json}"
+  id="${languageNavigation.id}">
+  <sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+
+  <sly data-sly-list="${languageNavigation.items}">
+    <sly data-sly-test="${item.path != currentPage.path}">
+      <a class="language-switcher" data-component="${analyticsModel.title}" href="${item.URL}" lang="ar">${item.title}</a>
+    </sly>
+  </sly>
+</sly>

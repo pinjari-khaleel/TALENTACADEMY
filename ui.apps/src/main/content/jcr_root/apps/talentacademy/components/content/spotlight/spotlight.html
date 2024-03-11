@@ -1,0 +1,26 @@
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}" class="panel-title">${'Spotlight' @i18n}</h3>
+<sly data-sly-use.model="com.talentacademy.core.models.SpotlightModel" />
+<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+<sly data-sly-set.hasContent="${model.caption || model.learningPathway || model.title || model.description || model.desktopBackgroundImage || model.backgroundVideo}" />
+<section class="ta-spotlight" data-component="${analyticsModel.title}" data-sly-test="${hasContent}">
+    <div class="ta-spotlight__text">
+        <span class="ta-tag ta-tag_black bg-white" data-sly-test="${model.learningPathway && !model.caption}">${model.learningPathway}</span>
+        <span class="captionM text-brightYellow" data-sly-test="${model.caption && !model.learningPathway}">${model.caption}</span>
+        <h1 class="title3 text-white" data-sly-test="${model.title}">${model.title}</h1>
+        <p class="body3 text-white" data-sly-test="${model.description}">${model.description}</p>
+    </div>
+    <div data-sly-test="${model.desktopBackgroundImage && !model.backgroundVideo}" class="ta-spotlight__image">
+        <picture data-sly-set.mobileImage="${model.mobileBackgroundImage || model.desktopBackgroundImage}">
+            <source media="(min-width: 1080px)" srcset="${model.desktopBackgroundImage}">
+            <source media="(min-width: 768px)" srcset="${mobileImage}">
+            <img src="${mobileImage}" alt="image description" loading="lazy" fetchpriority="low" />
+        </picture>
+    </div>
+    <div data-sly-test="${model.backgroundVideo}" class="ta-spotlight__video">
+        <video data-video="" controls playsinline="" autoplay="" muted="" loop="" poster="${model.backgroundVideoPoster}"
+        data-src="${model.backgroundVideo}" src="${model.backgroundVideo}">
+        <source type="video/mp4" data-src="" src="${model.backgroundVideo}">
+         ${'Your browser does not support the video tag.' @i18n}
+        </video>
+    </div>
+</section>

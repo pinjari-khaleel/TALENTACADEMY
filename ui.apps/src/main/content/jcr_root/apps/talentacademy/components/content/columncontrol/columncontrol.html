@@ -1,0 +1,16 @@
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}" class="panel-title">${'columncontrol'
+     @i18n}</h3>
+<sly data-sly-use.model="com.talentacademy.core.models.ColumnControlModel">
+	<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+     <div class="cmp-columncontrol ${model.isContainerFluid == true ? 'container-fluid' : 'container' }" data-component="${analyticsModel.title}">
+          <sly data-sly-test="${model.sectionName}">
+               <h3>${model.sectionName}</h3>
+          </sly>
+          <div class="row columns" data-sly-list="${model.list}">
+               <div class="inner-column col-md-${model.columnCount} col-sm-12 column-${itemList.count}">
+                    <div class="column-wrapper"
+                         data-sly-resource="${itemList.count @ resourceType='wcm/foundation/components/parsys'}"></div>
+               </div>
+          </div>
+     </div>
+</sly>

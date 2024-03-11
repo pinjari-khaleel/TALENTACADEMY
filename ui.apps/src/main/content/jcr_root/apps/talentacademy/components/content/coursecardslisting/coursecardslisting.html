@@ -1,0 +1,24 @@
+<h3 data-sly-test="${(wcmmode.edit || wcmmode.design) && (!wcmmode.preview)}" class="panel-title">
+	${'coursecardslisting' @i18n}</h3>
+<sly data-sly-use.model="com.talentacademy.core.models.CourseCardsListingModel">
+	<sly data-sly-set.compTitle="${component.title}" data-sly-use.analyticsModel="${'com.talentacademy.core.models.AnalyticsModel' @ title=compTitle}"></sly>
+
+	<input type="hidden" class="courselistingdetails" data-rootDetailsPath="${model.rootDetailsPath}" data-badgesEarned="${model.badgesEarned}"
+		data-primaryCTALabel="${model.primaryButtonLabel}" data-primaryCTALink="${model.primaryButtonLink}" data-openInNewTab="${model.primaryButtonTarget}"
+		data-secondaryCTALabel="${model.secondaryButtonLabel}" data-loadMoreLimit="${model.loadMoreLimit}" data-loadMoreCtaLabel="${model.loadMoreCtaLabel}"
+		data-listType="${model.listingType}" data-catalogId="${model.catalogId}" data-secondaryCTALink="${model.secondaryButtonLink}" data-secondaryCTATarget="${model.secondaryButtonTarget}"
+		data-hours="${'hours' @i18n}" data-minutes="${'minutes' @i18n}" data-courses="${'courses' @ i18n}">
+
+	<section class="grid-listing-container course-listing-container" data-component="${analyticsModel.title}">
+		<div class="grid-listing-header">
+			<h4 class="title5" data-sly-test="${model.title}">${model.title}</h4>
+			<p class="body4" data-sly-test="${model.description}">${model.description}</p>
+		</div>
+
+		<sly data-sly-test="${model.listingType == 'static'}" data-sly-use.static="${'staticcourselisting.html'}" data-sly-call="${static.include @ model = model}" />
+
+		<sly data-sly-test="${model.listingType == 'dynamic'}" data-sly-use.dynamic="${'dynamiccourselisting.html'}" data-sly-call="${dynamic.include @ model = model}" />
+			
+	</section>
+
+</sly>

@@ -1,0 +1,29 @@
+{
+	"jcr:primaryType": "nt:unstructured",
+	"secondaryButtonLink": "/content/talentacademy/language-masters/en/about-us.html",
+	"coursesCount": "14 Course",
+	"jcr:createdBy": "admin",
+	"carouselImageLabelText": "Testing Learn Path",
+	"secondaryButtonLabel": "Secondary",
+	"jcr:lastModifiedBy": "admin",
+	"jcr:created": "Wed Nov 29 2023 15:13:38 GMT+0530",
+	"badgesTitle": "Earn these Badges",
+	"headingText": "Testing Heading",
+	"primaryButtonLabel": "Primary",
+	"primaryButtonTarget": "blank",
+	"secondaryButtonTarget": "blank",
+	"jcr:lastModified": "Wed Nov 29 2023 15:14:58 GMT+0530",
+	"sling:resourceType": "talentacademy/components/content/coursecard",
+	"carouselImage": "/content/dam/talentacademy/construction.jpg",
+	"primaryButtonLink": "/content/talentacademy/language-masters/en/about-us.html",
+	"altTextForImage": "Image Alt Text",
+	"learningPathwayID" : "learningPathwayID:123",
+	"badgesList": {
+		"jcr:primaryType": "nt:unstructured",
+		"item0": {
+			"jcr:primaryType": "nt:unstructured",
+			"icon": "/content/dam/talentacademy/icons/facebook.svg",
+			"link": "#"
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+  "pressrelease": {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:createdBy": "admin",
+    "knowMoreCtaLabel": "know more",
+    "loadMoreLimit": "6",
+    "jcr:lastModifiedBy": "admin",
+    "rootDetailsPath": "/content/talentacademy/sa/en/press-release",
+    "jcr:created": "Wed Jan 10 2024 19:29:26 GMT+0530",
+    "jcr:lastModified": "Thu Jan 11 2024 18:08:32 GMT+0530",
+    "sling:resourceType": "talentacademy/components/content/gridlisting",
+    "loadMoreCtaLabel": "Load more"
+  }
+}

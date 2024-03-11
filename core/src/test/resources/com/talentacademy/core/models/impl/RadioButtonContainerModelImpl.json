@@ -1,0 +1,1600 @@
+{
+   "radiobuttoncontainerDefault": {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "options": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "current status",
+         "jcr:title": "CURRENT STATUS",
+         "source": "local",
+         "type": "radio",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "text": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "tell me more",
+         "jcr:title": "Tell me more",
+         "rows": "2",
+         "type": "text"
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/High school student",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerDefaultWithColumnContainer": {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "columncontrol": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/content/columncontrol",
+         "columnNumbers": "1",
+         "1": {
+            "jcr:primaryType":"nt:unstructured",
+            "sling:resourceType":"wcm/foundation/components/parsys",
+            "text": {
+               "jcr:primaryType":"nt:unstructured",
+               "sling:resourceType":"talentacademy/components/form/text",
+               "name": "employer",
+               "jcr:title": "Employer",
+               "rows": "1",
+               "type": "text"
+            }
+         }
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/High school student",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerDefaultWithColumnContainerOptions": {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "columncontrol": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/content/columncontrol",
+         "columnNumbers": "1",
+         "1": {
+            "jcr:primaryType":"nt:unstructured",
+            "sling:resourceType":"wcm/foundation/components/parsys",
+            "options": {
+               "jcr:primaryType":"nt:unstructured",
+               "sling:resourceType":"talentacademy/components/form/options",
+               "name": "company size",
+               "jcr:title": "Company Size",
+               "type":"drop-down",
+               "items": {
+                  "jcr:primaryType":"nt:unstructured",
+                  "item0":{
+                     "jcr:primaryType":"nt:unstructured",
+                     "text":"company size 1",
+                     "value":"company_size_1",
+                     "selected": false
+                  }
+               }
+            }
+         }
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/High school student",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerDefaultWithColumnContainerNoFormElements": {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "columncontrol": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/content/columncontrol",
+         "columnNumbers": "1",
+         "1": {
+            "jcr:primaryType":"nt:unstructured",
+            "sling:resourceType":"wcm/foundation/components/parsys",
+            "options": {
+               "jcr:primaryType":"nt:unstructured",
+               "sling:resourceType":"talentacademy/components/title",
+               "jcr:title": "Title"
+            }
+         }
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/High school student",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerDefaultWithId": {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "id": "radioId123",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "options": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "current status",
+         "jcr:title": "CURRENT STATUS",
+         "source": "local",
+         "type": "radio",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "text": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "tell me more",
+         "jcr:title": "Tell me more",
+         "rows": "2",
+         "type": "text"
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/High school student",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerDefaultWithDisabledItems": {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false,
+            "disabled": true
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "options": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "current status",
+         "jcr:title": "CURRENT STATUS",
+         "source": "local",
+         "type": "radio",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "text": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "tell me more",
+         "jcr:title": "Tell me more",
+         "rows": "2",
+         "type": "text"
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/High school student",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerDefaultWithNoValueItem": {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "options": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "current status",
+         "jcr:title": "CURRENT STATUS",
+         "source": "local",
+         "type": "radio",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "text": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "tell me more",
+         "jcr:title": "Tell me more",
+         "rows": "2",
+         "type": "text"
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/High school student",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerItemsNoValueOrNoTextKeys": {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "options": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "current status",
+         "jcr:title": "CURRENT STATUS",
+         "source": "local",
+         "type": "radio",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "text": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "tell me more",
+         "jcr:title": "Tell me more",
+         "rows": "2",
+         "type": "text"
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/High school student",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerItemsNoCompleteKeys": {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "options": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "current status",
+         "jcr:title": "CURRENT STATUS",
+         "source": "local",
+         "type": "radio",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "text": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "tell me more",
+         "jcr:title": "Tell me more",
+         "rows": "2",
+         "type": "text"
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/High school student",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerNoItems": {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "options": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "current status",
+         "jcr:title": "CURRENT STATUS",
+         "source": "local",
+         "type": "radio",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "text": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "tell me more",
+         "jcr:title": "Tell me more",
+         "rows": "2",
+         "type": "text"
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/High school student",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerWithSameKeyInConfigMap": {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "options": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "current status",
+         "jcr:title": "CURRENT STATUS",
+         "source": "local",
+         "type": "radio",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "text": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "tell me more",
+         "jcr:title": "Tell me more",
+         "rows": "2",
+         "type": "text"
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/High school student",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"kickstart career"
+         }
+      }
+   },
+   "radiobuttoncontainerHideShowItemWithSlash" : {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "options": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "current status",
+         "jcr:title": "CURRENT STATUS",
+         "source": "local",
+         "type": "radio",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "text": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "tell me more",
+         "jcr:title": "Tell me more",
+         "rows": "2",
+         "type": "text"
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/High school student/University",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerHideShowItemNoRadioNoSlash" : {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "options": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "current status",
+         "jcr:title": "CURRENT STATUS",
+         "source": "local",
+         "type": "radio",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "text": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "tell me more",
+         "jcr:title": "Tell me more",
+         "rows": "2",
+         "type": "text"
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"text/Tell me more",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerHideShowItemOptionUnderscoreNoRadioNoSlash" : {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "options": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "current status",
+         "jcr:title": "CURRENT STATUS",
+         "source": "local",
+         "type": "radio",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "text": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "tell me more",
+         "jcr:title": "Tell me more",
+         "rows": "2",
+         "type": "text"
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"text/Tell me more",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options_12345678/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerHideShowItemOptionMalformedTextValue" : {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "options": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "current status",
+         "jcr:title": "CURRENT STATUS",
+         "source": "local",
+         "type": "radio",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "text": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "tell me more",
+         "jcr:title": "Tell me more",
+         "rows": "2",
+         "type": "text"
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"Tell me more",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options_12345678/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerHideShowItemIncompleteData" : {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "options": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "current status",
+         "jcr:title": "CURRENT STATUS",
+         "source": "local",
+         "type": "radio",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "text": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "tell me more",
+         "jcr:title": "Tell me more",
+         "rows": "2",
+         "type": "text"
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerHideShowItemNoValue" : {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "options": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "current status",
+         "jcr:title": "CURRENT STATUS",
+         "source": "local",
+         "type": "radio",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "text": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "tell me more",
+         "jcr:title": "Tell me more",
+         "rows": "2",
+         "type": "text"
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/High School"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerHideShowItemAllIncompleteData" : {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "options": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "current status",
+         "jcr:title": "CURRENT STATUS",
+         "source": "local",
+         "type": "radio",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "text": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "tell me more",
+         "jcr:title": "Tell me more",
+         "rows": "2",
+         "type": "text"
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student"
+         }
+      }
+   },
+   "radiobuttoncontainerNoHideItems" : {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "options": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "current status",
+         "jcr:title": "CURRENT STATUS",
+         "source": "local",
+         "type": "radio",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "text": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "tell me more",
+         "jcr:title": "Tell me more",
+         "rows": "2",
+         "type": "text"
+      }
+   },
+   "radiobuttoncontainerEmptyHideItems": {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "options": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "current status",
+         "jcr:title": "CURRENT STATUS",
+         "source": "local",
+         "type": "radio",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "text": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "tell me more",
+         "jcr:title": "Tell me more",
+         "rows": "2",
+         "type": "text"
+      },
+      "hideShowItems": {}
+   },
+   "radiobuttoncontainerNoChildrenElements": {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/High school student",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerOtherChildrenElements": {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "button": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/button",
+         "name": "submit button",
+         "jcr:title": "submit"
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/High school student",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerTextAndOtherChildrenElements": {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "button": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/button",
+         "name": "submit button",
+         "jcr:title": "submit"
+      },
+      "text": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "tell me more",
+         "jcr:title": "Tell me more",
+         "rows": "2",
+         "type": "text"
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/High school student",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerWithTextAndOptionsNoRadio": {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "options": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "current status",
+         "jcr:title": "CURRENT STATUS",
+         "source": "local",
+         "type": "checkbox",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "text": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "tell me more",
+         "jcr:title": "Tell me more",
+         "rows": "2",
+         "type": "text"
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/High school student",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerWithOnlyRadioOption": {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "options": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "current status",
+         "jcr:title": "CURRENT STATUS",
+         "source": "local",
+         "type": "radio",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/High school student",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"accelerate career"
+         }
+      }
+   },
+   "radiobuttoncontainerWithWrongRadioOption": {
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"talentacademy/components/form/radiobuttoncontainer",
+      "name": "career goals",
+      "jcr:title": "CAREER GOALS",
+      "helpMessage": "help message text",
+      "items": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to kickstart my career",
+            "value":"kickstart career",
+            "selected": false
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"I want to accelerate my existing career",
+            "value":"accelerate career",
+            "selected": false
+         }
+      },
+      "text": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "tell me more",
+         "jcr:title": "Tell me more",
+         "rows": "2",
+         "type": "text"
+      },
+      "options": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/text",
+         "name": "current status wrong text",
+         "jcr:title": "CURRENT STATUS wrong text",
+         "source": "local",
+         "type": "radio",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "options_2323434": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "drop down form options",
+         "jcr:title": "drop down form options title",
+         "source": "local",
+         "type": "dropdown",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "options_2323435": {
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"talentacademy/components/form/options",
+         "name": "drop down form options",
+         "jcr:title": "drop down form options title",
+         "source": "local",
+         "type": "radio",
+         "items": {
+            "jcr:primaryType":"nt:unstructured",
+            "item0":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"High school student",
+               "value":"high school",
+               "selected": false
+            },
+            "item1":{
+               "jcr:primaryType":"nt:unstructured",
+               "text":"College student",
+               "value":"college",
+               "selected": false
+            }
+         }
+      },
+      "hideShowItems": {
+         "jcr:primaryType":"nt:unstructured",
+         "item0":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/High school student",
+            "value":"kickstart career"
+         },
+         "item1":{
+            "jcr:primaryType":"nt:unstructured",
+            "text":"options/radio/College student",
+            "value":"accelerate career"
+         }
+      }
+   }
+}
